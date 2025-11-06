@@ -169,43 +169,124 @@
 }
 
 /* CONTATO */
-.contato {
+/* ==== SEÇÃO DE CONTATO ==== */
+.contato-section {
+  padding: 60px 20px;
+  background: #ffffff; /* fundo branco puro */
+  display: flex;
+  justify-content: center;
+}
+
+/* ==== CONTAINER PRINCIPAL ==== */
+.contato-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  max-width: 900px;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  overflow: hidden;
 }
 
-.contato-form {
-  flex: 1;
+/* ==== BLOCO DE INFORMAÇÕES ==== */
+.contato-info {
+  flex: 1 1 35%;
+  background: #fff;
+  padding: 40px 30px;
+  border-right: 1px solid #eee;
+}
+
+.contato-info h3 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.info-item {
+  margin-bottom: 20px;
+}
+
+.info-item strong {
+  display: block;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.info-item p {
+  color: #555;
+  line-height: 1.4;
+}
+
+/* ==== FORMULÁRIO ==== */
+.contato-formulario {
+  flex: 1 1 65%;
+  padding: 40px 30px;
+  background: #fff;
+}
+
+.contato-formulario h2 {
+  font-size: 1.4rem;
+  color: #2a2a8b;
+  margin-bottom: 10px;
+}
+
+.contato-formulario p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 
-.contato-form input,
-.contato-form textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+input, textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f6f6fc;
+  font-size: 0.95rem;
+  color: #333;
+  transition: border 0.3s, background 0.3s;
 }
 
-.contato-form button {
-  background: #0099cc;
-  color: white;
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #4a4af5;
+  background: #fff;
+}
+
+button {
+  align-self: flex-start;
+  background: #4a4af5;
+  color: #fff;
   border: none;
-  padding: 10px;
-  border-radius: 5px;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 1rem;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
-.contato-form button:hover {
-  background: #0077aa;
+button:hover {
+  background: #3535c0;
 }
 
-.contato-info {
-  flex: 1;
-  color: #444;
+/* ==== RESPONSIVO ==== */
+@media (max-width: 768px) {
+  .contato-container {
+    flex-direction: column;
+  }
+  .contato-info {
+    border-right: none;
+    border-bottom: 1px solid #eee;
+  }
 }
+
 
 /* CHAT DE SUPORTE */
 #chat-button {
