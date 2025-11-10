@@ -6,6 +6,50 @@
   font-family: "Segoe UI", sans-serif;
 }
 
+/* ===== Fontes  ===== */
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fontes/Montserrat-VariableFont_wght.ttf') ;
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fontes/Montserrat-VariableFont_wght.ttf') ;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Source Sans 3';
+  src: url('./assets/fontes/SourceSans3-VariableFont_wght.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Source Sans 3';
+  src: url('./assets/fontes/SourceSans3-VariableFont_wght.ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+/* Fonte padrão do site */
+body {
+  font-family: 'Source Sans 3', Arial, sans-serif;
+}
+
+/* Menus e títulos */
+nav, header, h1, h2, h3, h4, h5, h6, .menu, .btn, .titulo, .servicos h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+
+
+
 /* HEADER FIXO */
 .navbar {
   position: fixed;
