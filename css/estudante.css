@@ -1,0 +1,134 @@
+/* Reset / baselines */
+:root{
+  --verde: #6CC24A;
+  --roxo: #5b2c83;
+  --azul: #00aeef;
+  --amarelo: #f4bf2a;
+  --texto: #23323a;
+  --card-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+ @font-face {
+            font-family: 'Montserrat';
+            src: url('fonts/Montserrat.ttf') format('truetype');
+            font-weight: 700;
+        }
+
+        @font-face {
+            font-family: 'Source Sans 3';
+            src: url('fonts/SourceSans3.ttf') format('truetype');
+            font-weight: 400;
+        }
+
+        :root {
+            --verde: #6CC24A;
+            --roxo: #5b2c83;
+            --azul: #00aeef;
+            --amarelo: #f4bf2a;
+            --texto: #23323a;
+            --fundo: #f6f7f8;
+            --card-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: "Source Sans 3", Arial, sans-serif;
+            background: var(--fundo);
+            color: var(--texto);
+        }
+
+body{
+  background: #f6f7f8;
+  color: var(--texto);
+  font-family: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-size: 15px;
+}
+
+/* Logotipo topo */
+.logo-top{
+  height: 36px;
+}
+
+/* PERFIL (lado esquerdo) */
+.perfil-card{
+  box-shadow: var(--card-shadow);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.avatar{
+  width:64px;
+  height:64px;
+  object-fit:cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.avatar-sm{
+  width:42px;
+  height:42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* thumbs dos destaques */
+.thumb{
+  width:56px;
+  height:56px;
+  object-fit:cover;
+  border-radius:8px;
+}
+
+/* cartões de destaque */
+.destaque-card{
+  border-radius: 10px;
+  background: #fff;
+  display:flex;
+  flex-direction:column;
+  box-shadow: var(--card-shadow);
+}
+
+/* cards principais */
+.card{
+  border: 0;
+  border-radius: 12px;
+}
+
+/* botão verde (primário) */
+.btn-success{
+  background: var(--verde);
+  border-color: var(--verde);
+}
+
+.btn-success:hover{
+  background: #57a735;
+  border-color: #57a735;
+}
+
+/* LOGO ORG */
+.org-logo{
+  width:40px;
+  height:40px;
+  object-fit:cover;
+  border-radius:6px;
+}
+
+/* estilo dos badges */
+.badge{
+  border-radius: 8px;
+  font-weight:600;
+}
+
+/* responsividade fina */
+@media (max-width: 992px){
+  main.col-lg-6{ order: 2; }
+  aside.col-lg-3:first-child{ order: 1; }
+  aside.col-lg-3:last-child{ order: 3; }
+}
+
+/* ajustes visuais pequenos */
+h5, h6 { font-family: "Montserrat", "Source Sans 3", sans-serif; font-weight:700; color: var(--roxo); }
+small.text-muted { color: #7a8a92; }
+
+/* espaço entre seções */
+section { margin-bottom: 18px; }
