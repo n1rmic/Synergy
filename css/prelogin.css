@@ -24,14 +24,14 @@ body {
     
     display: flex;
     flex-direction: column;
-    align-items: center;       /* centraliza horizontalmente */
-    justify-content: center;   /* centraliza verticalmente */
-    text-align: center;        /* centraliza textos */
+    align-items: center;       
+    justify-content: center;   
+    text-align: center;       
 }
 
 .left .logo {
-  width: 340px;   /* aumente aqui */
-    max-width: 90%; /* evita estourar a tela */
+  width: 340px;   
+    max-width: 90%; 
     margin-bottom: 40px;
   
 }
@@ -157,12 +157,12 @@ body {
 
 .logo-container {
   display: flex;
-  justify-content: center;   /* Centraliza HORIZONTAL */
-  align-items: center;       /* Centraliza VERTICAL */
-  height: 100vh;             /* Ocupa a tela toda */
+  justify-content: center;   
+  align-items: center;       
+  height: 100vh;             
   width: 100%;
 }
 
 .logo {
-  max-width: 300px; /* opcional */
+  max-width: 300px; 
 }
