@@ -1,68 +1,104 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="icon" href="../imgs/logo.png" type="image/png">
+    <link rel="icon" href="../imgs/logo.png" type="image/png">
     <title>Login - Synergy 360</title>
     <link rel="stylesheet" href="../css/login.css">
 
     <!-- Ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
 
-<div class="container">
+    <div class="container">
 
-    <!-- LADO ESQUERDO (FORMULÁRIO) -->
-    <div class="left">
+        <!-- LADO ESQUERDO (FORMULÁRIO) -->
+        <div class="left">
 
-     <a href="../index.html">   <img src="../imgs/synergy360 logo svg.svg" class="logo" alt="logo"></a>
+            <a href="../index.html"> <img src="../imgs/synergy360 logo svg.svg" class="logo" alt="logo"></a>
 
-        <h1>Bem vindo!</h1>
-        <p class="sub">Utilize suas credenciais para logar</p>
+            <h1>Bem vindo!</h1>
+            <p class="sub">Utilize suas credenciais para logar</p>
 
-        <form class="form">
+            <form class="form">
 
-            <label for="email">E-mail</label>
-            <input type="email" id="email" placeholder="">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="">
 
-            <label for="senha">Senha</label>
-            <input type="password" id="senha" placeholder="">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" placeholder="">
 
-            <div class="remember">
-                <input type="checkbox" id="lembrar">
-                <label for="lembrar">Lembrar de mim</label>
-            </div>
+                <div class="remember">
+                    <input type="checkbox" id="lembrar">
+                    <label for="lembrar">Lembrar de mim</label>
+                </div>
 
-    
-            <button type="button" class="btn" onclick="location.href='estudante.html'">Entrar</button>
 
-            
+                <button type="button" class="btn" onclick="fazerLogin()">Entrar</button>
 
-            
 
-            <a href="#" class="forgot">Esqueceu a senha ?</a>
 
-            <p class="register">
-                Não possui uma conta ? <a href="#" class="cad">Cadastre-se</a>
-            </p>
 
-        </form>
 
-        <footer class="footer">
-            <a href="#">Privacidade e Termos</a>
-            <a href="#">Fale conosco</a>
-        </footer>
+
+                <a href="#" class="forgot">Esqueceu a senha ?</a>
+
+                <p class="register">
+                    Não possui uma conta ? <a href="#" class="cad">Cadastre-se</a>
+                </p>
+
+            </form>
+
+            <footer class="footer">
+                <a href="#">Privacidade e Termos</a>
+                <a href="#">Fale conosco</a>
+            </footer>
+
+        </div>
+
+        <!-- LADO DIREITO -->
+        <div class="right">
+
+        </div>
 
     </div>
 
-    <!-- LADO DIREITO -->
-    <div class="right">
-     
-    </div>
 
-</div>
+
+
+    <script>
+
+        function fazerLogin() {
+            const email = document.getElementById("email").value.trim();
+            const senha = document.getElementById("senha").value.trim();
+
+
+            if (email === "admin" && senha === "123") {
+                window.location.href = "mentor.html";
+                return;
+            }
+
+            if (email === "aluno" && senha === "123") {
+                window.location.href = "estudante.html";
+                return;
+            }
+
+
+            alert("Credenciais incorretas. Tente novamente!");
+        }
+    </script>
+
+
+
+
+
+
+
 
 </body>
+
 </html>
