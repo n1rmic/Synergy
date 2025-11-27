@@ -692,3 +692,19 @@ footer {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(113, 0, 140, 0.4);
 }
+
+/* Estilo do Ícone (Novo Bloco) */
+.card-icon {
+    font-size: 3rem; /* Ícone grande */
+    color: #0099cc; /* Cor de destaque (Azul) */
+    margin-bottom: 25px; /* Mais espaço para separar o ícone do título */
+    /* Adiciona um efeito de profundidade sutil */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+/* Animação sutil no hover */
+.card:hover .card-icon {
+    color: rgb(113, 0, 140); /* Mudar para a cor roxa da marca no hover */
+    transform: scale(1.05);
+    transition: color 0.3s, transform 0.3s;
+}
