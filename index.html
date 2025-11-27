@@ -45,19 +45,23 @@
 
     <!-- QUEM SOMOS -->
     <section id="quem-somos" class="section">
-      <div class="container two-columns">
-        <div class="text">
-          <h2>Quem Somos</h2>
-          <br>
-          <p style="font-size: 20px;">A Synergy360 é uma plataforma que conecta pessoas, instituições e empresas em um ambiente colaborativo.</p>
-        
-          <p style="font-size: 20px;">Nosso objetivo é transformar potencial em resultados, unindo aprendizado, inovação e desenvolvimento de habilidades.</p>
+    <div class="qs-container">
+        <div class="qs-texto">
+            <h2>Quem Somos</h2>
+            <p>
+                A Synergy360 é uma plataforma que conecta pessoas, instituições e
+                empresas em um ambiente colaborativo.<br><br>
+                Nosso objetivo é transformar potencial em resultados, unindo
+                aprendizado, inovação e desenvolvimento de habilidades.
+            </p>
         </div>
-        <div class="graphic">
-          <img src="imgs/imag1.jpg" alt="pessoas Synergy" style="border-radius:20px; ">
+
+        <div class="qs-imagem">
+            <img src="imgs/imag1.jpg" alt="Equipe Synergy360">
         </div>
-      </div>
-    </section>
+    </div>
+</section>
+
 
 
   <!-- SERVIÇOS -->
@@ -143,62 +147,58 @@
 
 
     <!-- Vitrine de projetos-->
-  <section id="vitrine" class="section">
+ <section id="vitrine" class="section">
     <div class="container">
-      <h2>Vitrine de Projetos</h2>
+        <h2>Vitrine de Projetos</h2>
 
-      <div class="carousel">
-        <button class="carousel-btn prev">&#10094;</button>
+        <div class="carousel">
+            <button class="carousel-btn prev" aria-label="Anterior">&#10094;</button>
 
-        <div class="carousel-track">
-          <div class="card">
-            <img src="imgs/teste01.jpg" alt="Projeto 1">
-            <h3>Clean Tech (Bioeconomia Circular)</h3>
-            <p>
-              Purificando água com sementes de açaí.<br>
-              A Ver o Fruto transforma resíduos da cadeia do açaí em um sistema portátil capaz de tratar até 1.000 L/h sem o uso de químicos.<br>
-              Mais de 300 pessoas já têm acesso a água potável graças a esta tecnologia sustentável.
-            </p>
-            <a href="#" class="btn" target="_blank">Acesse a matéria completa</a>
-          </div>
+            <div class="carousel-track">
+                <div class="card project-card">
+                    <img src="imgs/teste01.jpg" alt="Purificação de água com sementes de açaí">
+                    <h3>Clean Tech (Bioeconomia Circular)</h3>
+                    <p>Sistema portátil que purifica **1.000 L/h de água potável** sem químicos, usando resíduos de açaí.</p>
+                    <a href="#" class="btn-card-cta" target="_blank">Conheça o Projeto</a>
+                </div>
 
-          <div class="card">
-            <img src="imgs/teste01.jpg" alt="Projeto 2 - Doroth">
-            <h3>Doroth (Agronegócio + Biotecnologia)</h3>
-            <p>
-              Molecularizando o campo.<br>
-              A Doroth automatiza testes moleculares com chips microfluídicos que aumentam a eficiência do monitoramento nas lavouras, 
-              reduzindo em até 20% o uso de químicos e otimizando decisões no agronegócio.
-            </p>
-            <a href="https://doroth.com.br" class="btn" target="_blank">Acesse a matéria completa</a>
-          </div>
+                <div class="card project-card">
+                    <img src="imgs/teste01.jpg" alt="Tecnologia para agronegócio">
+                    <h3>Doroth (Agronegócio + Biotecnologia)</h3>
+                    <p>Automação de testes moleculares que **reduz em 20% o uso de químicos** e otimiza decisões no campo.</p>
+                    <a href="https://doroth.com.br" class="btn-card-cta" target="_blank">Conheça o Projeto</a>
+                </div>
 
-          <div class="card">
-            <img src="imgs/blindog.jpg" alt="Projeto 3 - Blindog">
-            <h3>Blindog (Pet + Tecnologia Assistiva)</h3>
-            <p>
-              Tecnologia para inclusão animal.<br>
-              A Blindog criou um dispositivo inteligente para cães cegos que detecta obstáculos por vibração.<br>
-              Mais de 8.000 unidades vendidas em 12 países: mobilidade com amor e inovação.
-            </p>
-            <a href="https://blindog.com.br" class="btn" target="_blank">Acesse a matéria completa</a>
-          </div>
+                <div class="card project-card">
+                    <img src="imgs/blindog.jpg" alt="Tecnologia assistiva para pets">
+                    <h3>Blindog (Pet + Tecnologia Assistiva)</h3>
+                    <p>Dispositivo inteligente para cães cegos que detecta obstáculos por vibração. **Mais de 8.000 unidades vendidas.**</p>
+                    <a href="https://blindog.com.br" class="btn-card-cta" target="_blank">Conheça o Projeto</a>
+                </div>
 
-          <div class="card">
-            <img src="imgs/ambiente.jpg" alt="Projeto 4">
-            <h3>Projeto 04</h3>
-            <p>Projetos de impacto ambiental e social.</p>
-            <a href="#" class="btn" target="_blank">Saiba mais</a>
-          </div>
+                <div class="card project-card">
+                    <img src="imgs/ambiente.jpg" alt="Sustentabilidade e impacto social">
+                    <h3>Projeto 04 (Inovação Social)</h3>
+                    <p>Iniciativa focada em soluções colaborativas e escaláveis com alto impacto ambiental e social.</p>
+                    <a href="#" class="btn-card-cta" target="_blank">Saiba mais</a>
+                </div>
+            </div>
+
+            <button class="carousel-btn next" aria-label="Próximo">&#10095;</button>
         </div>
-
-        <button class="carousel-btn next">&#10095;</button>
-      </div>
     </div>
-  </section>
+</section>
 
 
-  <!--Termina aqui -->
+
+
+
+
+
+
+
+
+    
 
   <!--Noticias-->
 
@@ -210,7 +210,7 @@
 
         <!-- Notícia principal -->
         <div class="card-noticia destaque-noticia"
-            style="background-image: url('https://picsum.photos/800/500?random=1');">
+            style="background-image: url('https://www.blogs.unicamp.br/wp-content/uploads/2021/02/FNDCT.png');">
             <div class="overlay">
                 <span class="categoria">Destaque</span>
                 <h3>Presidente sanciona lei que libera R$ 22 bilhões do FNDCT</h3>
@@ -219,7 +219,7 @@
 
         <!-- Notícia menor 1 -->
         <div class="card-noticia"
-            style="background-image: url('https://picsum.photos/400/300?random=2');">
+            style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYUVL1t7buH-22bHffu0CCpOTAPdzjEd7HzA&s');">
             <div class="overlay">
                 <span class="categoria">Educação</span>
                 <h3>Projeto do Piauí sobre IA na educação é selecionado pela UNESCO</h3>
@@ -228,7 +228,7 @@
 
         <!-- Notícia menor 2 -->
         <div class="card-noticia"
-            style="background-image: url('https://picsum.photos/400/300?random=3');">
+            style="background-image: url('https://imagens.ebc.com.br/EuFAkFSuV0VT-gBRjT2Z1Xut3Gg=/754x0/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/08/25/54744917423_f9d08993ab_o.jpg?itok=zOswFlZy');">
             <div class="overlay">
                 <span class="categoria">Inovação</span>
                 <h3>Governo anuncia R$ 12 bilhões em crédito para inovação</h3>
@@ -246,7 +246,7 @@
 
         <!-- Notícia menor 4 -->
         <div class="card-noticia"
-            style="background-image: url('https://picsum.photos/400/300?random=5');">
+            style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR7uuj6cx9Puhp72wkX-tyxBKMg5q-HEuKSA&s');">
             <div class="overlay">
                 <span class="categoria">Ciência</span>
                 <h3>Projeto “Rhisotope” usa tecnologia nuclear para proteger rinocerontes</h3>
@@ -273,39 +273,17 @@
 
 
     <!-- CONTATO -->
-  <section id="contato" class="contato-section">
-    <div class="contato-container">
-      
-      <div class="contato-info">
-        <h3>Informações de Contato</h3>
-        <div class="info-item">
-          <strong>Endereço:</strong>
-          <p>Rua teste, Rio de Janeiro - RJ</p>
-        </div>
-        <div class="info-item">
-          <strong>Telefone:</strong>
-          <p>(21) 99999-9999<br>(21) 98888-8888</p>
-        </div>
-        <div class="info-item">
-          <strong>E-mail:</strong>
-          <p>contato@exemplo.com<br>suporte@exemplo.com</p>
-        </div>
-      </div>
-
-      <div class="contato-formulario">
-        <h2>Envie-nos uma mensagem</h2>
-        <p>Se você tiver dúvidas, sugestões ou quiser entrar em contato, envie uma mensagem abaixo. Será um prazer responder!</p>
-
-        <form action="#" method="post">
-          <input type="text" name="nome" placeholder="Digite seu nome" required>
-          <input type="email" name="email" placeholder="Digite seu e-mail" required>
-          <textarea name="mensagem" rows="4" placeholder="Digite sua mensagem" required></textarea>
-          <button type="submit">Enviar Mensagem</button>
-        </form>
-      </div>
-
+  <section id="chamada-final" class="cta-final light">
+    <div class="container">
+        <h2 data-aos="fade-up">Pronto para transformar potencial em resultados?</h2>
+        <p data-aos="fade-up" data-aos-delay="200">
+            Conecte sua equipe, inove em seus projetos e desenvolva talentos com a Synergy360.
+        </p>
+        <a href="pages/prelogin.html" class="btn-cta-final" data-aos="zoom-in" data-aos-delay="400">
+            Comece Agora
+        </a>
     </div>
-  </section>
+</section>
 
 
     <!-- FOOTER -->
