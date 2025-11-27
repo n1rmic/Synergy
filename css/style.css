@@ -456,3 +456,184 @@ footer {
   .carousel .card img { height: 150px; }
   .carousel-btn { display: none; } 
 }
+
+
+/* Animação do Hero */
+#hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
+  text-align: center;
+  opacity: 0;
+  animation: heroFade 1s ease forwards;
+}
+
+@keyframes heroFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Logo animada */
+.hero-logo {
+  width: 800px;
+  opacity: 0;
+  animation: logoPop 1.2s ease forwards;
+}
+
+@keyframes logoPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Texto animado */
+#hero p {
+  font-size: 26px;
+  margin-top: 20px;
+  opacity: 0;
+  animation: textIn 1s ease forwards;
+  animation-delay: 0.8s;
+}
+
+@keyframes textIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Animações */
+.section,
+#servicos,
+#quem-somos {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.section.show,
+#servicos.show,
+#quem-somos.show {
+  opacity: 1;
+  transform: translateY(0);
+  
+}
+
+
+/* ====== Correções para o layout de notícias (cole ao final do CSS) ====== */
+
+/* Força que as novas regras tenham prioridade dentro da seção de notícias */
+.noticias-section .grade-noticias {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  grid-template-rows: repeat(3, 160px);
+  gap: 18px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card geral */
+.noticias-section .card-noticia {
+  position: relative;
+  border-radius: 12px !important;
+  overflow: hidden;
+  min-height: 160px;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+/* Hover */
+.noticias-section .card-noticia:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+/* Destaque ocupa 3 linhas da grade */
+.noticias-section .destaque-noticia {
+  grid-row: span 3;
+  min-height: 480px; /* controla tamanho do grande */
+}
+
+/* Overlay escuro (melhor contraste) */
+.noticias-section .card-noticia::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.12));
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Conteúdo por cima do overlay */
+.noticias-section .card-noticia .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 14px 16px;
+  z-index: 2; /* acima do ::before */
+  color: #fff;
+}
+
+/* Categoria */
+.noticias-section .card-noticia .categoria {
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  display: inline-block;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+/* Títulos — força cor branca e sombra para legibilidade */
+.noticias-section .card-noticia .overlay h3 {
+  margin: 0;
+  color: #fff !important;
+  font-size: 1rem;
+  line-height: 1.25;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+/* Título maior no destaque */
+.noticias-section .destaque-noticia .overlay h3 {
+  font-size: 1.4rem;
+}
+
+/* Se o seu CSS antigo tiver regras .noticia h3 etc, estas garantem prioridade */
+.noticias-section .card-noticia h3,
+.noticias-section .card-noticia p {
+  color: inherit;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .noticias-section .grade-noticias {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 14px;
+  }
+  .noticias-section .destaque-noticia { min-height: 260px; }
+  .noticias-section .card-noticia { min-height: 160px; }
+}
