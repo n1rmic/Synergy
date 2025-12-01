@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background-color: #f5f6f8;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    height: 65px;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.logo {
+    height: 42px;
+}
+
+.navbar-center a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.navbar-center a:hover {
+    color: #0077b6;
+}
+
+/* DROPDOWN */
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    color: #444;
+    font-weight: 500;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #fff;
+    min-width: 200px;
+    right: 0;
+    top: 45px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 6px 0;
+    z-index: 5;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    background: #f2f2f2;
+}
+
+/* LAYOUT PRINCIPAL */
+.main-container {
+    display: flex;
+    padding: 30px;
+    gap: 30px;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 290px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+.company-avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: #ddd;
+    margin: 0 auto;
+}
+
+.company-name {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.company-area {
+    text-align: center;
+    margin-top: 4px;
+    color: #666;
+}
+
+.company-location {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #444;
+}
+
+.btn-primary {
+    width: 100%;
+    margin-top: 20px;
+    background: #0077b6;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-primary:hover {
+    opacity: .85;
+}
+
+/* CONTEÚDO PRINCIPAL */
+.content {
+    flex: 1;
+}
+
+.content-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-secondary {
+    padding: 7px 15px;
+    border-radius: 8px;
+    border: 1px solid #0077b6;
+    background: #fff;
+    color: #0077b6;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* PROJETOS */
+.project-card {
+    margin-top: 15px;
+    border: 1px solid #e4e4e4;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.tags {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+}
+
+.tag {
+    background: #eef7ff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    color: #005f92;
+}
+
+/* TECNOLOGIAS */
+.tech-list {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tech {
+    background: #e7f3ff;
+    padding: 7px 14px;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+/* EQUIPE */
+.team-list {
+    display: flex;
+    gap: 18px;
+    margin-top: 15px;
+}
+
+.team-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    background: #ddd;
+    border-radius: 50%;
+}
+
+.team-name {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.team-role {
+    font-size: 13px;
+    color: #666;
+}

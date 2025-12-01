@@ -4,256 +4,205 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../imgs/logo.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="../css/mentor.css">
 
     <title>Mentor — Synergy360</title>
-
-
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
-        <div class="container-fluid nav-conteiner">
-            <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html" id="brand">
-                <img src="../imgs/synergy360 logo svg.svg" alt="Synergy360" class="logo-top">
-            </a>
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-white bg-white border-bottom shadow-sm sticky-top">
+    <div class="container-fluid">
 
-            <ul class="nav ms-auto align-items-center nav-principal" role="tablist" aria-label="Menu principal">
-                <li class="nav-item">
-                    <button class="nav-link nav-btn active" data-view="feed" aria-selected="true">
-                        <i class="fa-solid fa-house"></i>
-                        <span>Feed</span>
-                    </button>
-                </li>
+        <!-- LOGO -->
+        <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
+            <img src="../imgs/synergy360 logo svg.svg" alt="Synergy360" class="logo-top">
+        </a>
 
-                <li class="nav-item">
-                    <button class="nav-link nav-btn" data-view="projetos">
-                        <i class="fa-solid fa-folder-open"></i>
-                        <span>Projetos</span>
-                    </button>
-                </li>
+        <ul class="nav ms-auto align-items-center">
 
-                <li class="nav-item">
-                    <button class="nav-link nav-btn" data-view="trilhas">
-                        <i class="fa-solid fa-route"></i>
-                        <span>Trilhas</span>
-                    </button>
-                </li>
+            <!-- projeto -->
+            <li class="nav-item nav-icon me-3">
+                <a class="nav-link text-dark" href="#">
+                    <i class="fa-solid fa-folder-open fs-5"></i>
+                    <small>Projetos</small>
+                </a>
+            </li>
 
-                <li class="nav-item">
-                    <button class="nav-link nav-btn" data-view="mensagens">
-                        <i class="fa-regular fa-comment"></i>
-                        <span>Mensagens</span>
-                    </button>
-                </li>
+            <!--Trilhas de Desenvolvimento -->
+            <li class="nav-item dropdown nav-icon dropdown-hover me-3">
+                <a class="nav-link text-dark" href="#" data-bs-toggle="dropdown">
+                    <i class="fa-solid fa-route fs-5"></i>
+                    <small>Trilhas</small>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end perfil-dropdown">
+                    <li><a class="dropdown-item" href="#">Big Five</a></li>
+                    <li><a class="dropdown-item" href="#">Sprint de Desenvolvimento</a></li>
+                    <li><a class="dropdown-item" href="#">Ferramentas de RH</a></li>
+                </ul>
+            </li>
 
-                <li class="nav-item">
-                    <button class="nav-link nav-btn" data-view="copilot">
-                        <i class="fa-solid fa-robot"></i>
-                        <span>Copilot</span>
-                    </button>
-                </li>
+            <!-- Mensagens -->
+            <li class="nav-item dropdown nav-icon dropdown-hover me-3">
+                <a class="nav-link text-dark" href="#" data-bs-toggle="dropdown">
+                    <i class="fa-regular fa-comment fs-5"></i>
+                    <small>Mensagens</small>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end perfil-dropdown">
+                    <li><a class="dropdown-item" href="#">Mensagens de Projetos</a></li>
+                    <li><a class="dropdown-item" href="#">Conversas privadas (1:1)</a></li>
+                </ul>
+            </li>
 
-                <li class="nav-item">
-                    <button class="nav-link nav-btn" data-view="dados">
-                        <i class="fa-solid fa-chart-line"></i>
-                        <span>Dados</span>
-                    </button>
-                </li>
+            <!-- copilot -->
+            <li class="nav-item dropdown nav-icon dropdown-hover me-3">
+                <a class="nav-link text-dark" href="#" data-bs-toggle="dropdown">
+                    <i class="fa-solid fa-robot fs-5"></i>
+                    <small>Copilot</small>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end perfil-dropdown">
+                    <li><a class="dropdown-item" href="#">Sugestões e Roadmap</a></li>
+                    <li><a class="dropdown-item" href="#">Lembretes e Prazos</a></li>
+                    <li><a class="dropdown-item" href="#">Apoio na Gestão / Insights</a></li>
+                </ul>
+            </li>
 
-                <li class="nav-item">
-                    <button class="nav-link nav-btn" data-view="insights">
-                        <i class="fa-solid fa-share-nodes"></i>
-                        <span>Insights360</span>
-                    </button>
-                </li>
+            <!-- Dados -->
+            <li class="nav-item nav-icon me-3">
+                <a class="nav-link text-dark" href="#">
+                    <i class="fa-solid fa-database fs-5"></i>
+                    <small>Dados</small>
+                </a>
+            </li>
 
-                <li class="nav-item">
-                    <button class="nav-link nav-btn" data-view="perfil">
-                        <i class="fa-regular fa-user"></i>
-                        <span>Perfil</span>
-                    </button>
-                </li>
-            </ul>
+            <!-- Insights360 -->
+            <li class="nav-item nav-icon me-3">
+                <a class="nav-link text-dark" href="#">
+                    <i class="fa-solid fa-chart-pie fs-5"></i>
+                    <small>Insights360</small>
+                </a>
+            </li>
+
+            <!-- Perfil -->
+            <li class="nav-item dropdown perfil-dropdown-parent">
+                <a class="nav-link dropdown-toggle" href="#" id="perfilMenu">
+                    <i class="fa-regular fa-user fs-5"></i>
+                    <small>Perfil</small>
+                </a>
+
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Foto e Descrição</a></li>
+                    <li><a class="dropdown-item" href="#">Projetos Desenvolvidos</a></li>
+                    <li><a class="dropdown-item" href="#">Habilidades de Destaque</a></li>
+                    <li><a class="dropdown-item" href="#">Cases de Sucesso</a></li>
+                    <li><a class="dropdown-item" href="#">Feed de Atualizações</a></li>
+                    <li><a class="dropdown-item" href="#">Rede de Contatos</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+<!-- NAVBAR -->
+
+
+
+
+<!-- 🔥 AQUI ESTÁ TODO O CÓDIGO QUE VOCÊ ENVIOU INSERIDO CORRETAMENTE -->
+<div class="container-fluid mt-4">
+
+    <div class="row">
+
+        <!-- COLUNA ESQUERDA -->
+        <div class="col-lg-3" id="coluna-esquerda">
+            <div class="perfil-card p-3">
+                <div class="d-flex flex-column align-items-center">
+                    <img src="../imgs/homem3.png" class="perfil-foto mb-2">
+                    <h6 class="fw-bold mb-0">Carlos Andrade</h6>
+                    <small class="text-muted">Inscrição: 123.456</small>
+
+                    <div class="d-flex align-items-center mt-2">
+                        <i class="fa-solid fa-star text-warning me-1"></i>
+                        <small>4.5</small>
+                    </div>
+
+                    <p class="text-center small mt-3 mb-1">
+                        Professor de Física e Robótica do Ensino Médio
+                    </p>
+                    <p class="text-center small text-muted">Fortaleza, Ceará</p>
+                </div>
+            </div>
         </div>
-    </nav>
 
-    <!-- CONTEÚDO PRINCIPAL (GRID) -->
-    <div class="container-fluid mt-4">
-        <div class="row gx-4">
+        <!-- COLUNA CENTRAL -->
+        <div class="col-lg-9" id="conteudo-central">
 
-            <!-- COLUNA ESQUERDA -->
-            <aside id="coluna-esquerda" class="col-lg-3 mb-4">
+            <!-- HERO -->
+            <div class="card hero-card p-4 mb-4 d-flex flex-row align-items-center justify-content-between">
+                
 
+                <img src="../imgs/bannermentor.png" class="hero-ilustra">
+            </div>
 
+            <!-- PARA VOCÊ -->
+            <h4 class="mb-2">Para você</h4>
+            <p class="text-muted small mt-n2">Projetos que têm similaridades com os seus</p>
 
+            <div class="card p-3 mb-4">
+                <h6 class="fw-bold">Mochila Solar Inteligente</h6>
+                <p class="small mt-2">
+                    Garantir autonomia energética completa para estudantes e aventureiros,
+                    permitindo que seus dispositivos sejam carregados em qualquer lugar.
+                </p>
 
-                <!-- Caixa de perfil -->
-                <div class="card perfil-card p-3 mb-3">
-                    <div class="d-flex gap-3">
-                        <img src="../imgs/homem3.png" class="perfil-foto">
-                        <div>
-                            <h6 class="mb-0">Bruno Henrique</h6>
-                            <small class="text-muted">Professor de Programação — Ensino Médio</small>
-                            <p class="mt-2 mb-1 small text-muted">Rio de Janeiro— Engajado em projetos de educação e
-                                inovação.</p>
-                            <div class="mt-2">
-                                <span class="badge bg-success text-white">Programação</span>
-                                <br>
-                                <span class="badge bg-warning text-dark">Sustentabilidade</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <p class="mt-3 text-muted small">Texto curto sobre o usuário, atividades e interesses em projetos e
-                        mentoria.</p>
-
-                    <div class="d-grid gap-2 mt-3">
-                        <button class="btn btn-outline-primary">Ver Perfil</button>
-                        <button class="btn btn-outline-secondary">Editar</button>
-                    </div>
+                <div class="mt-2">
+                    <span class="badge bg-light text-dark me-1">Ciência</span>
+                    <span class="badge bg-light text-dark">Meio ambiente</span>
                 </div>
+            </div>
 
-                <!-- Caixa "Para você" -->
-                <div class="card p-3">
-                    <h6>Para você</h6>
-                    <p class="small text-muted">Projetos que têm similaridades com os seus</p>
-                    <hr>
-                    <small class="d-block">Mochila Solar Inteligente</small>
-                    <a class="btn btn-sm btn-outline-primary mt-2" href="#">Ver projeto</a>
+            <!-- PROJETOS DESIGNADOS -->
+            <h4 class="mb-2">Projetos Designados</h4>
+            <p class="text-muted small mt-n2">Veja os projetos que você está responsável</p>
+
+            <div class="card p-3 mb-3">
+                <h6 class="fw-bold">Carregador Solar para Celular</h6>
+                <p class="small mt-2">
+                    Carregador 100% solar e de baixo custo para uso na escola usando materiais reciclados.
+                </p>
+
+                <div class="mt-2">
+                    <span class="badge bg-light text-dark me-1">Ciência</span>
+                    <span class="badge bg-light text-dark">Meio ambiente</span>
                 </div>
-            </aside>
+            </div>
 
-            <!-- CONTEÚDO CENTRAL (onde as views aparecem) -->
-            <main id="conteudo-central" class="col-lg-9 mb-4">
+            <div class="card p-3 mb-5">
+                <h6 class="fw-bold">Horta Comunitária Automatizada</h6>
+                <p class="small mt-2">
+                    Irrigação automática com sensores que economiza água e facilita o cultivo de alimentos.
+                </p>
 
-
-                <!-- Views: cada section é uma view; apenas a view ativa fica visível -->
-                <section id="view-feed" class="app-view active-view">
-                    <div class="card p-4 mb-4 hero-card">
-                        <div class="hero-banner-container">
-                            <img src="../imgs/bannermentor.png" alt="Banner" class="hero-banner">
-                        </div>
-
-                    </div>
-
-                    <div class="card p-3 mb-3">
-                        <h5>Para você</h5>
-                        <div class="card p-3 mt-2">
-                            <strong>Mochila Solar Inteligente</strong>
-                            <p class="small text-muted mb-0">Garantir autonomia energética completa para estudantes e
-                                aventureiros.</p>
-                        </div>
-                    </div>
-
-                    <div class="card p-3">
-                        <h5>Projetos Designados</h5>
-                        <div class="card p-3 mt-2">
-                            <strong>Carregador Solar para Celular</strong>
-                            <p class="small text-muted mb-0">Proposta de carregador 100% solar e de baixo custo para uso
-                                em escolas.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="view-projetos" class="app-view">
-                    <div class="card p-4 mb-4">
-                        <div class="d-flex justify-content-between align-items-start">
-                            <div>
-                                <h2>Projetos</h2>
-                                <p class="text-muted">Explore, gerencie e crie projetos dentro da plataforma.</p>
-                            </div>
-                            <div>
-                                <button class="btn btn-outline-primary">Criar Novo Projeto</button>
-                            </div>
-                        </div>
-
-                        <hr class="my-3">
-
-                        <div class="card p-3 mb-3">
-                            <h6>Lista de projetos</h6>
-                            <p class="small text-muted mb-0">Aqui aparecem projetos ativos, filtros por categoria e
-                                status.</p>
-                        </div>
-
-                        <div class="card p-3">
-                            <h6>Projeto: Horta Inteligente</h6>
-                            <p class="small text-muted mb-0">Resumo do projeto, responsáveis e progresso.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="view-trilhas" class="app-view">
-                    <div class="card p-4">
-                        <h2>Trilhas de Desenvolvimento</h2>
-                        <p class="text-muted">Escolha caminhos de aprendizado: Big Five, Sprint de Desenvolvimento e
-                            ferramentas de RH.</p>
-
-                        <div class="row mt-3">
-                            <div class="col-md-4">
-                                <div class="card p-3 mb-3">Big Five</div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card p-3 mb-3">Sprint de Desenvolvimento</div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card p-3 mb-3">Ferramentas de RH</div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="view-mensagens" class="app-view">
-                    <div class="card p-4">
-                        <h2>Mensagens</h2>
-                        <p class="text-muted">Mensagens de projetos e conversas privadas (1:1).</p>
-                        <div class="card p-3 mt-3">Nenhuma mensagem selecionada — espaço para conversas.</div>
-                    </div>
-                </section>
-
-                <section id="view-copilot" class="app-view">
-                    <div class="card p-4">
-                        <h2>Copilot (Assistente IA do Projeto)</h2>
-                        <p class="text-muted">Sugestões, roadmap, lembretes e apoio na gestão.</p>
-                        <div class="card p-3 mt-3">Painel inicial do Copilot — ações rápidas e recomendações.</div>
-                    </div>
-                </section>
-
-                <section id="view-dados" class="app-view">
-                    <div class="card p-4">
-                        <h2>Dados / Dashboard</h2>
-                        <p class="text-muted">Upload de dados, indicadores e relatórios.</p>
-                        <div class="card p-3 mt-3">Indicadores principais e KPIs.</div>
-                    </div>
-                </section>
-
-                <section id="view-insights" class="app-view">
-                    <div class="card p-4">
-                        <h2>Insights360</h2>
-                        <p class="text-muted">Visões e recomendações baseadas em dados.</p>
-                        <div class="card p-3 mt-3">Blocos de insights e recomendações.</div>
-                    </div>
-                </section>
-
-                <section id="view-perfil" class="app-view">
-                    <div class="card p-4">
-                        <h2>Perfil</h2>
-                        <p class="text-muted">Foto, descrição, projetos desenvolvidos e habilidades.</p>
-                        <div class="card p-3 mt-3">Resumo do perfil, histórico e ações.</div>
-                    </div>
-                </section>
-            </main>
+                <div class="mt-2">
+                    <span class="badge bg-light text-dark me-1">Tecnologia</span>
+                    <span class="badge bg-light text-dark me-1">Meio ambiente</span>
+                    <span class="badge bg-light text-dark">Sustentabilidade</span>
+                </div>
+            </div>
 
         </div>
     </div>
+</div>
 
 
-    <script src="../js/mentor.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

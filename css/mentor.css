@@ -11,42 +11,7 @@
 html,body { height:100%; margin:0; padding:0; background:var(--fundo); color:var(--texto); font-family: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, Arial; font-size:15px; }
 
 
-.navbar { background: #fff; padding: 8px 18px; }
-.nav-principal { gap: 10px; align-items:center; }
-.logo-top { height:36px; }
 
-
-.nav-btn {
-  border: 0;
-  background: transparent;
-  color: #222;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  font-size:13px;
-  gap:4px;
-  padding:6px 10px;
-  cursor:pointer;
-  border-radius:8px;
-  transition: all .18s ease;
-}
-.nav-btn i { font-size:18px; }
-
-/* hover / foco */
-.nav-btn:hover, .nav-btn:focus {
-  background: rgba(11,120,230,0.06);
-  color: var(--azul);
-  transform: translateY(-2px);
-  outline: none;
-}
-
-/* estado ativo (item selecionado) */
-.nav-btn.active {
-  background: rgba(91,44,131,0.08);
-  color: var(--roxo);
-  box-shadow: 0 2px 0 rgba(91,44,131,0.12) inset;
-}
 
 /* container principal spacing */
 .container-fluid { max-width:1280px; margin:0 auto; }
@@ -107,7 +72,8 @@ h5, h6 { color: #333; font-weight:700; }
 .badge { font-weight:600; border-radius: 6px; padding: 6px 8px; }
 
 
-.card > hr { border-color: #eee; margin: 1rem 0; }
+.card > hr { border-color: #eee; margin: 1rem 0;box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+ }
 
 
 .perfil-foto {
@@ -132,4 +98,234 @@ h5, h6 { color: #333; font-weight:700; }
     width: 100%;
     height: 100%;
     object-fit: contain; 
+}
+
+.dropdown-hover .dropdown-menu {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.15s ease;
+}
+
+
+
+.dropdown-hover:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-menu {
+    border-radius: 12px !important;
+    padding: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.dropdown-item {
+    padding: 10px 14px;
+    border-radius: 8px;
+}
+
+.dropdown-item:hover {
+    background: #f1f3f5;
+}
+
+
+/* navbar + drop */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block !important;
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-item.dropdown .dropdown-menu:hover {
+    display: block !important;
+}
+
+
+.nav-item.dropdown.perfil-dropdown-parent .dropdown-menu {
+    right: auto !important;
+    left: 0 !important;
+    transform: translateX(-60%) !important; /* Ajuste fino */
+    min-width: 240px;
+}
+
+
+.nav-item.dropdown .dropdown-menu {
+    transition: opacity .15s ease;
+}
+
+
+.navbar .nav-link,
+.navbar .dropdown-toggle {
+    color: #222 !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .dropdown-toggle:hover {
+    color: #000 !important;
+}
+
+
+.navbar .nav-link i {
+    color: #222 !important;
+}
+
+.navbar .dropdown-item {
+    color: #333 !important;
+}
+
+.navbar .dropdown-item i {
+    color: #555 !important;
+}
+
+.logo-top{
+  height: 36px;
+}
+/* navbar + drop */
+
+
+
+/* --- HERO --- */
+.hero-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: var(--card-shadow);
+}
+.hero-ilustra {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* --- TITULOS E ESPAÇAMENTOS --- */
+h4 {
+    font-weight: 700;
+    color: #2a2a3a;
+}
+
+/* --- CARDS --- */
+.card {
+    border-radius: 14px;
+    border: none;
+    box-shadow: var(--card-shadow);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+
+}
+
+/* --- PERFIL LATERAL --- */
+.perfil-card {
+    border-radius: 14px;
+    box-shadow: var(--card-shadow);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+
+}
+.perfil-foto {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* --- BADGES --- */
+.badge {
+    border-radius: 6px;
+    font-weight: 600;
+    padding: 6px 10px;
+    background: #eef1f4 !important;
+    color: #333 !important;
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 992px){
+    .hero-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    .hero-ilustra {
+        margin-top: 20px;
+        width: 70%;
+    }
+}
+
+
+:root {
+  --bg: #f4f6f8;
+  --bg-card: #fff;
+  --text: #1a1a1a;
+  --text-light: #6f6f6f;
+  --primary: #0a66c2;
+  --radius: 12px;
+  --shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* Layout centralizado */
+.main-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* CARD mais moderno */
+.card {
+  background: var(--bg-card);
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* Títulos estilo LinkedIn */
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: var(--text-light);
+}
+
+/* Inputs mais modernos */
+.input-modern {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d0d7de;
+  border-radius: var(--radius);
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.input-modern:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(10, 102, 194, 0.2);
+}
+
+/* Botão estilo LinkedIn */
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.btn-primary:hover {
+  background: #004a8f;
+}
+
+/* Layout responsivo */
+@media (max-width: 768px) {
+  .main-container {
+    margin: 20px;
+  }
 }

@@ -131,6 +131,8 @@ body{
 h5, h6 { font-family: "Montserrat", "Source Sans 3", sans-serif; font-weight:700; color: var(--roxo); }
 small.text-muted { color: #7a8a92; }
 
+
+
 /* espaço entre seções */
 section { margin-bottom: 18px; }
 .dropdown-hover .dropdown-menu {
@@ -139,6 +141,8 @@ section { margin-bottom: 18px; }
     visibility: hidden;
     transition: 0.15s ease;
 }
+
+
 
 .dropdown-hover:hover .dropdown-menu {
     display: block;
