@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // AGORA SIM está correto:
+
   views.forEach(v => {
     if (!v.classList.contains('active-view')) {
       v.style.display = 'none';
@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  /* css overlay */
+  /* css  */
   const overlayCSS = `
     .project-overlay{
       position:fixed; inset:0;
