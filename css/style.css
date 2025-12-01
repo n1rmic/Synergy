@@ -708,3 +708,8 @@ footer {
     transform: scale(1.05);
     transition: color 0.3s, transform 0.3s;
 }
+
+.nav-links .roxo {
+  color: rgb(113, 0, 140);
+  font-weight: 700;
+}
