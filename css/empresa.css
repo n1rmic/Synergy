@@ -2,7 +2,6 @@
     --verde: #6CC24A;
     --roxo: #5b2c83;
     --azul: #0b78e6;
-    /* primary blue used for accents */
     --texto: #23323a;
     --fundo: #f6f7f8;
     --card-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
@@ -10,7 +9,7 @@
     --transition-medium: 300ms;
 }
 
-/* base */
+
 * {
     box-sizing: border-box;
 }
@@ -40,7 +39,7 @@ body {
     height: 36px;
 }
 
-/* layout of icons in navbar */
+
 .nav-icon .nav-link,
 .nav-main-link {
     display: flex;
@@ -73,7 +72,7 @@ body {
     box-shadow: 0 2px 0 rgba(91, 44, 131, 0.12) inset;
 }
 
-/* dropdown styling (hover on desktop) */
+/* hover */
 .perfil-dropdown {
     min-width: 220px;
     padding: 8px;
@@ -82,7 +81,6 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* show dropdown on hover (desktop) */
 @media (hover: hover) and (pointer: fine) {
     .dropdown-hover:hover>.dropdown-menu {
         display: block;
@@ -90,13 +88,13 @@ body {
     }
 }
 
-/* profile dropdown alignment tweak */
+
 .perfil-dropdown-parent .dropdown-menu {
     right: 0;
     left: auto;
 }
 
-/* cards / layout */
+
 .perfil-card {
     background: #fff;
     border-radius: 12px;
@@ -112,7 +110,7 @@ body {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
-/* central cards */
+
 .card {
     border: 0;
     border-radius: 12px;
@@ -165,7 +163,7 @@ body {
     background: linear-gradient(180deg, #fff, #fbfdff);
 }
 
-/* animated underline on headings */
+
 h2 {
     font-weight: 700;
     color: #222;
@@ -184,7 +182,7 @@ h2::after {
     opacity: .12;
 }
 
-/* small typography tweaks */
+
 h5,
 h6 {
     color: #333;
@@ -195,14 +193,14 @@ h6 {
     font-size: 0.9rem;
 }
 
-/* badges */
+
 .badge {
     font-weight: 600;
     border-radius: 6px;
     padding: 6px 8px;
 }
 
-/* chat styles */
+
 .chat-window {
     display: flex;
     flex-direction: column;
@@ -398,13 +396,13 @@ h6 {
 }
 
 
-/* === Atividade recente === */
+/* atividades*/
 .atividade-card ul li {
     display: flex;
     align-items: center;
 }
 
-/* === KPIs === */
+
 .kpi-card strong {
     font-size: 14px;
 }
@@ -418,7 +416,7 @@ h6 {
     border-bottom: 0;
 }
 
-/* === Sugestões de talentos === */
+/* Talentos*/
 .talento-item {
     background: #f9fafb;
     border: 1px solid #eee;

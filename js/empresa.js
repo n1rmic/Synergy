@@ -1,15 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
 
- 
-  const navLinks = document.querySelectorAll('.nav-main-link'); // itens SPA
-  const views = document.querySelectorAll('.app-view');         // telas SPA
-
-
+  const navLinks = document.querySelectorAll('.nav-main-link'); 
+  const views = document.querySelectorAll('.app-view');
 
   function showView(targetName, pushState = false) {
     const target = document.querySelector(`#view-${targetName}`);
     if (!target) return;
-
 
     navLinks.forEach(n =>
       n.classList.toggle('active', n.dataset.target === targetName)
@@ -27,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 250);
     }
 
-  
     target.style.display = 'block';
     requestAnimationFrame(() => {
       target.classList.add('view-enter-active');
@@ -37,20 +32,18 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 320);
     });
 
-    // atualiza URL
     if (pushState) {
       history.pushState({ view: targetName }, '', `#${targetName}`);
     }
   }
 
-
+  // AGORA SIM está correto:
+  views.forEach(v => {
     if (!v.classList.contains('active-view')) {
       v.style.display = 'none';
     }
   });
 
-
- 
   document.querySelectorAll('[data-target]').forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
@@ -58,7 +51,6 @@ document.addEventListener('DOMContentLoaded', function () {
       showView(target, true);
     });
   });
-
 
   navLinks.forEach(n => {
     n.addEventListener('click', e => {
@@ -68,19 +60,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // voltar no navegador
   window.addEventListener('popstate', ev => {
     const view = (ev.state && ev.state.view) || 'feed';
     showView(view, false);
   });
 
-  // Marca FEED ativo ao iniciar
   navLinks.forEach(n => {
     n.classList.toggle('active', n.dataset.target === 'feed');
   });
 
-
-  /*cars  */
+  /* cards */
   document.querySelectorAll('.card-clickable, [data-open]').forEach(el => {
     el.addEventListener('click', e => {
       e.preventDefault();
@@ -133,7 +122,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-
   /* chat */
   const chatMessages = document.getElementById('chatMessages');
   const chatInput = document.getElementById('chatInput');
@@ -177,7 +165,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     renderMessages(seed);
 
-    // resposta automática
     setTimeout(() => {
       const replies = [
         'Perfeito, vou confirmar!',
@@ -210,8 +197,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-
-  /* css*/
+  /* css overlay */
   const overlayCSS = `
     .project-overlay{
       position:fixed; inset:0;
