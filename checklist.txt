@@ -1,0 +1,131 @@
+- Pagina principal - falta vitrine de projetos 
+  Rodapé - algumas empresas que fazem parte da synergy
+
+
+ALTERAR TODAS AS LOCALIZAÇÃO PARA FORTALEZA CEARA
+
+
+- remover o pré login
+  
+
+
+- login unificado
+  
+resolver lembrar de mim
+
+
+
+
+
+
+
+-Pagina Estudante - Portfolio
+Adicionar trilha
+Navbar:
+
+Projetos ->  Projetos concluídos, Projetos em andamento.
+
+Mensagens -> remover mensagem privada
+
+Mensagens e Convites*** 
+
+
+Quando clicar em mensagens,
+
+dropdowns > Projetos > todos os projetos/
+Mensagens
+
+Quando clico em convites 
+
+
+
+Quando clicar em perfil, deve ser exibido o Meu Perfil (criar outra página, usuário.html)
+
+
+https://docs.google.com/document/d/1eF8co3oDp_WhYsVkm-pYe97hkocW5kf2bVa3WFz6FwU/edit?tab=t.0
+
+
+modificar PARA VOCE, para Noticias para você
+
+
+Adicionar No feed de interesses, mais um card -> Empresas, entre outros (5)
+
+
+Conexões
+Adicione mais perfil
+
+
+
+
+
+
+
+
+
+
+
+- pagina mentor -
+
+adicionar empresa do mentor
+
+Remover banner, é uma propaganda de uma empresa
+O banner fica em alunos
+
+add propaganda Energy menor em algum canto
+
+
+No perfil do mentor, adicione um resumo + informações 
+
+
+Adicionar perfil do mentor
+
+
+Em copilot, trabalhar com lembrete. 
+
+
+Criar um convite de projeto
+
+
+
+
+
+
+
+
+
+
+
+- Perfil empresa -
+
+Remover widgets linkdin
+
+
+Em Sugestões de talentos, colocar instituições.
+
+
+Alterar o feed, parecido com mentor, porem focado para empresa
+
+
+Criar  COPILOT pagina Apoio na gestão (ver no figma Projetos - Feedback - Submeter - Com arquivo)
+
+
+remover logo empresa na navbar
+
+Remover o SPA
+
+
+
+
+
+Ao invés de criar perfil de instituição:
+
+- Criar outro perfil empresa Sertão verde 
+
+
+Ela terá o relatório Dashboard
+
+
+
+
+
+
