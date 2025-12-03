@@ -22,32 +22,17 @@ Adicionar trilha
 Navbar:
 
 
-Mensagens e Convites*** 
-
-
-Quando clicar em mensagens,
-
-dropdowns > Projetos > todos os projetos/
-Mensagens
-
-Quando clico em convites 
-
-
-
 Quando clicar em perfil, deve ser exibido o Meu Perfil (criar outra página, usuário.html)
 
 
 https://docs.google.com/document/d/1eF8co3oDp_WhYsVkm-pYe97hkocW5kf2bVa3WFz6FwU/edit?tab=t.0
 
 
-modificar PARA VOCE, para Noticias para você
 
 
-Adicionar No feed de interesses, mais um card -> Empresas, entre outros (5)
 
+Em conexões, adiciona mais 3 perfis
 
-Conexões
-Adicione mais perfil
 
 
 

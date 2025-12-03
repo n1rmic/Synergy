@@ -1,219 +1,185 @@
-:root{
+:root {
   --verde: #6CC24A;
   --roxo: #5b2c83;
   --azul: #00aeef;
   --amarelo: #f4bf2a;
   --texto: #23323a;
-  --card-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  --fundo: #f6f7f8;
+  --card-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
- @font-face {
-            font-family: 'Montserrat';
-            src: url('fonts/Montserrat.ttf') format('truetype');
-            font-weight: 700;
-        }
+/* Fontes (se você tiver os arquivos, mantêm; senão o fallback funciona) */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat.ttf') format('truetype');
+  font-weight: 700;
+}
 
-        @font-face {
-            font-family: 'Source Sans 3';
-            src: url('fonts/SourceSans3.ttf') format('truetype');
-            font-weight: 400;
-        }
+@font-face {
+  font-family: 'Source Sans 3';
+  src: url('fonts/SourceSans3.ttf') format('truetype');
+  font-weight: 400;
+}
 
-        :root {
-            --verde: #6CC24A;
-            --roxo: #5b2c83;
-            --azul: #00aeef;
-            --amarelo: #f4bf2a;
-            --texto: #23323a;
-            --fundo: #f6f7f8;
-            --card-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-        }
-
-        body {
-            font-family: "Source Sans 3", Arial, sans-serif;
-            background: var(--fundo);
-            color: var(--texto);
-        }
-
-body{
-  background: #f6f7f8;
+body {
+  font-family: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--fundo);
   color: var(--texto);
-  font-family: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Logotipo topo */
-.logo-top{
+.logo-top {
   height: 36px;
 }
 
 /* PERFIL */
-.perfil-card{
+.perfil-card {
   box-shadow: var(--card-shadow);
   border-radius: 10px;
   background: #fff;
+  margin-top: 15px;
 }
 
-.avatar{
-  width:64px;
-  height:64px;
-  object-fit:cover;
+.avatar {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
   border-radius: 50%;
   border: 3px solid #fff;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
-.avatar-sm{
-  width:42px;
-  height:42px;
+.avatar-sm {
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   object-fit: cover;
 }
 
-
-
 /* thumbs dos destaques */
-.thumb{
-  width:56px;
-  height:56px;
-  object-fit:cover;
-  border-radius:8px;
+.thumb {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 /* cartões de destaque */
-.destaque-card{
+.destaque-card {
   border-radius: 10px;
   background: #fff;
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   box-shadow: var(--card-shadow);
 }
 
 /* cards principais */
-.card{
+.card {
   border: 0;
   border-radius: 12px;
 }
 
 /* botão verde (primário) */
-.btn-success{
+.btn-success {
   background: var(--verde);
   border-color: var(--verde);
 }
 
-.btn-success:hover{
+.btn-success:hover {
   background: #57a735;
   border-color: #57a735;
 }
 
-/* LOGO ORG */
-.org-logo{
-  width:40px;
-  height:40px;
-  object-fit:cover;
-  border-radius:6px;
-}
-
 /* estilo dos badges */
-.badge{
+.badge {
   border-radius: 8px;
-  font-weight:600;
+  font-weight: 600;
 }
 
-/* responsi */
-@media (max-width: 992px){
-  main.col-lg-6{ order: 2; }
-  aside.col-lg-3:first-child{ order: 1; }
-  aside.col-lg-3:last-child{ order: 3; }
+/* responsividade */
+@media (max-width: 992px) {
+  main.col-lg-6 {
+    order: 2;
+  }
+
+  aside.col-lg-3:first-child {
+    order: 1;
+  }
+
+  aside.col-lg-3:last-child {
+    order: 3;
+  }
 }
 
 /* ajustes visuais pequenos */
-h5, h6 { font-family: "Montserrat", "Source Sans 3", sans-serif; font-weight:700; color: var(--roxo); }
-small.text-muted { color: #7a8a92; }
+h5,
+h6 {
+  font-family: "Montserrat", "Source Sans 3", sans-serif;
+  font-weight: 700;
+  color: var(--roxo);
+}
 
-
+small.text-muted {
+  color: #7a8a92;
+}
 
 /* espaço entre seções */
-section { margin-bottom: 18px; }
-.dropdown-hover .dropdown-menu {
-    display: none;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.15s ease;
+section {
+  margin-bottom: 18px;
 }
 
-
-
-.dropdown-hover:hover .dropdown-menu {
-    display: block;
-    opacity: 1;
-    visibility: visible;
-}
-
+/* Dropdowns */
 .dropdown-menu {
-    border-radius: 12px !important;
-    padding: 10px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  border-radius: 12px !important;
+  padding: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  white-space: nowrap;
 }
 
 .dropdown-item {
-    padding: 10px 14px;
-    border-radius: 8px;
+  padding: 10px 14px;
+  border-radius: 8px;
 }
 
 .dropdown-item:hover {
-    background: #f1f3f5;
+  background: #f1f3f5;
 }
 
-
-/* === dropdown === */
-.nav-item.dropdown:hover .dropdown-menu {
-    display: block !important;
-    opacity: 1;
-    visibility: visible;
+/* === dropdown hover open (nav) === */
+.nav-item.dropdown:hover>.dropdown-menu {
+  display: block !important;
+  opacity: 1;
+  visibility: visible;
 }
-
-.nav-item.dropdown .dropdown-menu:hover {
-    display: block !important;
-}
-
-
-.nav-item.dropdown.perfil-dropdown-parent .dropdown-menu {
-    right: auto !important;
-    left: 0 !important;
-    transform: translateX(-60%) !important; /* Ajuste fino */
-    min-width: 240px;
-}
-
 
 .nav-item.dropdown .dropdown-menu {
-    transition: opacity .15s ease;
+  transition: opacity .15s ease;
 }
-
 
 .navbar .nav-link,
 .navbar .dropdown-toggle {
-    color: #222 !important;
+  color: #222 !important;
 }
 
 .navbar .nav-link:hover,
 .navbar .dropdown-toggle:hover {
-    color: #000 !important;
+  color: #000 !important;
 }
 
-
 .navbar .nav-link i {
-    color: #222 !important;
+  color: #222 !important;
 }
 
 .navbar .dropdown-item {
-    color: #333 !important;
+  color: #333 !important;
 }
 
 .navbar .dropdown-item i {
-    color: #555 !important;
+  color: #555 !important;
 }
-
 
 /* Estilo para permitir dropdown em multi-nível */
 .dropdown-submenu {
@@ -223,8 +189,10 @@ section { margin-bottom: 18px; }
 .dropdown-submenu > .dropdown-menu {
   top: 0;
   left: 100%;
+  margin-top: -5px;
   margin-left: 0.1rem;
   margin-right: 0.1rem;
+  display: none;
 }
 
 /* Abrir submenus ao passar o mouse */
@@ -232,7 +200,146 @@ section { margin-bottom: 18px; }
   display: block;
 }
 
-/* Corrige alinhamento */
-.dropdown-menu {
-  white-space: nowrap;
+/* === ESTILOS NOVOS PARA O PERFIL DETALHADO === */
+
+/* Remove a seta padrão do botão dropdown se ele for usado como toggle */
+.no-caret::after {
+    display: none;
+}
+
+/* Títulos das seções internas do perfil */
+.perfil-titulo {
+    letter-spacing: 0.5px;
+    font-size: 0.7rem;
+    margin-bottom: 8px;
+    color: var(--roxo) !important; 
+}
+
+/* Tamanho de fonte extra pequeno para detalhes de portfolio */
+.smaller {
+    font-size: 0.8rem;
+    line-height: 1.2;
+}
+
+/* Estilo do bloco de "Visão Pessoal" */
+.border-success-dark {
+    border-color: #57a735 !important; /* Um verde um pouco mais escuro para destaque */
+}
+
+/* Badges Soft (Fundo claro, texto forte) */
+.bg-soft-success {
+    background-color: rgba(108, 194, 74, 0.15); 
+    color: var(--verde);
+}
+.border-success-subtle {
+    border-color: rgba(108, 194, 74, 0.3) !important;
+}
+
+.bg-soft-primary {
+    background-color: rgba(0, 174, 239, 0.15); /* Baseado no seu --azul */
+    color: var(--azul);
+}
+.border-primary-subtle {
+    border-color: rgba(0, 174, 239, 0.3) !important;
+}
+
+/* Conexões (lado direito) */
+.conexoes {
+  margin-top: 15px;
+}
+
+.lista-conexoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 18px;
+}
+
+.card-conexao {
+  background: #fff;
+  border-radius: 14px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transition: 0.2s;
+}
+
+.card-conexao:hover {
+  transform: translateY(-3px);
+}
+
+.card-conexao img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.card-conexao h4 {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.card-conexao p {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* Botão "Ver perfil" dentro do card-conexao — específico para não afetar demais botões da página */
+.card-conexao .btn-ver {
+  border: none;
+  background: var(--azul);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 8px auto 0;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+}
+
+.card-conexao .btn-ver i {
+  width: 16px;
+  height: 16px;
+}
+
+/* Segurança visual: garantir sombreamento padrão nas cards */
+.card[style*="box-shadow"], .perfil-card, .destaque-card {
+  will-change: transform;
+}
+
+/* pequenos ajustes em badges e textos para consistência */
+.badge.bg-light.text-primary {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+
+.card-feed {
+    background: #fff;
+    padding: 16px;
+    border-radius: 14px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    margin-bottom: 16px;
+}
+
+.card-feed h4 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+
+.card-feed p {
+    font-size: 0.87rem;
+    color: #555;
+}
+
+.icon-feed {
+    width: 22px;
+    height: 22px;
+    stroke-width: 1.8;
+    margin-bottom: 10px;
+    color: #444;
 }
