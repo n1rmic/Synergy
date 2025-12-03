@@ -213,3 +213,26 @@ section { margin-bottom: 18px; }
 .navbar .dropdown-item i {
     color: #555 !important;
 }
+
+
+/* Estilo para permitir dropdown em multi-nível */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-left: 0.1rem;
+  margin-right: 0.1rem;
+}
+
+/* Abrir submenus ao passar o mouse */
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+
+/* Corrige alinhamento */
+.dropdown-menu {
+  white-space: nowrap;
+}

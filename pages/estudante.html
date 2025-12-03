@@ -11,340 +11,336 @@
     <title>Estudante — Synergy360</title>
 </head>
 
-
-
-
 <body>
 
 <!--Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-white bg-white border-bottom shadow-sm sticky-top">
-        <div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-white bg-white border-bottom shadow-sm sticky-top">
+    <div class="container-fluid">
 
-            <!-- LOGO -->
-            <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
-                <img src="../imgs/synergy360 logo svg.svg" alt="Synergy360" class="logo-top">
-            </a>
+        <!-- LOGO -->
+        <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
+            <img src="../imgs/synergy360 logo svg.svg" alt="Synergy360" class="logo-top">
+        </a>
 
-            <ul class="nav ms-auto align-items-center">
+        <ul class="nav ms-auto align-items-center">
 
-                <!-- projeto -->
-                <li class="nav-item nav-icon me-3">
-                    <a class="nav-link text-dark" href="#">
-                        <i class="fa-solid fa-folder-open fs-5"></i>
-                        <small>Projetos</small>
-                    </a>
-                </li>
+            <!-- Projetos -->
+            <li class="nav-item dropdown me-3">
+                <a class="nav-link text-dark dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                    <i class="fa-solid fa-folder-open fs-5"></i>
+                    <small>Projetos</small>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end perfil-dropdown">
+                    <li><a class="dropdown-item" href="#">Projetos concluidos</a></li>
+                    <li><a class="dropdown-item" href="#">Projetos em andamento</a></li>
+                </ul>
+            </li>
 
-                <!--Trilhas de Desenvolvimento -->
-                <li class="nav-item dropdown nav-icon dropdown-hover me-3">
-                    <a class="nav-link text-dark" href="#" data-bs-toggle="dropdown">
-                        <i class="fa-solid fa-route fs-5"></i>
-                        <small>Trilhas</small>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end perfil-dropdown">
-                        <li><a class="dropdown-item" href="#">Big Five</a></li>
-                        <li><a class="dropdown-item" href="#">Sprint de Desenvolvimento</a></li>
-                        <li><a class="dropdown-item" href="#">Ferramentas de RH</a></li>
-                    </ul>
-                </li>
+            <!-- Trilhas -->
+            <li class="nav-item dropdown me-3">
+                <a class="nav-link text-dark dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                    <i class="fa-solid fa-route fs-5"></i>
+                    <small>Trilhas</small>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end perfil-dropdown">
+                    <li><a class="dropdown-item" href="#">Big Five</a></li>
+                    <li><a class="dropdown-item" href="#">Sprint de Desenvolvimento</a></li>
+                    <li><a class="dropdown-item" href="#">Ferramentas de RH</a></li>
+                </ul>
+            </li>
 
-                <!-- Mensagens -->
-                <li class="nav-item dropdown nav-icon dropdown-hover me-3">
-                    <a class="nav-link text-dark" href="#" data-bs-toggle="dropdown">
-                        <i class="fa-regular fa-comment fs-5"></i>
-                        <small>Mensagens</small>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end perfil-dropdown">
-                        <li><a class="dropdown-item" href="#">Chat</a></li>
-                        <li><a class="dropdown-item" href="#">Convites</a></li>
-                    </ul>
-                </li>
+            <!-- Mensagens -->
+            <li class="nav-item dropdown me-3">
+                <a class="nav-link text-dark dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                    <i class="fa-regular fa-comment fs-5"></i>
+                    <small>Mensagens</small>
+                </a>
 
-                <!-- copilot -->
-                <li class="nav-item dropdown nav-icon dropdown-hover me-3">
-                    <a class="nav-link text-dark" href="#" data-bs-toggle="dropdown">
-                        <i class="fa-solid fa-robot fs-5"></i>
-                        <small>Copilot</small>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end perfil-dropdown">
-                        <li><a class="dropdown-item" href="#">Sugestões e Roadmap</a></li>
-                        <li><a class="dropdown-item" href="#">Lembretes e Prazos</a></li>
-                        <li><a class="dropdown-item" href="#">Apoio na Gestão / Insights</a></li>
-                    </ul>
-                </li>
+                <ul class="dropdown-menu dropdown-menu-end perfil-dropdown">
 
-                <!-- Dados -->
-                <li class="nav-item nav-icon me-3">
-                    <a class="nav-link text-dark" href="#">
-                        <i class="fa-solid fa-database fs-5"></i>
-                        <small>Dados</small>
-                    </a>
-                </li>
+                    <!-- CHAT -->
+                    <li class="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle" href="#">
+                            Chat
+                        </a>
 
-                <!-- Insights360 -->
-                <li class="nav-item nav-icon me-3">
-                    <a class="nav-link text-dark" href="#">
-                        <i class="fa-solid fa-chart-pie fs-5"></i>
-                        <small>Insights360</small>
-                    </a>
-                </li>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Mensagens</a></li>
 
-                <!-- Perfil -->
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">
+                                    Projetos
+                                </a>
 
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Todos os projetos</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
 
-                <li class="nav-item dropdown perfil-dropdown-parent">
-                    <a class="nav-link dropdown-toggle" href="#" id="perfilMenu">
-                        <i class="fa-regular fa-user fs-5"></i>
-                        <small>Perfil</small>
-                    </a>
+                    <li><a class="dropdown-item" href="#">Convites</a></li>
 
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Foto e Descrição</a></li>
-                        <li><a class="dropdown-item" href="#">Projetos Desenvolvidos</a></li>
-                        <li><a class="dropdown-item" href="#">Habilidades de Destaque</a></li>
-                        <li><a class="dropdown-item" href="#">Cases de Sucesso</a></li>
-                        <li><a class="dropdown-item" href="#">Feed de Atualizações</a></li>
-                        <li><a class="dropdown-item" href="#">Rede de Contatos</a></li>
-                    </ul>
-                </li>
+                </ul>
+            </li>
 
+            <!-- Copilot -->
+            <li class="nav-item dropdown me-3">
+                <a class="nav-link text-dark dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                    <i class="fa-solid fa-robot fs-5"></i>
+                    <small>Copilot</small>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end perfil-dropdown">
+                    <li><a class="dropdown-item" href="#">Sugestões e Roadmap</a></li>
+                    <li><a class="dropdown-item" href="#">Lembretes e Prazos</a></li>
+                    <li><a class="dropdown-item" href="#">Apoio na Gestão / Insights</a></li>
+                </ul>
+            </li>
 
+            <!-- Dados -->
+            <li class="nav-item nav-icon me-3">
+                <a class="nav-link text-dark" href="#">
+                    <i class="fa-solid fa-database fs-5"></i>
+                    <small>Dados</small>
+                </a>
+            </li>
 
+            <!-- Insights360 -->
+            <li class="nav-item nav-icon me-3">
+                <a class="nav-link text-dark" href="#">
+                    <i class="fa-solid fa-chart-pie fs-5"></i>
+                    <small>Insights360</small>
+                </a>
+            </li>
 
+            <!-- Perfil -->
+            <li class="nav-item dropdown perfil-dropdown-parent">
+                <a class="nav-link dropdown-toggle" href="#" id="perfilMenu" data-bs-toggle="dropdown">
+                    <i class="fa-regular fa-user fs-5"></i>
+                    <small>Perfil</small>
+                </a>
 
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Foto e Descrição</a></li>
+                    <li><a class="dropdown-item" href="#">Projetos Desenvolvidos</a></li>
+                    <li><a class="dropdown-item" href="#">Habilidades de Destaque</a></li>
+                    <li><a class="dropdown-item" href="#">Cases de Sucesso</a></li>
+                    <li><a class="dropdown-item" href="#">Feed de Atualizações</a></li>
+                    <li><a class="dropdown-item" href="#">Rede de Contatos</a></li>
+                </ul>
+            </li>
 
-            </ul>
-        </div>
-    </nav>
-
-
-
-    <!-- CONTEÚDO PRINCIPAL -->
-    <div class="container-fluid mt-4">
-        <div class="row gx-4">
-
-            <!-- COLUNA ESQUERDA: PERFIL -->
-            <aside class="col-lg-3 mb-4">
-                <div class="card perfil-card p-3">
-                    <div class="d-flex gap-3">
-                        <img src="../imgs/avatar.png" alt="Avatar" class="avatar">
-                        <div>
-                            <h6 class="mb-0">Bruno Henrique</h6>
-                            <small class="text-muted">Ensino Superior</small>
-                            <p class="mt-2 mb-1 small text-muted">Estacio de Sá - Rio de janeiro</p>
-                            <p class="mt-2 mb-1 small text-muted"> Texto sobre mim
-
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada, ipsum ac ornare
-                                varius, sem enim luctus nunc, lacinia congue odio ante consectetur ex. Aliquam turpis
-                                justo, egestas ac malesuada et, molestie rhoncus elit.
-                            </p>
-                            <div class="mt-2">
-                                <span class="badge bg-light text-success border">Programação</span>
-                                <span class="badge bg-light text-warning border">Cyber segurança</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- COLUNA: BOXS LATERAIS -->
-                <div class="card mt-3 p-3 small" style="box-shadow: var(--card-shadow);">
-                    <h6 class="mb-2">Para você</h6>
-                    <p class="mb-0 text-muted">Projetos que têm similaridades com os seus</p>
-                    <div class="mt-2 border-top pt-2">
-                        <small class="text-muted d-block">Mochila Solar Inteligente</small>
-                        <a href="#" class="btn btn-sm btn-outline-primary mt-2">Ver projeto</a>
-                    </div>
-                </div>
-            </aside>
-
-            <!-- COLUNA CENTRAL: CONTEÚDO PRINCIPAL -->
-            <main class="col-lg-6 mb-4">
-
-                <!--DESTAQUES -->
-                <section class="mb-4">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h5 class="mb-0">Destaques para você</h5>
-                        <small class="text-muted">Veja os projetos que se destacaram essa semana</small>
-                    </div>
-
-                    <div class="row g-3">
-                        <!-- cartão destaque -->
-                        <div class="col-md-4">
-                            <article class="card destaque-card p-3 h-100">
-                                <div class="d-flex align-items-center gap-2 mb-2">
-                                    <img src="../imgs/imag1.jpg" class="thumb" alt="Projeto">
-                                    <div>
-                                        <h6 class="mb-0">Horta Inteligente</h6>
-                                        <small class="text-muted">Irrigação automatizada</small>
-                                    </div>
-                                </div>
-                                <p class="small text-muted"> Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit. Cras sed pharetra purus.
-                                    Fusce vehicula imperdiet ex, sed ultrices sapien aliquet feugiat.
-                                    Sed vehicula nisi</p>
-                                <div class="mt-auto d-flex justify-content-between align-items-center">
-                                    <a href="#" class="small text-primary">
-                                        <i class="fa-regular fa-thumbs-up me-1"></i> Curtir
-                                    </a>
-
-                                    <a href="#" class="btn btn-sm btn-outline-primary">Ver mais</a>
-                                </div>
-                            </article>
-                        </div>
-
-                        <div class="col-md-4">
-                            <article class="card destaque-card p-3 h-100">
-                                <div class="d-flex align-items-center gap-2 mb-2">
-                                    <img src="../imgs/imagem.jpg" class="thumb" alt="Projeto">
-                                    <div>
-                                        <h6 class="mb-0">Mapa da Memória Afetiva</h6>
-                                        <small class="text-muted">História e design</small>
-                                    </div>
-                                </div>
-                                <p class="small text-muted">orem ipsum dolor sit amet, consectetur
-                                    adipiscing elit. Cras sed pharetra purus.
-                                    Fusce vehicula imperdiet ex, sed ultrices sapien aliquet feugiat.
-                                    Sed vehicula nisi
-                                </p>
-                                <div class="mt-auto d-flex justify-content-between align-items-center">
-                                    <a href="#" class="small text-primary">
-                                        <i class="fa-regular fa-thumbs-up me-1"></i> Curtir
-                                    </a>
-
-                                    <a href="#" class="btn btn-sm btn-outline-primary">Ver mais</a>
-                                </div>
-                            </article>
-                        </div>
-
-                        <div class="col-md-4">
-                            <article class="card destaque-card p-3 h-100">
-                                <div class="d-flex align-items-center gap-2 mb-2">
-                                    <img src="../imgs/you-x-ventures-1439463-unsplash-min.jpg" class="thumb"
-                                        alt="Projeto">
-                                    <div>
-                                        <h6 class="mb-0">Carregador Solar</h6>
-                                        <small class="text-muted">Portátil e de baixo custo</small>
-                                    </div>
-                                </div>
-                                <p class="small text-muted">Protótipo disponível para uso em comunidades ...</p>
-                                <div class="mt-auto d-flex justify-content-between align-items-center">
-                                    <a href="#" class="small text-primary">
-                                        <i class="fa-regular fa-thumbs-up me-1"></i> Curtir
-                                    </a>
-
-                                    <a href="#" class="btn btn-sm btn-outline-primary">Ver mais</a>
-                                </div>
-                            </article>
-                        </div>
-
-                    </div>
-                </section>
-
-                <!-- PARA VOCÊ (PROJECT HIGHLIGHT) -->
-                <section class="mb-4">
-                    <h6 class="mb-3">Para você</h6>
-                    <div class="card p-3" style="box-shadow: var(--card-shadow);">
-                        <h6 class="mb-2">Mochila Solar Inteligente</h6>
-                        <p class="small text-muted mb-0">Garantir autonomia energética completa para estudantes,
-                            profissionais e aventureiros...</p>
-                        <div class="mt-2">
-                            <span class="badge bg-success">Ciência</span>
-                            <span class="badge bg-warning text-dark">Meio ambiente</span>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- FEED DE INTERESSES (POSTS) -->
-                <section>
-                    <h6 class="mb-3">Feed de interesses</h6>
-
-                    <!-- Post 1 -->
-                    <article class="card mb-3 p-3" style="box-shadow: var(--card-shadow);">
-                        <div class="d-flex align-items-start gap-3">
-                            <img src="../imgs/homem3.png" class="avatar-sm" alt="">
-                            <div class="flex-grow-1">
-                                <div class="d-flex justify-content-between">
-                                    <div>
-                                        <strong>Carlos </strong>
-                                        <div class="small text-muted">Feira de Inovação &middot; 2 dias</div>
-                                    </div>
-                                    <div class="text-end">
-                                        <a href="#" class="btn btn-sm btn-outline-secondary">Seguir</a>
-                                    </div>
-                                </div>
-
-                                <p class="mt-2 mb-2 small text-muted">
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit. Cras sed pharetra purus.
-                                    Fusce vehicula imperdiet ex, sed ultrices sapien aliquet feugiat.
-                                    Sed vehicula nisi in magna convallis vulputate. Fusce in feugiat mi.
-                                    Etiam mollis, metus quis aliquet dictum, dolor sapien imperdiet nunc,
-                                    ut semper nulla diam id ligula. Proin et commodo lectus, ut pretium ex.
-                                    Pellentesque congue pellentesque velit, dignissim commodo erat dapibus at.
-                                    Integer bibendum felis eget facilisis maximus.
-                                </p>
-
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <a href="#" class="small text-primary">
-                                        <i class="fa-regular fa-thumbs-up me-1"></i> Curtir
-                                    </a>
-
-                                    <a href="#" class="btn btn-sm btn-outline-primary">Saiba mais</a>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Post 2 -->
-
-
-                </section>
-
-            </main>
-
-            <!-- COLUNA DIREITA: WIDGETS -->
-            <aside class="col-lg-3 mb-4">
-
-                <!-- Conexões -->
-                <div class="card p-3 mb-3" style="box-shadow: var(--card-shadow);">
-                    <h6 class="mb-2">Conexões</h6>
-                    <ul class="list-unstyled">
-                        <li class="d-flex align-items-center mb-2">
-                            <img src="../imgs/homem2.jpg" class="org-logo" alt="">
-                            <div class="ms-2">
-                                <strong>PESSOA 1</strong>
-                                <small class="d-block text-muted">Excelência educacional...</small>
-                            </div>
-                        </li>
-                        <li class="d-flex align-items-center mb-2">
-                            <img src="../imgs/mulherpng.png" class="org-logo" alt="">
-                            <div class="ms-2">
-                                <strong>PESSOA 2</strong>
-                                <small class="d-block text-muted">É o propósito...</small>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#" class="btn btn-sm btn-outline-primary mt-2">Ver todos</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Puzzle do dia -->
-                <div class="card p-3" style="box-shadow: var(--card-shadow);">
-                    <h6 class="mb-2">Puzzle de hoje</h6>
-                    <small class="text-muted">Seu cérebro também precisa de treino. Desvende o puzzle do dia!</small>
-                    <div class="mt-3">
-                        <a href="#" class="btn btn-sm btn-success">Game #2</a>
-                    </div>
-                </div>
-
-            </aside>
-
-        </div>
+        </ul>
     </div>
+</nav>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Conteúdo principal -->
+<div class="container-fluid mt-4">
+    <div class="row gx-4">
+
+        <!-- Lado esquerdo -->
+        <aside class="col-lg-3 mb-4">
+            <div class="card perfil-card p-3">
+                <div class="d-flex gap-3">
+                    <img src="../imgs/avatar.png" alt="Avatar" class="avatar">
+                    <div>
+                        <h6 class="mb-0">Bruno Henrique</h6>
+                        <small class="text-muted">Ensino Superior</small>
+                        <p class="mt-2 mb-1 small text-muted">
+                            Estacio de Sá - Rio de janeiro<br>
+                            Texto sobre mim...
+                        </p>
+                        <div class="mt-2">
+                            <span class="badge bg-light text-success border">Programação</span>
+                            <span class="badge bg-light text-warning border">Cyber segurança</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-3 p-3 small" style="box-shadow: var(--card-shadow);">
+                <h6 class="mb-2">Para você</h6>
+                <p class="mb-0 text-muted">Projetos que têm similaridades com os seus</p>
+                <div class="mt-2 border-top pt-2">
+                    <small class="text-muted d-block">Mochila Solar Inteligente</small>
+                    <a href="#" class="btn btn-sm btn-outline-primary mt-2">Ver projeto</a>
+                </div>
+            </div>
+        </aside>
+
+
+        <!-- Conteúdo central -->
+        <main class="col-lg-6 mb-4">
+
+            <!-- DESTAQUES -->
+            <section class="mb-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="mb-0">Destaques para você</h5>
+                    <small class="text-muted">Veja os projetos que se destacaram essa semana</small>
+                </div>
+
+                <div class="row g-3">
+
+                    <!-- Card 1 -->
+                    <div class="col-md-4">
+                        <article class="card destaque-card p-3 h-100">
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <img src="../imgs/imag1.jpg" class="thumb" alt="Projeto">
+                                <div>
+                                    <h6 class="mb-0">Horta Inteligente</h6>
+                                    <small class="text-muted">Irrigação automatizada</small>
+                                </div>
+                            </div>
+                            <p class="small text-muted">
+                                Sistema de irrigação automatizada usando sensores...
+                            </p>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <a href="#" class="small text-primary">
+                                    <i class="fa-regular fa-thumbs-up me-1"></i> Curtir
+                                </a>
+                                <a href="#" class="btn btn-sm btn-outline-primary">Ver mais</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-md-4">
+                        <article class="card destaque-card p-3 h-100">
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <img src="../imgs/imagem.jpg" class="thumb" alt="Projeto">
+                                <div>
+                                    <h6 class="mb-0">Mapa da Memória Afetiva</h6>
+                                    <small class="text-muted">História e design</small>
+                                </div>
+                            </div>
+                            <p class="small text-muted">
+                                Criação de mapas afetivos conectando pessoas e histórias...
+                            </p>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <a href="#" class="small text-primary">
+                                    <i class="fa-regular fa-thumbs-up me-1"></i> Curtir
+                                </a>
+                                <a href="#" class="btn btn-sm btn-outline-primary">Ver mais</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-md-4">
+                        <article class="card destaque-card p-3 h-100">
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <img src="../imgs/you-x-ventures-1439463-unsplash-min.jpg" class="thumb" alt="Projeto">
+                                <div>
+                                    <h6 class="mb-0">Carregador Solar</h6>
+                                    <small class="text-muted">Portátil e sustentável</small>
+                                </div>
+                            </div>
+                            <p class="small text-muted">Protótipo portátil para uso em comunidades...</p>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <a href="#" class="small text-primary">
+                                    <i class="fa-regular fa-thumbs-up me-1"></i> Curtir
+                                </a>
+                                <a href="#" class="btn btn-sm btn-outline-primary">Ver mais</a>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- PARA VOCÊ -->
+            <section class="mb-4">
+                <h6 class="mb-3">Para você</h6>
+                <div class="card p-3" style="box-shadow: var(--card-shadow);">
+                    <h6 class="mb-2">Mochila Solar Inteligente</h6>
+                    <p class="small text-muted mb-0">
+                        Autonomia energética para estudantes e profissionais...
+                    </p>
+                    <div class="mt-2">
+                        <span class="badge bg-success">Ciência</span>
+                        <span class="badge bg-warning text-dark">Meio ambiente</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FEED -->
+            <section>
+                <h6 class="mb-3">Feed de interesses</h6>
+
+                <!-- Post -->
+                <article class="card mb-3 p-3" style="box-shadow: var(--card-shadow);">
+                    <div class="d-flex align-items-start gap-3">
+                        <img src="../imgs/homem3.png" class="avatar-sm" alt="">
+                        <div class="flex-grow-1">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <strong>Carlos</strong>
+                                    <div class="small text-muted">Feira de Inovação · 2 dias</div>
+                                </div>
+                                <a href="#" class="btn btn-sm btn-outline-secondary">Seguir</a>
+                            </div>
+
+                            <p class="mt-2 mb-2 small text-muted">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                            </p>
+
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="#" class="small text-primary">
+                                    <i class="fa-regular fa-thumbs-up me-1"></i> Curtir
+                                </a>
+
+                                <a href="#" class="btn btn-sm btn-outline-primary">Saiba mais</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+        </main>
+
+        <!-- Lado direito -->
+        <aside class="col-lg-3 mb-4">
+
+            <!-- Conexões -->
+            <div class="card p-3 mb-3" style="box-shadow: var(--card-shadow);">
+                <h6 class="mb-2">Conexões</h6>
+                <ul class="list-unstyled">
+                    <li class="d-flex align-items-center mb-2">
+                        <img src="../imgs/homem2.jpg" class="org-logo" alt="">
+                        <div class="ms-2">
+                            <strong>PESSOA 1</strong>
+                            <small class="d-block text-muted">Excelência educacional...</small>
+                        </div>
+                    </li>
+                    <li class="d-flex align-items-center mb-2">
+                        <img src="../imgs/mulherpng.png" class="org-logo" alt="">
+                        <div class="ms-2">
+                            <strong>PESSOA 2</strong>
+                            <small class="d-block text-muted">É o propósito...</small>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-sm btn-outline-primary mt-2">Ver todos</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Puzzle -->
+            <div class="card p-3" style="box-shadow: var(--card-shadow);">
+                <h6 class="mb-2">Puzzle de hoje</h6>
+                <small class="text-muted">Desvende o puzzle do dia!</small>
+                <div class="mt-3">
+                    <a href="#" class="btn btn-sm btn-success">Game #2</a>
+                </div>
+            </div>
+
+        </aside>
+
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
-
 </html>

@@ -1,5 +1,5 @@
-- Pagina principal - falta vitrine de projetos 
-  Rodapé - algumas empresas que fazem parte da synergy
+- Pagina principal - falta vitrine de projetos  - Anne
+
 
 
 ALTERAR TODAS AS LOCALIZAÇÃO PARA FORTALEZA CEARA
@@ -7,11 +7,9 @@ ALTERAR TODAS AS LOCALIZAÇÃO PARA FORTALEZA CEARA
 
 - remover o pré login
   
-
-
 - login unificado
   
-resolver lembrar de mim
+
 
 
 
@@ -23,9 +21,6 @@ resolver lembrar de mim
 Adicionar trilha
 Navbar:
 
-Projetos ->  Projetos concluídos, Projetos em andamento.
-
-Mensagens -> remover mensagem privada
 
 Mensagens e Convites*** 
 
