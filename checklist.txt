@@ -2,7 +2,6 @@
 
 
 
-ALTERAR TODAS AS LOCALIZAÇÃO PARA FORTALEZA CEARA
 
 
 - remover o pré login
@@ -13,30 +12,7 @@ ALTERAR TODAS AS LOCALIZAÇÃO PARA FORTALEZA CEARA
 
 
 
-
-
-
-
--Pagina Estudante - Portfolio
-Adicionar trilha
-Navbar:
-
-
-Quando clicar em perfil, deve ser exibido o Meu Perfil (criar outra página, usuário.html)
-
-
-https://docs.google.com/document/d/1eF8co3oDp_WhYsVkm-pYe97hkocW5kf2bVa3WFz6FwU/edit?tab=t.0
-
-
-
-
-
-Em conexões, adiciona mais 3 perfis
-
-
-
-
-
+- Perguntar a Anne prefere estudante ou teste
 
 
 

@@ -1,0 +1,250 @@
+:root {
+    /* Cores da Marca (Inalteradas) */
+    --verde: #6CC24A;
+    --roxo: #5b2c83;
+    --azul: #00aeef;
+    
+    /* Cores de Interface */
+    --fundo: #f6f7f8;
+    --texto: #23323a;
+    --cinza-claro: #e9ecef;
+    
+    /* Sombras e Efeitos */
+    --card-shadow: 0 10px 30px rgba(91, 44, 131, 0.05); /* Sombra com tom roxo muito sutil */
+    --hover-shadow: 0 15px 35px rgba(91, 44, 131, 0.1);
+    --border-radius-card: 16px;
+    --transition: all 0.3s ease;
+}
+
+body {
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: "Source Sans 3", "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ================= Navbar ================= */
+.navbar-white {
+    background-color: #ffffff;
+    height: 80px; /* Mais altura para elegância */
+}
+
+.logo-top {
+    height: 40px;
+}
+
+.nav-icon .nav-link {
+    transition: var(--transition);
+    opacity: 0.7;
+}
+
+.nav-icon .nav-link:hover,
+.nav-icon .nav-link.active-nav {
+    color: var(--roxo) !important;
+    opacity: 1;
+}
+
+.active-nav {
+    font-weight: 700;
+    position: relative;
+}
+
+.active-nav::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 3px;
+    background: var(--roxo);
+    margin: 2px auto 0;
+    border-radius: 2px;
+}
+
+/* ================= Header do Perfil ================= */
+.perfil-top-card {
+    background: #ffffff;
+    border-radius: var(--border-radius-card);
+    box-shadow: var(--card-shadow);
+    border-top: 5px solid var(--roxo) !important; /* Detalhe visual da marca */
+}
+
+.perfil-foto {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.status-indicator {
+    width: 20px;
+    height: 20px;
+    background-color: var(--verde);
+    border: 3px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.perfil-nome {
+    font-weight: 800;
+    color: var(--roxo);
+    letter-spacing: -0.5px;
+}
+
+.perfil-profissao {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--texto);
+}
+
+.perfil-instituicao {
+    font-size: 0.95rem;
+    color: #6c757d;
+}
+
+.perfil-bio {
+    max-width: 600px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #4a5568;
+}
+
+/* Botões Personalizados */
+.btn-primary-custom {
+    background-color: var(--roxo);
+    color: white;
+    border: none;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.btn-primary-custom:hover {
+    background-color: #4a236b;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-success-custom {
+    background-color: var(--verde);
+    color: white;
+    border: none;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.btn-success-custom:hover {
+    background-color: #5bb03d;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-outline-custom {
+    border: 2px solid #dee2e6;
+    color: var(--texto);
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 8px;
+    transition: var(--transition);
+    background: transparent;
+}
+
+.btn-outline-custom:hover {
+    border-color: var(--roxo);
+    color: var(--roxo);
+    background-color: #fcf9ff;
+}
+
+/* ================= Tags e Habilidades ================= */
+.tags-wrapper {
+    line-height: 2.2;
+}
+
+.tag-skill {
+    background: rgba(0, 174, 239, 0.1); /* Azul com transparência */
+    color: var(--azul);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-right: 6px;
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+
+.tag-skill:hover {
+    background: var(--azul);
+    color: white;
+    transform: scale(1.05);
+}
+
+#btn-toggle-tags {
+    color: var(--azul);
+    font-weight: 700;
+}
+
+/* ================= Projetos ================= */
+.projeto-card {
+    border: none;
+    border-radius: var(--border-radius-card);
+    background: #fff;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.projeto-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--hover-shadow);
+}
+
+.projeto-capa {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.status-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    color: white;
+}
+
+/* ================= Conquistas ================= */
+.conquista-badge {
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.05);
+    min-width: 200px;
+    flex: 1;
+    transition: var(--transition);
+}
+
+.conquista-badge:hover {
+    border-color: var(--roxo);
+    transform: translateY(-3px);
+}
+
+.icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-light-warning { background-color: #fff8e1; }
+.bg-light-primary { background-color: #e3f2fd; }
+.bg-light-success { background-color: #e8f5e9; }

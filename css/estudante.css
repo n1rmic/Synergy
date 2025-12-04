@@ -343,3 +343,19 @@ section {
     margin-bottom: 10px;
     color: #444;
 }
+
+a {
+  text-decoration: none;
+}
+
+
+
+/* === Ajuste exclusivo do dropdown do Perfil === */
+.perfil-dropdown-left {
+    transform: translateX(-130px) !important; /* ajuste padrão */
+}
+
+/* Quando abrir via hover */
+.nav-item.dropdown.perfil-dropdown-parent:hover > .perfil-dropdown-left {
+    display: block !important;
+}

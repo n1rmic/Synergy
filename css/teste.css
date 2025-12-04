@@ -1,0 +1,205 @@
+:root {
+    /* Cores da Marca */
+    --verde: #6CC24A;
+    --roxo: #5b2c83;
+    --azul: #00aeef;
+    
+    /* Variações Suaves (Soft Colors) para fundos */
+    --bg-soft-roxo: #f3eef8;
+    --bg-soft-verde: #eefceb;
+    --bg-soft-azul: #e6f7ff;
+    
+    /* Cores de Interface */
+    --fundo: #f6f7f8;
+    --texto: #23323a;
+    --texto-muted: #6c757d;
+    
+    /* Efeitos */
+    --card-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    --hover-shadow: 0 8px 25px rgba(91, 44, 131, 0.08);
+    --border-radius: 16px;
+    --transition: all 0.25s ease;
+}
+
+body {
+    background-color: var(--fundo);
+    color: var(--texto);
+    font-family: "Source Sans 3", "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ================= Navbar ================= */
+.navbar-white {
+    background-color: #ffffff;
+    height: 70px;
+}
+.logo-top { height: 32px; }
+
+.avatar-nav {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border: 2px solid var(--bg-soft-roxo);
+}
+
+/* Dropdown no Hover (Apenas Desktop - a partir de 992px) */
+@media (min-width: 992px) {
+    .navbar-collapse .dropdown:hover > .dropdown-menu {
+        display: block;
+        margin-top: 0; /* Garante que o dropdown abra logo abaixo do link */
+    }
+}
+
+/* ================= Cards Gerais ================= */
+.card-dashboard {
+    background: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+}
+
+.card-dashboard:hover {
+    box-shadow: var(--hover-shadow);
+}
+
+/* ================= Sidebar Esquerda (Perfil) ================= */
+.card-header-brand {
+    height: 60px;
+    background: linear-gradient(90deg, var(--roxo), #7b4aa3);
+}
+
+.avatar-wrapper {
+    margin-top: -40px;
+    position: relative;
+    display: inline-block;
+}
+
+.avatar-profile {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    object-fit: cover;
+    background: #fff;
+}
+
+.status-dot {
+    width: 18px;
+    height: 18px;
+    background: var(--verde);
+    border: 3px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.sidebar-title {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #999;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.tag-mini {
+    font-size: 0.75rem;
+    background: var(--bg-soft-roxo);
+    color: var(--roxo);
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+/* Utilirário para borda roxa */
+.border-roxo {
+    border-color: var(--roxo) !important;
+}
+
+/* ================= Destaques (Centro) ================= */
+.destaque-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.destaque-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-shadow);
+}
+
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.font-sm { font-size: 0.9rem; }
+.smaller { font-size: 0.8rem; }
+
+/* ================= Feed (Centro) ================= */
+.avatar-feed {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+}
+
+/* ================= Conexões (Direita) ================= */
+.icon-square {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Utilitário para sobreposição de avatares na seção de conexões */
+.avatar-group-item {
+    /* Define a ordem de empilhamento para garantir que o primeiro item fique por cima */
+    z-index: 5; 
+}
+.avatar-group-item:nth-child(2) { z-index: 4; }
+.avatar-group-item:nth-child(3) { z-index: 3; }
+.avatar-group-item:nth-child(4) { z-index: 2; }
+.avatar-group-item:nth-child(5) { z-index: 1; }
+
+/* ================= Utilitários de Cores ================= */
+.text-roxo { color: var(--roxo) !important; }
+.text-verde { color: var(--verde) !important; }
+.text-azul { color: var(--azul) !important; }
+
+.bg-soft-roxo { background-color: var(--bg-soft-roxo); }
+.bg-soft-verde { background-color: var(--bg-soft-verde); }
+.bg-soft-azul { background-color: var(--bg-soft-azul); }
+
+.btn-roxo {
+    background-color: var(--roxo);
+    color: white;
+    border: none;
+    transition: var(--transition);
+}
+.btn-roxo:hover {
+    background-color: #4a236b;
+    color: white;
+}
+
+.btn-outline-roxo {
+    border: 1px solid var(--roxo);
+    color: var(--roxo);
+    background: transparent;
+}
+.btn-outline-roxo:hover {
+    background: var(--roxo);
+    color: white;
+}
+
+/* Ajustes de Responsividade */
+@media (max-width: 991px) {
+    .navbar-white { height: auto; padding-bottom: 15px; }
+}
