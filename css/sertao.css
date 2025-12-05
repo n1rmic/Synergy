@@ -1,8 +1,9 @@
 :root {
-  
+    /* Cores da Marca */
     --verde: #6CC24A;
     --roxo: #5b2c83;
     --azul: #00aeef;
+
 
     --bg-soft-roxo: #f3eef8;
     --bg-soft-verde: #eefceb;
@@ -13,11 +14,23 @@
     --texto: #23323a;
     --texto-muted: #6c757d;
 
-
     --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
     --hover-shadow: 0 8px 25px rgba(91, 44, 131, 0.08);
     --border-radius: 16px;
     --transition: all 0.25s ease;
+}
+
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat.ttf') format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Source Sans 3';
+    src: url('fonts/SourceSans3.ttf') format('truetype');
+    font-weight: 400;
 }
 
 body {
@@ -44,13 +57,6 @@ body {
     border: 2px solid var(--bg-soft-roxo);
 }
 
-@media (min-width: 992px) {
-    .navbar-collapse .dropdown:hover>.dropdown-menu {
-        display: block;
-        margin-top: 0;
-    }
-}
-
 
 .card-dashboard {
     background: #fff;
@@ -66,7 +72,7 @@ body {
 
 .card-header-brand {
     height: 60px;
-    background: linear-gradient(90deg, var(--verde), #4aa354);
+    background: linear-gradient(90deg, var(--roxo), #7b4aa3);
 }
 
 .avatar-wrapper {
@@ -114,11 +120,25 @@ body {
     font-weight: 600;
 }
 
+
+
+.project-invite-card {
+    border-left: 4px solid var(--roxo) !important;
+    background-color: #f3eef8;
+    color: var(--texto);
+}
+
+
+.project-invite-card .text-secondary,
+.project-invite-card .text-muted {
+    color: #4a4a4a !important;
+}
+
 .border-roxo {
     border-color: var(--roxo) !important;
 }
 
-/*Centro*/
+/* Feed e Destaques */
 .destaque-card {
     background: #fff;
     border-radius: 12px;
@@ -147,43 +167,10 @@ body {
     font-size: 0.8rem;
 }
 
-
 .avatar-feed {
     width: 48px;
     height: 48px;
     object-fit: cover;
-}
-
-
-.icon-square {
-    width: 36px;
-    height: 36px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.avatar-group-item {
-
-    z-index: 5;
-}
-
-.avatar-group-item:nth-child(2) {
-    z-index: 4;
-}
-
-.avatar-group-item:nth-child(3) {
-    z-index: 3;
-}
-
-.avatar-group-item:nth-child(4) {
-    z-index: 2;
-}
-
-.avatar-group-item:nth-child(5) {
-    z-index: 1;
 }
 
 
@@ -212,29 +199,85 @@ body {
 }
 
 .btn-roxo {
-    background-color: var(--verde);
+    background-color: var(--roxo);
     color: white;
     border: none;
     transition: var(--transition);
 }
 
 .btn-roxo:hover {
-    background-color: #8ff97c;
+    background-color: #4a236b;
     color: white;
 }
 
 .btn-outline-roxo {
-    border: 1px solid var(--verde);
-    color: var(--verde);
+    border: 1px solid var(--roxo);
+    color: var(--roxo);
     background: transparent;
 }
 
 .btn-outline-roxo:hover {
-    background: var(--verde);
+    background: var(--roxo);
     color: white;
 }
 
-/*responsi*/
+
+@media (min-width: 992px) {
+    .navbar-collapse .dropdown:hover>.dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+
+    .dropdown-submenu:hover>.dropdown-menu {
+        display: block;
+    }
+}
+
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.dropdown-item {
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Submenu para a Direita */
+.dropdown-submenu .submenu-right {
+    top: 0;
+    left: 100%;
+    margin-top: -5px;
+    margin-left: 0.1rem;
+}
+
+/* Fix do Menu Perfil */
+#perfilMenu+.dropdown-menu {
+    right: 0;
+    margin-right: 15px !important;
+    transform: none !important;
+}
+
+/* copilot*/
+.upload-area {
+    border: 2px dashed #dee2e6;
+    background-color: #f8f9fa;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.upload-area:hover {
+    border-color: var(--roxo);
+    background-color: #f3eef8;
+}
+
+/* Responsividade */
 @media (max-width: 991px) {
     .navbar-white {
         height: auto;
@@ -242,17 +285,29 @@ body {
     }
 }
 
-.logo-empresa-nav {
-    height: 40px;
-    object-fit: contain;
+
+/*spa*/
+.app-view {
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    display: none;
 }
 
-.project-invite-card {
-    border-left: 4px solid var(--roxo);
-    background: #fdfbff;
+.app-view.active-view {
+    opacity: 1;
+    display: block !important;
 }
 
-.ad-card {
-    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-    color: white;
+.upload-area {
+    border: 2px dashed #dee2e6;
+    background-color: #f8f9fa;
+    transition: all 0.2s ease;
+    cursor: pointer;
 }
+
+.upload-area:hover {
+    border-color: var(--roxo);
+    background-color: #f3eef8;
+}
+
+

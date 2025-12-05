@@ -8,7 +8,7 @@
   --card-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
-/* Fontes (se você tiver os arquivos, mantêm; senão o fallback funciona) */
+
 @font-face {
   font-family: 'Montserrat';
   src: url('fonts/Montserrat.ttf') format('truetype');
@@ -285,7 +285,6 @@ section {
   color: #555;
 }
 
-/* Botão "Ver perfil" dentro do card-conexao — específico para não afetar demais botões da página */
 .card-conexao .btn-ver {
   border: none;
   background: var(--azul);
@@ -306,12 +305,11 @@ section {
   height: 16px;
 }
 
-/* Segurança visual: garantir sombreamento padrão nas cards */
 .card[style*="box-shadow"], .perfil-card, .destaque-card {
   will-change: transform;
 }
 
-/* pequenos ajustes em badges e textos para consistência */
+
 .badge.bg-light.text-primary {
   background: #fff;
   border: 1px solid rgba(0,0,0,0.06);
@@ -350,12 +348,12 @@ a {
 
 
 
-/* === Ajuste exclusivo do dropdown do Perfil === */
+
 .perfil-dropdown-left {
-    transform: translateX(-130px) !important; /* ajuste padrão */
+    transform: translateX(-130px) !important; 
 }
 
-/* Quando abrir via hover */
+
 .nav-item.dropdown.perfil-dropdown-parent:hover > .perfil-dropdown-left {
     display: block !important;
 }

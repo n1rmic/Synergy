@@ -1,331 +1,245 @@
-:root{
-  --verde: #6CC24A;
-  --roxo: #5b2c83;
-  --azul: #0b78e6;
-  --texto: #23323a;
-  --fundo: #f6f7f8;
-  --card-shadow: 0 8px 22px rgba(0,0,0,0.06);
+:root {
+    /* Cores da Marca */
+    --verde: #6CC24A;
+    --roxo: #5b2c83;
+    --azul: #00aeef;
+    
+    /* Variações Suaves (Soft Colors) para fundos */
+    --bg-soft-roxo: #f3eef8;
+    --bg-soft-verde: #eefceb;
+    --bg-soft-azul: #e6f7ff;
+    
+    /* Cores de Interface */
+    --fundo: #f6f7f8;
+    --texto: #23323a;
+    --texto-muted: #6c757d;
+    
+    /* Efeitos */
+    --card-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    --hover-shadow: 0 8px 25px rgba(91, 44, 131, 0.08);
+    --border-radius: 16px;
+    --transition: all 0.25s ease;
 }
 
-* { box-sizing: border-box; }
-html,body { height:100%; margin:0; padding:0; background:var(--fundo); color:var(--texto); font-family: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, Arial; font-size:15px; }
-
-
-
-
-/* container principal spacing */
-.container-fluid { max-width:1280px; margin:0 auto; }
-
-/* coluna esquerda: perfil */
-.perfil-card {
-  background:#fff;
-  border-radius:12px;
-  box-shadow:var(--card-shadow);
-}
-.avatar-placeholder {
-  width:64px; height:64px; border-radius:50%;
-  background:linear-gradient(135deg,#fff,#f3f3f3);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+body {
+    background-color: var(--fundo);
+    color: var(--texto);
+    font-family: "Source Sans 3", "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* cards centrais */
-.card { border:0; border-radius:12px; background:#fff; box-shadow: var(--card-shadow); }
-.hero-card { background: linear-gradient(180deg,#ffffff,#f8fbff); }
+/* ================= Navbar ================= */
+.navbar-white {
+    background-color: #ffffff;
+    height: 70px;
+}
+.logo-top { height: 32px; }
 
-/* vistas (views) - só a ativa mostra */
-.app-view { display:none; }
-.app-view.active-view { display:block; }
-
-/* responsi
-*/
-@media (max-width: 991px) {
-  #coluna-esquerda { display:none !important; } /* Opção 3: coluna escondida em telas pequenas */
-  .container-fluid { padding-left:12px; padding-right:12px; }
-  .nav-btn span { display:none; } /* esconder rótulo se quiser espaço em mobile */
+.avatar-nav {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border: 2px solid var(--bg-soft-roxo);
 }
 
-
-body.show-left-col #coluna-esquerda { display:block; }
-body.hide-left-col #coluna-esquerda { display:none !important; }
-
-
-h2 { font-weight:700; color: #2a2a3a; }
-h5, h6 { color: #333; font-weight:700; }
-.small { font-size:0.9rem; }
-
-/* botões */
-.btn-primary { background: var(--azul); border-color: var(--azul); }
-.btn-primary:focus, .btn-outline-primary:focus { box-shadow:none; }
-
-/* utilitários */
-.mt-4 { margin-top:1.5rem !important; }
-.mb-4 { margin-bottom:1.5rem !important; }
-
-.nav-btn:active, .nav-btn:focus { color:inherit; }
-
-
+/* Dropdown no Hover (Apenas Desktop - a partir de 992px) */
 @media (min-width: 992px) {
-  #conteudo-central { padding-left: 16px; }
+    .navbar-collapse .dropdown:hover > .dropdown-menu {
+        display: block;
+        margin-top: 0; /* Garante que o dropdown abra logo abaixo do link */
+    }
 }
 
-
-.badge { font-weight:600; border-radius: 6px; padding: 6px 8px; }
-
-
-.card > hr { border-color: #eee; margin: 1rem 0;box-shadow: 0 2px 8px rgba(0,0,0,0.06);
- }
-
-
-.perfil-foto {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+/* ================= Cards Gerais ================= */
+.card-dashboard {
+    background: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
 }
-.hero-banner-container {
-    width: 100%;
-    height: 220px; 
-    border-radius: 14px;
+
+.card-dashboard:hover {
+    box-shadow: var(--hover-shadow);
+}
+
+/* ================= Sidebar Esquerda (Perfil) ================= */
+.card-header-brand {
+    height: 60px;
+    background: linear-gradient(90deg, var(--roxo), #7b4aa3);
+}
+
+.avatar-wrapper {
+    margin-top: -40px;
+    position: relative;
+    display: inline-block;
+}
+
+.avatar-profile {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    object-fit: cover;
+    background: #fff;
+}
+
+.status-dot {
+    width: 18px;
+    height: 18px;
+    background: var(--verde);
+    border: 3px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.sidebar-title {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #999;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.tag-mini {
+    font-size: 0.75rem;
+    background: var(--bg-soft-roxo);
+    color: var(--roxo);
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+/* Utilirário para borda roxa */
+.border-roxo {
+    border-color: var(--roxo) !important;
+}
+
+/* ================= Destaques (Centro) ================= */
+.destaque-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.destaque-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-shadow);
+}
+
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    background: #fff; 
+}
+
+.font-sm { font-size: 0.9rem; }
+.smaller { font-size: 0.8rem; }
+
+/* ================= Feed (Centro) ================= */
+.avatar-feed {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+}
+
+/* ================= Conexões (Direita) ================= */
+.icon-square {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.hero-banner {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; 
+/* Utilitário para sobreposição de avatares na seção de conexões */
+.avatar-group-item {
+    /* Define a ordem de empilhamento para garantir que o primeiro item fique por cima */
+    z-index: 5; 
 }
+.avatar-group-item:nth-child(2) { z-index: 4; }
+.avatar-group-item:nth-child(3) { z-index: 3; }
+.avatar-group-item:nth-child(4) { z-index: 2; }
+.avatar-group-item:nth-child(5) { z-index: 1; }
 
-.dropdown-hover .dropdown-menu {
-    display: none;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.15s ease;
-}
+/* ================= Utilitários de Cores ================= */
+.text-roxo { color: var(--roxo) !important; }
+.text-verde { color: var(--verde) !important; }
+.text-azul { color: var(--azul) !important; }
 
+.bg-soft-roxo { background-color: var(--bg-soft-roxo); }
+.bg-soft-verde { background-color: var(--bg-soft-verde); }
+.bg-soft-azul { background-color: var(--bg-soft-azul); }
 
-
-.dropdown-hover:hover .dropdown-menu {
-    display: block;
-    opacity: 1;
-    visibility: visible;
-}
-
-.dropdown-menu {
-    border-radius: 12px !important;
-    padding: 10px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-}
-
-.dropdown-item {
-    padding: 10px 14px;
-    border-radius: 8px;
-}
-
-.dropdown-item:hover {
-    background: #f1f3f5;
-}
-
-
-/* navbar + drop */
-.nav-item.dropdown:hover .dropdown-menu {
-    display: block !important;
-    opacity: 1;
-    visibility: visible;
-}
-
-.nav-item.dropdown .dropdown-menu:hover {
-    display: block !important;
-}
-
-
-.nav-item.dropdown.perfil-dropdown-parent .dropdown-menu {
-    right: auto !important;
-    left: 0 !important;
-    transform: translateX(-60%) !important; /* Ajuste fino */
-    min-width: 240px;
-}
-
-
-.nav-item.dropdown .dropdown-menu {
-    transition: opacity .15s ease;
-}
-
-
-.navbar .nav-link,
-.navbar .dropdown-toggle {
-    color: #222 !important;
-}
-
-.navbar .nav-link:hover,
-.navbar .dropdown-toggle:hover {
-    color: #000 !important;
-}
-
-
-.navbar .nav-link i {
-    color: #222 !important;
-}
-
-.navbar .dropdown-item {
-    color: #333 !important;
-}
-
-.navbar .dropdown-item i {
-    color: #555 !important;
-}
-
-.logo-top{
-  height: 36px;
-}
-/* navbar + drop */
-
-
-
-/* --- HERO --- */
-.hero-card {
-    background: #fff;
-    border-radius: 14px;
-    box-shadow: var(--card-shadow);
-}
-.hero-ilustra {
-    width: 100%;
-    border-radius: 12px;
-}
-
-/* --- TITULOS E ESPAÇAMENTOS --- */
-h4 {
-    font-weight: 700;
-    color: #2a2a3a;
-}
-
-/* --- CARDS --- */
-.card {
-    border-radius: 14px;
+.btn-roxo {
+    background-color: var(--roxo);
+    color: white;
     border: none;
-    box-shadow: var(--card-shadow);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-
+    transition: var(--transition);
+}
+.btn-roxo:hover {
+    background-color: #4a236b;
+    color: white;
 }
 
-/* --- PERFIL LATERAL --- */
-.perfil-card {
-    border-radius: 14px;
-    box-shadow: var(--card-shadow);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-
+.btn-outline-roxo {
+    border: 1px solid var(--roxo);
+    color: var(--roxo);
+    background: transparent;
 }
-.perfil-foto {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    object-fit: cover;
+.btn-outline-roxo:hover {
+    background: var(--roxo);
+    color: white;
 }
 
-/* --- BADGES --- */
-.badge {
-    border-radius: 6px;
-    font-weight: 600;
-    padding: 6px 10px;
-    background: #eef1f4 !important;
-    color: #333 !important;
+/* Ajustes de Responsividade */
+@media (max-width: 991px) {
+    .navbar-white { height: auto; padding-bottom: 15px; }
 }
 
-/* --- RESPONSIVO --- */
-@media (max-width: 992px){
-    .hero-card {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
+
+/* ================= CSS para Dropdown em Cascata (Hover) ================= */
+
+/* Ativa o hover apenas em telas grandes (Desktop) */
+@media (min-width: 992px) {
+    /* Abre o dropdown principal no hover */
+    .navbar-collapse .dropdown:hover > .dropdown-menu {
+        display: block;
+        margin-top: 0;
     }
-    .hero-ilustra {
-        margin-top: 20px;
-        width: 70%;
+    
+    /* Abre os submenus no hover */
+    .dropdown-submenu:hover > .dropdown-menu {
+        display: block;
     }
 }
 
-
-:root {
-  --bg: #f4f6f8;
-  --bg-card: #fff;
-  --text: #1a1a1a;
-  --text-light: #6f6f6f;
-  --primary: #0a66c2;
-  --radius: 12px;
-  --shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+/* Posicionamento do Submenu para a DIREITA (Igual à imagem) */
+.dropdown-submenu .submenu-right {
+    top: 0;
+    left: 100%; /* Empurra para o lado direito do pai */
+    margin-top: -5px; /* Alinha levemente para cima */
+    margin-left: 0.1rem; /* Pequeno espaçamento */
 }
 
-/* Layout centralizado */
-.main-container {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 20px;
+/* Garante que o item do menu mantenha o estilo */
+.dropdown-item {
+    display: flex;
+    justify-content: space-between; /* Espaça o texto da setinha se houver */
+    align-items: center;
 }
 
-/* CARD mais moderno */
-.card {
-  background: var(--bg-card);
-  padding: 30px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-3px);
-}
-
-/* Títulos estilo LinkedIn */
-.title {
-  font-size: 28px;
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: 10px;
-}
-
-.subtitle {
-  font-size: 16px;
-  color: var(--text-light);
-}
-
-/* Inputs mais modernos */
-.input-modern {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #d0d7de;
-  border-radius: var(--radius);
-  font-size: 16px;
-  transition: 0.2s;
-}
-
-.input-modern:focus {
-  border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(10, 102, 194, 0.2);
-}
-
-/* Botão estilo LinkedIn */
-.btn-primary {
-  background: var(--primary);
-  color: white;
-  border: none;
-  padding: 12px 16px;
-  border-radius: var(--radius);
-  font-size: 17px;
-  cursor: pointer;
-  transition: 0.25s;
-}
-
-.btn-primary:hover {
-  background: #004a8f;
-}
-
-/* Layout responsivo */
-@media (max-width: 768px) {
-  .main-container {
-    margin: 20px;
-  }
+/* ================= Fix do Menu Perfil ================= */
+/* Garante que o dropdown do perfil não fique cortado na tela */
+#perfilMenu + .dropdown-menu {
+    right: 0; /* Alinha a direita do menu com o elemento pai */
+    margin-right: 15px !important; /* Empurra 15px para a esquerda (para dentro da tela) */
+    transform: none !important; /* Evita conflitos com o posicionamento automático do Bootstrap */
 }

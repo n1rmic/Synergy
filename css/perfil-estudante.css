@@ -1,16 +1,16 @@
 :root {
-    /* Cores da Marca (Inalteradas) */
+ 
     --verde: #6CC24A;
     --roxo: #5b2c83;
     --azul: #00aeef;
     
-    /* Cores de Interface */
+ 
     --fundo: #f6f7f8;
     --texto: #23323a;
     --cinza-claro: #e9ecef;
     
-    /* Sombras e Efeitos */
-    --card-shadow: 0 10px 30px rgba(91, 44, 131, 0.05); /* Sombra com tom roxo muito sutil */
+   
+    --card-shadow: 0 10px 30px rgba(91, 44, 131, 0.05); 
     --hover-shadow: 0 15px 35px rgba(91, 44, 131, 0.1);
     --border-radius-card: 16px;
     --transition: all 0.3s ease;
@@ -23,10 +23,10 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* ================= Navbar ================= */
+
 .navbar-white {
     background-color: #ffffff;
-    height: 80px; /* Mais altura para elegância */
+    height: 80px; 
 }
 
 .logo-top {
@@ -59,12 +59,12 @@ body {
     border-radius: 2px;
 }
 
-/* ================= Header do Perfil ================= */
+
 .perfil-top-card {
     background: #ffffff;
     border-radius: var(--border-radius-card);
     box-shadow: var(--card-shadow);
-    border-top: 5px solid var(--roxo) !important; /* Detalhe visual da marca */
+    border-top: 5px solid var(--roxo) !important; 
 }
 
 .perfil-foto {
@@ -111,7 +111,7 @@ body {
     color: #4a5568;
 }
 
-/* Botões Personalizados */
+
 .btn-primary-custom {
     background-color: var(--roxo);
     color: white;
@@ -160,13 +160,13 @@ body {
     background-color: #fcf9ff;
 }
 
-/* ================= Tags e Habilidades ================= */
+
 .tags-wrapper {
     line-height: 2.2;
 }
 
 .tag-skill {
-    background: rgba(0, 174, 239, 0.1); /* Azul com transparência */
+    background: rgba(0, 174, 239, 0.1);
     color: var(--azul);
     padding: 8px 16px;
     border-radius: 50px;
@@ -188,7 +188,7 @@ body {
     font-weight: 700;
 }
 
-/* ================= Projetos ================= */
+
 .projeto-card {
     border: none;
     border-radius: var(--border-radius-card);
@@ -221,7 +221,7 @@ body {
     color: white;
 }
 
-/* ================= Conquistas ================= */
+
 .conquista-badge {
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.03);

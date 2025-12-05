@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="../css/sertao.css" rel="stylesheet">
+    <title>Sertão Verde — Synergy360</title>
+    <style>
+        /* Estilos inline para o funcionamento do SPA e Upload */
+        .app-view {
+            transition: opacity 0.3s ease;
+            opacity: 0;
+            display: none; 
+        }
+        .app-view.active-view {
+            opacity: 1;
+            display: block !important;
+        }
+        .upload-area {
+            border: 2px dashed #dee2e6;
+            background-color: #f8f9fa;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        .upload-area:hover {
+            border-color: var(--roxo);
+            background-color: #f3eef8;
+        }
+        /* Estilo extra para o Dashboard */
+        .metric-value {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-white bg-white border-bottom shadow-sm sticky-top">
+        <div class="container-fluid">
+
+            <a class="navbar-brand d-flex align-items-center gap-3" href="#">
+                <img src="../imgs/synergy360 logo svg.svg" alt="Synergy360" class="logo-top" onerror="this.src='https://placehold.co/120x40?text=Synergy360'">
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="nav navbar-nav ms-auto align-items-center mt-3 mt-lg-0">
+
+                    <li class="nav-item nav-icon me-lg-3">
+                        <a class="nav-link text-dark nav-main-link" href="#" onclick="switchView('feed')">
+                            <i class="fa-solid fa-house fs-5 me-1 text-muted"></i>
+                            <span class="small fw-semibold">Feed</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown me-lg-3">
+                        <a class="nav-link text-dark dropdown-toggle nav-main-link" href="#" data-bs-toggle="dropdown">
+                            <i class="fa-solid fa-folder-open fs-5 me-1 text-muted"></i>
+                            <span class="small fw-semibold">Projetos</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end border-0 shadow-sm rounded-3">
+                            <li><a class="dropdown-item" href="#" onclick="switchView('projetos')">Projetos concluídos</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="switchView('projetos')">Projetos em andamento</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown me-lg-3">
+                        <a class="nav-link text-dark dropdown-toggle nav-main-link" href="#" data-bs-toggle="dropdown">
+                            <i class="fa-solid fa-route fs-5 me-1 text-muted"></i>
+                            <span class="small fw-semibold">Trilhas</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end border-0 shadow-sm rounded-3">
+                            <li><a class="dropdown-item" href="#">Big Five</a></li>
+                            <li><a class="dropdown-item" href="#">Sprint de Desenvolvimento</a></li>
+                            <li><a class="dropdown-item" href="#">Ferramentas de RH</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown me-lg-3">
+                        <a class="nav-link text-dark dropdown-toggle nav-main-link" href="#" data-bs-toggle="dropdown">
+                            <i class="fa-regular fa-comment fs-5 me-1 text-muted"></i>
+                            <span class="small fw-semibold">Mensagens</span>
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow-sm rounded-3">
+                            <li class="dropdown-submenu position-relative">
+                                <a class="dropdown-item dropdown-toggle d-flex justify-content-between align-items-center" href="#">
+                                    Chat
+                                    <i class="fa-solid fa-chevron-right text-muted" style="font-size: 0.6em;"></i>
+                                </a>
+                                <ul class="dropdown-menu submenu-right border-0 shadow-sm rounded-3">
+                                    <li><a class="dropdown-item" href="#" onclick="switchView('mensagens')">Mensagens</a></li>
+                                    <li class="dropdown-submenu position-relative">
+                                        <a class="dropdown-item dropdown-toggle d-flex justify-content-between align-items-center" href="#">
+                                            Projetos
+                                            <i class="fa-solid fa-chevron-right text-muted" style="font-size: 0.6em;"></i>
+                                        </a>
+                                        <ul class="dropdown-menu submenu-right border-0 shadow-sm rounded-3">
+                                            <li><a class="dropdown-item" href="#">Todos os projetos</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Convites</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown me-lg-3">
+                        <a class="nav-link text-dark dropdown-toggle nav-main-link" href="#" data-bs-toggle="dropdown">
+                            <i class="fa-solid fa-robot fs-5 me-1 text-roxo"></i>
+                            <span class="small fw-semibold text-roxo">Copilot</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end border-0 shadow-sm rounded-3">
+                            <li><a class="dropdown-item" href="#" onclick="switchView('copilot')">Apoio na Gestão</a></li>
+                            <li><a class="dropdown-item" href="#">Lembretes e Prazos</a></li>
+                            <li><a class="dropdown-item" href="#">Roadmap de Inovação</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item nav-icon me-lg-3">
+                        <a class="nav-link text-dark nav-main-link" href="#" onclick="switchView('dashboard')">
+                            <i class="fa-solid fa-database fs-5 me-1 text-muted"></i>
+                            <span class="small fw-semibold">Dados</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item nav-icon me-lg-3">
+                        <a class="nav-link text-dark nav-main-link" href="#">
+                            <i class="fa-solid fa-chart-pie fs-5 me-1 text-muted"></i>
+                            <span class="small fw-semibold">Insights360</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown ms-lg-2">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href="#" id="perfilMenu" data-bs-toggle="dropdown">
+                            <img src="https://placehold.co/40x40/2e7d32/ffffff?text=SV" class="avatar-nav rounded-circle" alt="Sertão Verde">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end border-0 shadow-sm rounded-3">
+                            <li><a class="dropdown-item" href="#">Configurações da Empresa</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger" href="#">Sair</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4 mb-5 main-container">
+        <div class="row g-4">
+
+            <aside class="col-lg-3 mb-4">
+                <div class="card card-dashboard border-0 mb-3 overflow-hidden">
+                    <div class="card-header-brand" style="background: linear-gradient(90deg, #2e7d32, #66bb6a);"></div> 
+                    <div class="card-body text-center pt-0 position-relative">
+                        <div class="avatar-wrapper mb-2 mx-auto">
+                            <img src="https://placehold.co/100x100/2e7d32/ffffff?text=SV" alt="Logo" class="avatar-profile">
+                            <span class="status-dot" title="Online"></span>
+                        </div>
+                        <h5 class="fw-bold mb-0 text-success">Sertão Verde</h5>
+                        <p class="text-muted small mb-1">Agronegócio Sustentável</p>
+                        <p class="text-muted smaller mb-3"><i class="fa-solid fa-location-dot me-1"></i>Petrolina, PE</p>
+
+                        <div class="d-flex justify-content-center gap-2 mb-3">
+                            <span class="badge bg-soft-verde text-verde border border-success">Certificado ISO 14001</span>
+                        </div>
+
+                        <button class="btn btn-outline-success btn-sm w-100 rounded-pill mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#perfilDetalhes">
+                            Ver detalhes <i class="fa-solid fa-chevron-down ms-1"></i>
+                        </button>
+                    </div>
+
+                    <div class="collapse px-3 pb-3 text-start" id="perfilDetalhes">
+                        <hr class="text-muted opacity-25 mt-0 mb-3">
+                        <div class="mb-3">
+                            <h6 class="sidebar-title">Sobre a Empresa</h6>
+                            <p class="smaller text-muted mb-2">Focada em tecnologias de convivência com o semiárido e agricultura de precisão.</p>
+                            <a href="#" class="smaller text-success text-decoration-none"><i class="fa-solid fa-link me-1"></i> sertaoverde.agro.br</a>
+                        </div>
+                        <div class="mb-3 bg-soft-verde p-2 rounded-3">
+                            <h6 class="sidebar-title text-success mb-2">Mentor Responsável</h6>
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="https://placehold.co/35x35/555/fff?text=MA" class="rounded-circle" width="35" height="35">
+                                <div class="lh-1">
+                                    <span class="fw-bold d-block smaller text-dark">Mariana Alencar</span>
+                                    <small class="text-muted" style="font-size: 10px;">Diretora de Operações</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card-dashboard border-0 p-3">
+                    <h6 class="fw-bold mb-3 small">Status dos Projetos</h6>
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="smaller text-muted">Em Campo</span>
+                        <span class="badge bg-success rounded-pill">5</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="smaller text-muted">Análise de Solo</span>
+                        <span class="badge bg-warning text-dark rounded-pill">2</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="smaller text-muted">Vagas Abertas</span>
+                        <span class="badge bg-secondary rounded-pill">8</span>
+                    </div>
+                </div>
+            </aside>
+
+
+            <main class="col-lg-6 mb-4">
+
+                <section id="view-feed" class="app-view active-view">
+                    
+                    <div class="card card-dashboard project-invite-card border-0 mb-4 shadow-sm" style="background-color: #f1f8e9; border-left-color: #2e7d32 !important;">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <div>
+                                    <span class="badge bg-success text-white mb-2">Inovação no Campo</span>
+                                    <h5 class="fw-bold mb-1 text-dark">Squad Raízes: Monitoramento Hídrico</h5>
+                                    <small class="text-dark fw-semibold"><i class="fa-solid fa-users me-1"></i> 5 Engenheiros Agrônomos</small>
+                                </div>
+                                <img src="https://placehold.co/50x50/2e7d32/white?text=SR" class="rounded-3 shadow-sm">
+                            </div>
+                            
+                            <p class="text-dark opacity-75 small mt-3 fw-medium">
+                                O Squad Raízes desenvolveu um sensor de baixo custo para medir a umidade do solo em tempo real na Caatinga. Buscam área para testes piloto.
+                            </p>
+                            
+                            <div class="d-flex gap-2 mt-3">
+                                <button class="btn btn-success btn-sm px-4 fw-bold shadow-sm">Agendar Visita</button>
+                                <button class="btn btn-light btn-sm text-dark border ms-auto">Ver Projeto Técnico</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h5 class="fw-bold text-dark mb-3">Feed de Acompanhamento</h5>
+
+                    <div class="card card-dashboard border-0 mb-3">
+                        <div class="card-body p-3">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="https://placehold.co/50x50/8d6e63/fff?text=ES" class="avatar-feed rounded-circle me-3" alt="Grupo">
+                                <div>
+                                    <h6 class="mb-0 fw-bold text-dark">EcoSoluções Nordeste</h6>
+                                    <small class="text-muted">Relatório Técnico &bull; 3h atrás</small>
+                                </div>
+                                <span class="ms-auto badge bg-light text-dark border">Fase 2/4</span>
+                            </div>
+                            <p class="text-secondary mb-2">
+                                Olá equipe Sertão Verde! Finalizamos o mapeamento das áreas degradadas para o projeto de reflorestamento com algaroba. Segue o mapa de calor em anexo. 🌳
+                            </p>
+                            <div class="bg-light p-2 rounded border d-flex align-items-center gap-3">
+                                <i class="fa-solid fa-map text-success fs-4 ms-2"></i>
+                                <div>
+                                    <span class="d-block fw-bold small">Mapa_Calor_Area_Sul.pdf</span>
+                                    <span class="d-block smaller text-muted">5.2 MB</span>
+                                </div>
+                                <button class="btn btn-sm btn-outline-secondary ms-auto">Visualizar</button>
+                            </div>
+                            <div class="mt-3 d-flex gap-2 border-top pt-2">
+                                <button class="btn btn-light btn-sm text-success flex-fill fw-bold" onclick="switchView('copilot')"><i class="fa-regular fa-thumbs-up me-1"></i> Aprovar</button>
+                                <button class="btn btn-light btn-sm text-muted flex-fill"><i class="fa-regular fa-comment-dots me-1"></i> Comentar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card card-dashboard border-0 mb-3">
+                        <div class="card-body p-3">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="https://placehold.co/50x50/555/fff?text=MA" class="avatar-feed rounded-circle me-3" alt="Mentor">
+                                <div>
+                                    <h6 class="mb-0 fw-bold text-dark">Mariana Alencar</h6>
+                                    <small class="text-muted">Diretora de Operações &bull; Ontem</small>
+                                </div>
+                            </div>
+                            <p class="text-secondary mb-0">
+                                A equipe de <strong>Drones Agrícolas</strong> superou as expectativas na detecção de pragas na Fazenda Esperança. Vamos expandir o teste para os pomares de manga na próxima semana.
+                            </p>
+                            <div class="mt-3">
+                                <button class="btn btn-sm btn-outline-success rounded-pill px-3">Ver resultados</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section id="view-dashboard" class="app-view d-none">
+                    
+                    <div class="d-flex align-items-center gap-3 mb-4">
+                        <button onclick="switchView('feed')" class="btn btn-light rounded-circle border shadow-sm"><i class="fa-solid fa-arrow-left"></i></button>
+                        <div>
+                            <h4 class="fw-bold mb-0 text-success"><i class="fa-solid fa-chart-line me-2"></i>Relatório de Impacto</h4>
+                            <p class="text-muted small mb-0">Visão geral dos investimentos e progresso dos squads.</p>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-4">
+                            <div class="card card-dashboard border-0 p-3 h-100 border-bottom border-4 border-success">
+                                <small class="text-muted text-uppercase fw-bold" style="font-size: 0.7rem;">Investimento Total</small>
+                                <div class="d-flex align-items-center gap-2 mt-2">
+                                    <i class="fa-solid fa-sack-dollar text-success fs-3"></i>
+                                    <span class="metric-value text-dark">R$ 450k</span>
+                                </div>
+                                <small class="text-success smaller"><i class="fa-solid fa-arrow-trend-up me-1"></i>+12% este mês</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card card-dashboard border-0 p-3 h-100 border-bottom border-4 border-primary">
+                                <small class="text-muted text-uppercase fw-bold" style="font-size: 0.7rem;">Projetos Ativos</small>
+                                <div class="d-flex align-items-center gap-2 mt-2">
+                                    <i class="fa-solid fa-seedling text-primary fs-3"></i>
+                                    <span class="metric-value text-dark">7</span>
+                                </div>
+                                <small class="text-muted smaller">3 em fase final</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card card-dashboard border-0 p-3 h-100 border-bottom border-4 border-warning">
+                                <small class="text-muted text-uppercase fw-bold" style="font-size: 0.7rem;">Impacto Gerado</small>
+                                <div class="d-flex align-items-center gap-2 mt-2">
+                                    <i class="fa-solid fa-people-group text-warning fs-3"></i>
+                                    <span class="metric-value text-dark">120+</span>
+                                </div>
+                                <small class="text-muted smaller">Famílias beneficiadas</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card card-dashboard border-0 mb-4">
+                        <div class="card-body p-4">
+                            <h6 class="fw-bold text-dark mb-4">Progresso das Metas - 2024</h6>
+                            
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <small class="fw-bold text-muted">Reflorestamento (Hectares)</small>
+                                    <small class="fw-bold text-success">75%</small>
+                                </div>
+                                <div class="progress" style="height: 10px;">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 75%"></div>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <small class="fw-bold text-muted">Instalação de Sensores IoT</small>
+                                    <small class="fw-bold text-primary">45%</small>
+                                </div>
+                                <div class="progress" style="height: 10px;">
+                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 45%"></div>
+                                </div>
+                            </div>
+
+                            <div class="mb-0">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <small class="fw-bold text-muted">Capacitação Técnica (Horas)</small>
+                                    <small class="fw-bold text-warning">90%</small>
+                                </div>
+                                <div class="progress" style="height: 10px;">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card card-dashboard border-0">
+                        <div class="card-header bg-white border-0 py-3">
+                            <h6 class="fw-bold mb-0">Status Geral dos Squads</h6>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle mb-0">
+                                <thead class="bg-light">
+                                    <tr>
+                                        <th class="small text-muted border-0 ps-4">Projeto</th>
+                                        <th class="small text-muted border-0">Fase</th>
+                                        <th class="small text-muted border-0">Status</th>
+                                        <th class="small text-muted border-0 text-end pe-4">Ação</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="ps-4">
+                                            <span class="d-block fw-bold small text-dark">Monitoramento Hídrico</span>
+                                            <small class="text-muted smaller">Squad Raízes</small>
+                                        </td>
+                                        <td><span class="badge bg-light text-dark border">Piloto</span></td>
+                                        <td><span class="badge bg-success-subtle text-success">Em dia</span></td>
+                                        <td class="text-end pe-4"><button class="btn btn-sm btn-light border"><i class="fa-solid fa-eye"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4">
+                                            <span class="d-block fw-bold small text-dark">Drones Agrícolas</span>
+                                            <small class="text-muted smaller">TechFly</small>
+                                        </td>
+                                        <td><span class="badge bg-light text-dark border">Testes</span></td>
+                                        <td><span class="badge bg-warning-subtle text-warning">Atenção</span></td>
+                                        <td class="text-end pe-4"><button class="btn btn-sm btn-light border"><i class="fa-solid fa-eye"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4">
+                                            <span class="d-block fw-bold small text-dark">App Cooperativa</span>
+                                            <small class="text-muted smaller">DevAgro</small>
+                                        </td>
+                                        <td><span class="badge bg-light text-dark border">MVP</span></td>
+                                        <td><span class="badge bg-success-subtle text-success">Concluído</span></td>
+                                        <td class="text-end pe-4"><button class="btn btn-sm btn-light border"><i class="fa-solid fa-eye"></i></button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section id="view-copilot" class="app-view d-none">
+                    
+                    <div class="d-flex align-items-center gap-3 mb-4">
+                        <button onclick="switchView('feed')" class="btn btn-light rounded-circle border shadow-sm"><i class="fa-solid fa-arrow-left"></i></button>
+                        <div>
+                            <h4 class="fw-bold mb-0 text-success"><i class="fa-solid fa-robot me-2"></i>Copilot de Gestão</h4>
+                            <p class="text-muted small mb-0">Avalie entregas e forneça feedback aos squads rurais.</p>
+                        </div>
+                    </div>
+
+                    <div class="card card-dashboard border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <form>
+                                <div class="mb-4">
+                                    <label class="form-label fw-bold text-dark small text-uppercase">1. Selecione o Projeto</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-white border-end-0"><i class="fa-solid fa-folder-open text-muted"></i></span>
+                                        <select class="form-select border-start-0 ps-0">
+                                            <option selected>Escolha um projeto...</option>
+                                            <option value="1">Squad Raízes - Monitoramento Hídrico</option>
+                                            <option value="2">EcoSoluções - Reflorestamento</option>
+                                            <option value="3">Projeto Drones - Detecção de Pragas</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="form-label fw-bold text-dark small text-uppercase">2. Feedback & Avaliação</label>
+                                    <textarea class="form-control bg-light" rows="5" placeholder="Descreva os pontos fortes e ajustes necessários para o campo..."></textarea>
+                                    <div class="d-flex gap-2 mt-2">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill">Gerar sugestão com IA <i class="fa-solid fa-wand-magic-sparkles ms-1"></i></button>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="form-label fw-bold text-dark small text-uppercase">3. Anexar Arquivo (Opcional)</label>
+                                    <div class="upload-area rounded-3 p-4 text-center">
+                                        <i class="fa-solid fa-cloud-arrow-up fs-3 text-muted mb-2"></i>
+                                        <p class="small text-muted mb-2">Arraste seu arquivo ou clique para selecionar</p>
+                                        <input type="file" class="form-control form-control-sm w-75 mx-auto">
+                                        <small class="text-secondary d-block mt-2" style="font-size: 0.75rem;">PDF, DOCX ou JPG até 10MB</small>
+                                    </div>
+                                </div>
+
+                                <hr class="my-4 opacity-25">
+
+                                <div class="d-flex justify-content-end gap-2">
+                                    <button type="button" onclick="switchView('feed')" class="btn btn-light text-muted">Cancelar</button>
+                                    <button type="submit" class="btn btn-success px-4 fw-bold shadow-sm">
+                                        <i class="fa-regular fa-paper-plane me-2"></i>Enviar Avaliação
+                                    </button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="view-projetos" class="app-view d-none">
+                    <div class="card card-dashboard border-0 p-4 text-center py-5">
+                        <i class="fa-solid fa-folder-open fs-1 text-muted opacity-25 mb-3"></i>
+                        <h5>Gestão de Projetos Rurais</h5>
+                        <p class="text-muted small">Gerencie todos os seus projetos de campo e pesquisa aqui.</p>
+                        <button class="btn btn-sm btn-outline-secondary mt-2" onclick="switchView('feed')">Voltar ao início</button>
+                    </div>
+                </section>
+
+                <section id="view-mensagens" class="app-view d-none">
+                    <div class="card card-dashboard border-0 p-4">
+                        <h5>Mensagens</h5>
+                        <div class="bg-light p-3 rounded text-center text-muted small py-5 mt-3">
+                            Selecione uma conversa para iniciar.
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+
+            <aside class="col-lg-3 mb-4 d-none d-lg-block">
+
+                <div class="card card-dashboard border-0 p-3 mb-3">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h6 class="fw-bold mb-0 small">Parceiros do Agro</h6>
+                        <a href="#" class="text-decoration-none smaller">Ver todos</a>
+                    </div>
+                    
+                    <div class="d-flex flex-column gap-3">
+                        
+                        <div class="d-flex align-items-center gap-2">
+                            <img src="https://placehold.co/40x40/1b5e20/fff?text=EM" class="rounded-circle object-fit-cover" width="40" height="40" alt="Logo">
+                            <div class="flex-grow-1 lh-1">
+                                <h6 class="mb-0 fw-semibold" style="font-size: 0.9rem;">Embrapa Semiárido</h6>
+                                <small class="text-muted smaller">Pesquisa</small>
+                            </div>
+                            <button class="btn btn-sm btn-light text-success border rounded-circle" title="Conectar"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+
+                        <div class="d-flex align-items-center gap-2">
+                            <img src="https://placehold.co/40x40/fbc02d/fff?text=IR" class="rounded-circle object-fit-cover" width="40" height="40" alt="Logo">
+                            <div class="flex-grow-1 lh-1">
+                                <h6 class="mb-0 fw-semibold" style="font-size: 0.9rem;">IRPAA</h6>
+                                <small class="text-muted smaller">Convivência</small>
+                            </div>
+                            <button class="btn btn-sm btn-light text-success border rounded-circle" title="Conectar"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+
+                        <div class="d-flex align-items-center gap-2">
+                            <img src="https://placehold.co/40x40/0277bd/fff?text=UN" class="rounded-circle object-fit-cover" width="40" height="40" alt="Logo">
+                            <div class="flex-grow-1 lh-1">
+                                <h6 class="mb-0 fw-semibold" style="font-size: 0.9rem;">Univasf</h6>
+                                <small class="text-muted smaller">Academia</small>
+                            </div>
+                            <button class="btn btn-sm btn-light text-success border rounded-circle" title="Conectar"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+
+                        <div class="d-flex align-items-center gap-2">
+                            <img src="https://placehold.co/40x40/e65100/fff?text=AT" class="rounded-circle object-fit-cover" width="40" height="40" alt="Logo">
+                            <div class="flex-grow-1 lh-1">
+                                <h6 class="mb-0 fw-semibold" style="font-size: 0.9rem;">AgroTech Nordeste</h6>
+                                <small class="text-muted smaller">Inovação</small>
+                            </div>
+                            <button class="btn btn-sm btn-light text-success border rounded-circle" title="Conectar"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-sm mt-3 p-3 rounded-4" style="background: var(--bg-soft-roxo); border-left: 4px solid var(--roxo);">
+                    <div class="text-center px-2">
+                        <img src="" alt="Synergy360" width="90" class="mb-2">
+                        <h6 class="fw-bold text-roxo mb-1">Transforme seu Negócio</h6>
+                        <p class="smaller text-muted mb-3">
+                            A Synergy360 conecta empresas a talentos e soluções inovadoras para acelerar resultados.
+                        </p>
+                        <button class="btn btn-roxo btn-sm rounded-pill fw-bold px-4 shadow-sm">
+                            Conheça a Plataforma
+                        </button>
+                    </div>
+                </div>
+
+            </aside>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) lucide.createIcons();
+        });
+
+        function switchView(viewName) {
+            document.querySelectorAll('.app-view').forEach(el => {
+                el.classList.remove('active-view');
+                setTimeout(() => el.classList.add('d-none'), 0);
+            });
+            
+            document.querySelectorAll('.nav-main-link').forEach(el => el.classList.remove('active'));
+
+            const selectedView = document.getElementById('view-' + viewName);
+            if(selectedView) {
+                selectedView.classList.remove('d-none');
+                setTimeout(() => selectedView.classList.add('active-view'), 10);
+            }
+        }
+    </script>
+</body>
+</html>

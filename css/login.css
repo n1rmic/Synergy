@@ -67,22 +67,21 @@ h1 {
     font-size: 15px;
 }
 
-/* 🎯 CORREÇÃO: Reduz o tamanho do checkbox e ajusta o espaçamento */
+
 .remember input[type="checkbox"] {
     width: 14px;
-    /* Tamanho do 'quadrado' reduzido */
+
     height: 14px;
     margin: 0;
-    /* Remove margens do input geral */
+  
     margin-right: 8px;
-    /* Espaço entre o quadrado e o texto */
+
 }
 
 .remember {
     display: flex;
     align-items: center;
     gap: 0px;
-    /* Reduzindo ou removendo o gap para usar a margin-right do input */
     margin-bottom: 20px;
 }
 
