@@ -16,509 +16,537 @@
 
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-white bg-white border-bottom shadow-sm sticky-top">
-        <div class="container-fluid">
+        <div class="container">
 
-            <!-- LOGO -->
             <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
-                <img src="../imgs/synergy360 logo svg.svg" alt="Synergy360" class="logo-top">
+                <img src="../imgs/synergy360 logo svg.svg" alt="Synergy360" class="logo-top"
+                    onerror="this.src='https://placehold.co/120x40?text=Synergy360'">
             </a>
 
-            <ul class="nav ms-auto align-items-center">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarFeed">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <!-- Projetos -->
-                <li class="nav-item dropdown me-3">
-                    <a class="nav-link text-dark dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                        <i class="fa-solid fa-folder-open fs-5"></i>
-                        <small>Projetos</small>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end perfil-dropdown">
-                        <li><a class="dropdown-item" href="#">Projetos concluidos</a></li>
-                        <li><a class="dropdown-item" href="#">Projetos em andamento</a></li>
-                    </ul>
-                </li>
+            <div class="collapse navbar-collapse" id="navbarFeed">
+                <ul class="nav navbar-nav ms-auto align-items-center mt-3 mt-lg-0">
 
-                <!-- Trilhas -->
-                <li class="nav-item dropdown me-3">
-                    <a class="nav-link text-dark dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                        <i class="fa-solid fa-route fs-5"></i>
-                        <small>Trilhas</small>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end perfil-dropdown">
-                        <li><a class="dropdown-item" href="#">Big Five</a></li>
-                        <li><a class="dropdown-item" href="#">Sprint de Desenvolvimento</a></li>
-                        <li><a class="dropdown-item" href="#">Ferramentas de RH</a></li>
-                    </ul>
-                </li>
 
-                <!-- Mensagens -->
-                <li class="nav-item dropdown me-3">
-                    <a class="nav-link text-dark dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                        <i class="fa-regular fa-comment fs-5"></i>
-                        <small>Mensagens</small>
-                    </a>
+                    <li class="nav-item dropdown me-lg-3">
+                        <a class="nav-link text-dark dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            <i class="fa-solid fa-folder-open fs-5 me-1 text-muted"></i>
+                            <span class="d-lg-none d-xl-inline small fw-semibold">Projetos</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end border-0 shadow-sm rounded-3">
+                            <li><a class="dropdown-item" href="#">Projetos concluídos</a></li>
+                            <li><a class="dropdown-item" href="#">Projetos em andamento</a></li>
+                        </ul>
+                    </li>
 
-                    <ul class="dropdown-menu dropdown-menu-end perfil-dropdown">
+                    <!-- Trilhas -->
+                    <li class="nav-item dropdown me-lg-3">
+                        <a class="nav-link text-dark dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            <i class="fa-solid fa-route fs-5 me-1 text-muted"></i>
+                            <span class="d-lg-none d-xl-inline small fw-semibold">Trilhas</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end border-0 shadow-sm rounded-3">
+                            <li><a class="dropdown-item" href="#">Big Five</a></li>
+                            <li><a class="dropdown-item" href="#">Sprint de Desenvolvimento</a></li>
+                            <li><a class="dropdown-item" href="#">Ferramentas de RH</a></li>
+                        </ul>
+                    </li>
 
-                        <!-- CHAT -->
-                        <li class="dropdown-submenu">
-                            <a class="dropdown-item dropdown-toggle" href="#">
-                                Chat
-                            </a>
+                    <!-- Mensagens -->
+                    <li class="nav-item dropdown me-lg-3">
+                        <a class="nav-link text-dark dropdown-toggle position-relative" href="#"
+                            data-bs-toggle="dropdown">
+                            <i class="fa-regular fa-comment fs-5 me-1 text-muted"></i>
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle d-none d-lg-block"
+                                style="width: 8px; height: 8px;"></span>
+                            <span class="d-lg-none d-xl-inline small fw-semibold">Mensagens</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end border-0 shadow-sm rounded-3">
+                            <li><a class="dropdown-item" href="#">Chat Geral</a></li>
+                            <li><a class="dropdown-item" href="#">Mentores</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Convites</a></li>
+                        </ul>
+                    </li>
 
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Mensagens</a></li>
+                    <!-- Copilot -->
+                    <li class="nav-item dropdown me-lg-3">
+                        <a class="nav-link text-dark dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            <i class="fa-solid fa-robot fs-5 me-1 text-roxo"></i>
+                            <span class="d-lg-none d-xl-inline small fw-semibold text-roxo">Copilot</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end border-0 shadow-sm rounded-3">
+                            <li><a class="dropdown-item" href="#">Sugestões e Roadmap</a></li>
+                            <li><a class="dropdown-item" href="#">Lembretes e Prazos</a></li>
+                        </ul>
+                    </li>
 
-                                <li class="dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle" href="#">
-                                        Projetos
-                                    </a>
+                    <div class="vr d-none d-lg-block mx-2 h-50 align-self-center"></div>
 
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Todos os projetos</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
+                    <!-- Perfil Dropdown -->
+                    <li class="nav-item dropdown ms-lg-2">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href="#" id="perfilMenu"
+                            data-bs-toggle="dropdown">
+                            <img src="../imgs/avatar.png" class="avatar-nav rounded-circle" alt="User"
+                                onerror="this.src='https://placehold.co/40x40/5b2c83/white?text=EG'">
+                            <div class="d-flex flex-column text-start lh-1 d-none d-xl-block">
+                                <span class="fw-bold small">Eduardo</span>
+                                <span class="text-muted" style="font-size: 10px;">Estudante</span>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end border-0 shadow-sm rounded-3">
+                            <li><a class="dropdown-item" href="perfil-estudante.html"><i
+                                        class="fa-regular fa-user me-2"></i>Ver Perfil</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear me-2"></i>Configurações</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-danger" href="#"><i
+                                        class="fa-solid fa-arrow-right-from-bracket me-2"></i>Sair</a></li>
+                        </ul>
+                    </li>
 
-                        <li><a class="dropdown-item" href="#">Convites</a></li>
-
-                    </ul>
-                </li>
-
-                <!-- Copilot -->
-                <li class="nav-item dropdown me-3">
-                    <a class="nav-link text-dark dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                        <i class="fa-solid fa-robot fs-5"></i>
-                        <small>Copilot</small>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end perfil-dropdown">
-                        <li><a class="dropdown-item" href="#">Sugestões e Roadmap</a></li>
-                        <li><a class="dropdown-item" href="#">Lembretes e Prazos</a></li>
-                        <li><a class="dropdown-item" href="#">Apoio na Gestão / Insights</a></li>
-                    </ul>
-                </li>
-
-                <!-- Dados -->
-                <li class="nav-item nav-icon me-3">
-                    <a class="nav-link text-dark" href="#">
-                        <i class="fa-solid fa-database fs-5"></i>
-                        <small>Dados</small>
-                    </a>
-                </li>
-
-                <!-- Insights360 -->
-                <li class="nav-item nav-icon me-3">
-                    <a class="nav-link text-dark" href="#">
-                        <i class="fa-solid fa-chart-pie fs-5"></i>
-                        <small>Insights360</small>
-                    </a>
-                </li>
-
-                <!-- Perfil -->
-               <li class="nav-item dropdown perfil-dropdown-parent">
-    <a class="nav-link dropdown-toggle" href="#" id="perfilMenu" data-bs-toggle="dropdown">
-        <i class="fa-regular fa-user fs-5"></i>
-        <small>Perfil</small>
-    </a>
-
-    <ul class="dropdown-menu perfil-dropdown-left">
-        <li><a class="dropdown-item" href="perfil-estudante.html">Foto e Descrição</a></li>
-        <li><a class="dropdown-item" href="#">Projetos Desenvolvidos</a></li>
-        <li><a class="dropdown-item" href="#">Habilidades de Destaque</a></li>
-        <li><a class="dropdown-item" href="#">Cases de Sucesso</a></li>
-        <li><a class="dropdown-item" href="#">Feed de Atualizações</a></li>
-        <li><a class="dropdown-item" href="#">Rede de Contatos</a></li>
-    </ul>
-</li>
-
-            </ul>
+                </ul>
+            </div>
         </div>
     </nav>
 
 
-    <div class="caixinha">
 
-    <!-- Conteúdo principal -->
-    <div class="container-fluid mt-4">
-        <div class="row gx-4">
+    <div class="container mt-4 mb-5">
+        <div class="row g-4">
 
-            <!-- Lado esquerdo -->
+            <!-- perfil esquerdo -->
+            <aside class="col-lg-3">
 
-            <!--Perfil -->
-            <aside class="col-lg-3 mb-4">
-                <h5 class="mb-0">Seu Perfil</h5>
-                <div class="card perfil-card p-3 mb-3 position-relative overflow-hidden">
 
-                    <div class="text-center position-relative z-1">
+                <div class="card card-dashboard border-0 mb-3 overflow-hidden">
+                    <div class="card-header-brand"></div> <!-- Faixa colorida no topo -->
 
-                        <div class="position-relative d-inline-block mb-2">
-                            <img src="../imgs/avatar.png" alt="Avatar" class="avatar">
-                            <span
-                                class="position-absolute bottom-0 end-0 p-2 bg-success border border-white rounded-circle"
-                                title="Aberto a projetos" style="width:15px; height:15px;"></span>
+
+                    <div class="card-body text-center pt-0 position-relative">
+                        <div class="avatar-wrapper mb-2 mx-auto">
+                            <img src="../imgs/avatar.png" alt="Avatar" class="avatar-profile"
+                                onerror="this.src='https://placehold.co/100x100/5b2c83/white?text=EG'">
+                            <span class="status-dot" title="Aberto a projetos"></span>
                         </div>
 
-                        <h5 class="mb-0 fw-bold">Eduardo Gomes</h5>
 
-                        <span class="badge bg-light text-primary border mb-2 mt-1">Estudante</span>
+                        <h5 class="fw-bold mb-0 text-roxo">Eduardo Gomes</h5>
 
-                        <p class="text-muted small mb-1">Ciência da Computação</p>
-                        <p class="text-muted small mb-3">
-                            <i class="fa-solid fa-location-dot me-1"></i> Fortaleza, Ceará
+                        <div class="mb-1">
+                            <span class="badge bg-soft-roxo text-roxo mb-1">Estudante</span>
+                        </div>
+
+
+                        <p class="text-muted small mb-2 lh-sm">
+                            Ciência da Computação<br>
+
+                            <span class="smaller"><i class="fa-solid fa-location-dot me-1"></i>Fortaleza, CE /
+                                Brasil</span>
                         </p>
 
+
                         <div class="mb-3">
-                            <span class="badge rounded-pill bg-soft-success text-success border-success-subtle">
+                            <span class="badge rounded-pill border border-success text-success bg-soft-verde py-1 px-2">
                                 <i class="fa-regular fa-handshake me-1"></i> Aberto a projetos
                             </span>
                         </div>
 
-                        <hr class="my-2">
-                    </div>
-
-                    <div class="d-grid">
-                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle no-caret" type="button"
+                        <button class="btn btn-outline-roxo btn-sm w-100 rounded-pill mb-2" type="button"
                             data-bs-toggle="collapse" data-bs-target="#perfilCompleto" aria-expanded="false"
-                            aria-controls="perfilCompleto" id="btnVerMais">
-                            Ver perfil completo
+                            aria-controls="perfilCompleto">
+                            Ver detalhes <i class="fa-solid fa-chevron-down ms-1"></i>
                         </button>
                     </div>
 
-                    <div class="collapse mt-3" id="perfilCompleto">
+
+                    <div class="collapse px-3 pb-3 text-start" id="perfilCompleto">
+                        <hr class="text-muted opacity-25 mt-0 mb-3">
+
+                        <div class="mb-3 bg-soft-roxo p-2 rounded-3 border-start border-4 border-roxo">
+                            <h6 class="sidebar-title text-roxo mb-1"><i class="fa-solid fa-quote-left me-1"></i> Visão
+                                Pessoal</h6>
+                            <p class="smaller text-muted mb-0 fst-italic">
+                                "Quero usar a tecnologia para gerar impacto social e transformar comunidades através da
+                                inovação."
+                            </p>
+                        </div>
+
 
                         <div class="mb-3">
-                            <h6 class="fw-bold small text-uppercase perfil-titulo">Bio</h6>
-                            <p class="small text-muted mb-0">
+                            <h6 class="sidebar-title">Bio / Apresentação</h6>
+                            <p class="smaller text-muted mb-0">
                                 Tenho experiência em IA aplicada e busco co-desenvolver projetos de impacto social. Sou
-                                apaixonado por transformar dados em soluções reais.
+                                motivado por resolver problemas reais.
                             </p>
                         </div>
 
-                        <div class="mb-3 p-2 bg-light rounded border-start border-4 border-success-dark">
-                            <p class="small fst-italic text-muted mb-0">
-                                "Quero usar a tecnologia para democratizar o acesso à educação, transformando
-                                comunidades."
-                            </p>
-                        </div>
 
                         <div class="mb-3">
-                            <h6 class="fw-bold small text-uppercase perfil-titulo">Habilidades</h6>
+                            <h6 class="sidebar-title">Habilidades</h6>
 
-                            <small class="d-block text-muted fw-bold mt-1 mb-1">Técnicas:</small>
-                            <div class="d-flex flex-wrap gap-1 mb-2">
-                                <span class="badge bg-light text-dark border">Python/ML</span>
-                                <span class="badge bg-light text-dark border">Análise de Dados</span>
-                                <span class="badge bg-light text-dark border">Design UX/UI</span>
+
+                            <div class="mb-2">
+                                <small class="fw-bold smaller text-dark d-block mb-1">Técnicas</small>
+                                <div class="d-flex flex-wrap gap-1">
+                                    <span class="tag-mini">Python</span>
+                                    <span class="tag-mini">Análise de Dados</span>
+                                    <span class="tag-mini">Biotech</span>
+                                </div>
                             </div>
 
-                            <small class="d-block text-muted fw-bold mt-2 mb-1">Comportamentais:</small>
-                            <div class="d-flex flex-wrap gap-1 mb-2">
-                                <span class="badge bg-soft-primary text-primary border-primary-subtle">Liderança</span>
-                                <span class="badge bg-soft-primary text-primary border-primary-subtle">Resolução de
-                                    Problemas</span>
+
+                            <div class="mb-2">
+                                <small class="fw-bold smaller text-dark d-block mb-1">Comportamentais</small>
+                                <div class="d-flex flex-wrap gap-1">
+                                    <span class="tag-mini bg-light text-secondary">Liderança</span>
+                                    <span class="tag-mini bg-light text-secondary">Comunicação</span>
+                                    <span class="tag-mini bg-light text-secondary">Criatividade</span>
+                                </div>
                             </div>
 
-                            <small class="d-block text-muted fw-bold mt-2 mb-1">Perfil (Big Five):</small>
-                            <span class="badge bg-warning text-dark opacity-75">Conscienciosidade Alta</span>
+
+                            <div>
+                                <small class="fw-bold smaller text-dark d-block mb-1">Perfil Comportamental</small>
+                                <div class="progress mb-1" style="height: 6px;">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 85%"
+                                        aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <small class="text-muted smaller mt-1 d-block">Traço: Conscienciosidade Alta
+                                    (Organização, Foco)</small>
+                            </div>
                         </div>
 
+
                         <div class="mb-3">
-                            <h6 class="fw-bold small text-uppercase perfil-titulo">Portfólio & Links</h6>
-                            <ul class="list-unstyled small mb-2">
-                                <li class="mb-2">
-                                    <strong class="text-primary">Mochila Solar</strong> <span
-                                        class="text-muted small">(Líder)</span>
-                                    <div class="text-muted smaller">Co-desenvolvimento de protótipo premiado.</div>
-                                </li>
-                                <li class="mb-1">
-                                    <strong class="text-primary">App de Reciclagem</strong> <span
-                                        class="text-muted small">(Membro)</span>
-                                </li>
+                            <h6 class="sidebar-title">Experiência em Projetos / Portfólio</h6>
+
+                            <div class="d-flex flex-column gap-2 mb-2">
+
+                                <div class="p-2 border rounded-3 bg-light">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <span class="fw-bold smaller text-dark">Mochila Solar</span>
+                                        <span class="badge bg-success text-white" style="font-size: 9px;">Líder</span>
+                                    </div>
+                                    <p class="smaller text-muted mb-0 lh-sm" style="font-size: 0.75rem;">
+                                        Projeto premiado de autonomia energética para escolas rurais.
+                                        <span class="fw-semibold text-roxo d-block mt-1">Destaque: Inovação e Prêmio
+                                            Regional</span>
+                                    </p>
+                                </div>
+
+                                <div class="p-2 border rounded-3 bg-light">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <span class="fw-bold smaller text-dark">App Reciclagem</span>
+                                        <span class="badge bg-secondary text-white"
+                                            style="font-size: 9px;">Membro</span>
+                                    </div>
+                                    <p class="smaller text-muted mb-0 lh-sm" style="font-size: 0.75rem;">
+                                        Gamificação para coleta seletiva urbana. (Impacto: +20% na coleta).
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <div class="d-flex gap-2 justify-content-center">
+                                <a href="#" class="btn btn-sm btn-outline-secondary py-0 px-2 smaller" title="GitHub"><i
+                                        class="fa-brands fa-github"></i> GitHub</a>
+                                <a href="#" class="btn btn-sm btn-outline-secondary py-0 px-2 smaller"
+                                    title="LinkedIn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                            </div>
+                        </div>
+
+
+                        <div class="mb-3">
+                            <h6 class="sidebar-title">Trilhas de Desenvolvimento</h6>
+                            <ul class="list-unstyled mb-0 smaller text-muted">
+                                <li class="mb-1"><i class="fa-solid fa-check-circle text-success me-1"></i> Liderança
+                                    4.0 (Completa)</li>
+                                <li class="mb-1"><i class="fa-solid fa-spinner text-primary me-1"></i> Gestão de Dados
+                                    (Em andamento)</li>
                             </ul>
-                            <div class="d-flex gap-2">
-                                <a href="#" class="btn btn-sm btn-light border p-1" title="GitHub"><i
-                                        class="fa-brands fa-github text-muted"></i></a>
-                                <a href="#" class="btn btn-sm btn-light border p-1" title="LinkedIn"><i
-                                        class="fa-brands fa-linkedin text-muted"></i></a>
-                                <a href="#" class="btn btn-sm btn-light border p-1" title="Site Pessoal"><i
-                                        class="fa-solid fa-link text-muted"></i></a>
+                            <div class="mt-2">
+                                <small class="fw-bold smaller text-dark d-block mb-1">Competências Desenvolvidas</small>
+                                <div class="d-flex flex-wrap gap-1">
+                                    <span class="tag-mini border border-primary text-primary bg-white">Liderança</span>
+                                    <span class="tag-mini border border-primary text-primary bg-white">Inovação</span>
+                                </div>
                             </div>
                         </div>
 
-                        <hr class="my-2">
 
                         <div class="mb-3">
-                            <h6 class="fw-bold small text-uppercase perfil-titulo">Interesses & Busca</h6>
-                            <p class="small text-muted mb-1">IA, EdTech, Sustentabilidade</p>
-                            <div class="alert alert-light border p-2 mb-0">
-                                <small class="d-block text-muted"><strong>Tipo de Colaboração:</strong> Co-desenvolver
-                                    projetos, Buscar mentorias</small>
-                                <small class="d-block text-muted"><strong>Disponibilidade:</strong> 10h/semana (3
-                                    meses)</small>
+                            <h6 class="sidebar-title">Certificações e Conquistas</h6>
+                            <div class="d-flex flex-column gap-1">
+                                <span class="badge border bg-white text-body fw-normal smaller text-start"
+                                    title="Certificado Google UX"><i
+                                        class="fa-solid fa-certificate text-primary me-1"></i> Certificado UX Essentials
+                                    (Externo)</span>
+                                <span class="badge border bg-white text-body fw-normal smaller text-start"
+                                    title="Hackathon Regional"><i class="fa-solid fa-trophy text-warning me-1"></i> 1º
+                                    Lugar Hackathon (Conquista)</span>
+                            </div>
+                        </div>
+
+
+                        <div class="mb-3">
+                            <h6 class="sidebar-title">Interesses e Oportunidades</h6>
+                            <div class="bg-light p-2 rounded-3 border">
+                                <p class="smaller mb-1"><strong class="text-roxo">Áreas de Interesse:</strong> IA,
+                                    EdTech, Sustentabilidade</p>
+                                <p class="smaller mb-1"><strong class="text-roxo">Colaboração Desejada:</strong> Buscar
+                                    mentorias, Co-desenvolver projetos</p>
+                                <div class="mt-2 pt-2 border-top">
+                                    <p class="smaller mb-0 text-muted fw-bold"><i class="fa-regular fa-clock me-1"></i>
+                                        Disponibilidade: ~10h/semana (Compromisso de 3 meses)</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div>
+                            <h6 class="sidebar-title">Rede de Conexões</h6>
+                            <p class="smaller text-muted mb-2"><strong
+                                    class="text-dark">Colaboradores/Mentores:</strong> Mariana Duarte, Instituto
+                                TechLabs</p>
+                            <p class="smaller text-muted mb-2"><strong class="text-dark">Projetos em comum:</strong>
+                                Mochila Solar, App Reciclagem</p>
+                            <div class="d-flex align-items-center">
+
+                                <div class="position-relative d-flex ps-2">
+
+                                    <img src="../imgs/trabalhadores/pessoa01.jpg"
+                                        class="rounded-circle border border-white avatar-group-item" width="28"
+                                        height="28" style="margin-left: -10px; z-index: 3;">
+                                    <img src="../imgs/empresas/Instituto TechLabs.jpg"
+                                        class="rounded-circle border border-white avatar-group-item" width="28"
+                                        height="28" style="margin-left: -10px; z-index: 2;">
+                                    <img src="../imgs/trabalhadores/pessoa02.jpg"
+                                        class="rounded-circle border border-white avatar-group-item" width="28"
+                                        height="28" style="margin-left: -10px; z-index: 1;">
+                                </div>
+                                <a href="#" class="smaller text-muted ms-2 text-decoration-none">Ver todos os 15
+                                    contatos</a>
                             </div>
                         </div>
 
                     </div>
                 </div>
 
-                <div class="card mt-3 p-3 small" style="box-shadow: var(--card-shadow);">
-                    <h6 class="mb-2">Trilhas de Desenvolvimento</h6>
-                    <p class="mb-0 text-muted">Competências em destaque:</p>
-                    <div class="mt-2 border-top pt-2">
-                        <small class="text-muted d-block"><i class="fa-solid fa-trophy text-warning me-1"></i> Trilha de
-                            Liderança Completa</small>
-                        <small class="text-muted d-block"><i class="fa-solid fa-check-circle text-success me-1"></i>
-                            Certificado em Gestão de Dados</small>
-                        <a href="#" class="btn btn-sm btn-outline-primary mt-2">Ver todas</a>
+
+                <div class="card card-dashboard border-0 p-3">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="icon-square me-2 bg-soft-azul text-azul"><i class="fa-solid fa-trophy"></i></div>
+                        <h6 class="mb-0 fw-bold">Progresso Geral</h6>
                     </div>
+
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2 pb-2 border-bottom border-light">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <small class="fw-semibold text-dark">Liderança</small>
+                                <small class="text-success fw-bold">100%</small>
+                            </div>
+                            <div class="progress" style="height: 4px;">
+                                <div class="progress-bar bg-success" style="width: 100%"></div>
+                            </div>
+                        </li>
+                        <li class="mb-2">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <small class="fw-semibold text-dark">Gestão de Dados</small>
+                                <small class="text-primary fw-bold">60%</small>
+                            </div>
+                            <div class="progress" style="height: 4px;">
+                                <div class="progress-bar bg-primary" style="width: 60%"></div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
 
             </aside>
 
-            <!-- Conteúdo central -->
-            <main class="col-lg-6 mb-4">
 
-                <!-- DESTAQUES -->
+            <!-- feed -->
+            <main class="col-lg-6">
+
+
                 <section class="mb-4">
                     <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h5 class="mb-0">Destaques para você</h5>
-                        <small class="text-muted">Veja os projetos que se destacaram essa semana</small>
+                        <h5 class="fw-bold text-dark mb-0">Destaques da Semana</h5>
+                        <a href="#" class="text-decoration-none smaller text-muted">Ver tudo</a>
                     </div>
 
                     <div class="row g-3">
-
-                    
                         <div class="col-md-4">
-                            <article class="card destaque-card p-3 h-100">
-                                <div class="d-flex align-items-center gap-2 mb-2">
-                                    <img src="../imgs/imag1.jpg" class="thumb" alt="Projeto">
-                                    <div>
-                                        <h6 class="mb-0">Horta Inteligente</h6>
-                                        <small class="text-muted">Irrigação automatizada</small>
+                            <article class="card destaque-card h-100 border-0">
+                                <div class="card-body p-3 d-flex flex-column">
+                                    <div class="d-flex align-items-center gap-2 mb-2">
+                                        <img src="../imgs/imag1.jpg" class="rounded-3 object-fit-cover" width="40"
+                                            height="40" alt="Img"
+                                            onerror="this.src='https://placehold.co/40x40/green/white'">
+                                        <div class="lh-1">
+                                            <h6 class="mb-0 fw-bold font-sm">Horta Smart</h6>
+                                            <small class="text-muted smaller">IoT & Agro</small>
+                                        </div>
                                     </div>
-                                </div>
-                                <p class="small text-muted">
-                                    Sistema de irrigação automatizada usando sensores...
-                                </p>
-                                <div class="mt-auto d-flex justify-content-between align-items-center">
-                                   <a href="#" class="small text-primary">
-    <i data-lucide="heart" class="me-1"></i> Curtir
-</a>
-<a href="#" class="btn btn-sm btn-outline-primary">
-    <i data-lucide="external-link" class="me-1"></i> Ver mais
-</a>
+                                    <p class="smaller text-muted mb-2 line-clamp-2">Sistema de irrigação automatizada
+                                        usando sensores Arduino...</p>
+                                    <div class="mt-auto pt-2 border-top border-light d-flex justify-content-between">
+                                        <small class="text-roxo fw-bold cursor-pointer"><i data-lucide="heart"
+                                                width="14"></i> Curtir</small>
+                                        <i data-lucide="external-link" width="14" class="text-muted"></i>
+                                    </div>
                                 </div>
                             </article>
                         </div>
 
-                        <!-- Card 2 -->
+
                         <div class="col-md-4">
-                            <article class="card destaque-card p-3 h-100">
-                                <div class="d-flex align-items-center gap-2 mb-2">
-                                    <img src="../imgs/imagem.jpg" class="thumb" alt="Projeto">
-                                    <div>
-                                        <h6 class="mb-0">Mapa da Memória Afetiva</h6>
-                                        <small class="text-muted">História e design</small>
+                            <article class="card destaque-card h-100 border-0">
+                                <div class="card-body p-3 d-flex flex-column">
+                                    <div class="d-flex align-items-center gap-2 mb-2">
+                                        <img src="../imgs/imagem.jpg" class="rounded-3 object-fit-cover" width="40"
+                                            height="40" alt="Img"
+                                            onerror="this.src='https://placehold.co/40x40/orange/white'">
+                                        <div class="lh-1">
+                                            <h6 class="mb-0 fw-bold font-sm">Memória Afetiva</h6>
+                                            <small class="text-muted smaller">Design Social</small>
+                                        </div>
                                     </div>
-                                </div>
-                                <p class="small text-muted">
-                                    Criação de mapas afetivos conectando pessoas e histórias...
-                                </p>
-                                <div class="mt-auto d-flex justify-content-between align-items-center">
-                                  <a href="#" class="small text-primary">
-    <i data-lucide="heart" class="me-1"></i> Curtir
-</a>
-<a href="#" class="btn btn-sm btn-outline-primary">
-    <i data-lucide="external-link" class="me-1"></i> Ver mais
-</a>
+                                    <p class="smaller text-muted mb-2 line-clamp-2">Mapeamento de histórias locais e
+                                        cultura através do design...</p>
+                                    <div class="mt-auto pt-2 border-top border-light d-flex justify-content-between">
+                                        <small class="text-roxo fw-bold cursor-pointer"><i data-lucide="heart"
+                                                width="14"></i> Curtir</small>
+                                        <i data-lucide="external-link" width="14" class="text-muted"></i>
+                                    </div>
                                 </div>
                             </article>
                         </div>
 
-                        <!-- Card 3 -->
+
                         <div class="col-md-4">
-                            <article class="card destaque-card p-3 h-100">
-                                <div class="d-flex align-items-center gap-2 mb-2">
-                                    <img src="../imgs/you-x-ventures-1439463-unsplash-min.jpg" class="thumb"
-                                        alt="Projeto">
-                                    <div>
-                                        <h6 class="mb-0">Carregador Solar</h6>
-                                        <small class="text-muted">Portátil e sustentável</small>
+                            <article class="card destaque-card h-100 border-0">
+                                <div class="card-body p-3 d-flex flex-column">
+                                    <div class="d-flex align-items-center gap-2 mb-2">
+                                        <img src="../imgs/you-x-ventures-1439463-unsplash-min.jpg"
+                                            class="rounded-3 object-fit-cover" width="40" height="40" alt="Img"
+                                            onerror="this.src='https://placehold.co/40x40/blue/white'">
+                                        <div class="lh-1">
+                                            <h6 class="mb-0 fw-bold font-sm">Solar Charger</h6>
+                                            <small class="text-muted smaller">Sustentável</small>
+                                        </div>
                                     </div>
-                                </div>
-                                <p class="small text-muted">Protótipo portátil para uso em comunidades...</p>
-                                <div class="mt-auto d-flex justify-content-between align-items-center">
-                                    <a href="#" class="small text-primary">
-    <i data-lucide="heart" class="me-1"></i> Curtir
-</a>
-<a href="#" class="btn btn-sm btn-outline-primary">
-    <i data-lucide="external-link" class="me-1"></i> Ver mais
-</a>
+                                    <p class="smaller text-muted mb-2 line-clamp-2">Protótipo portátil para uso em
+                                        comunidades isoladas...</p>
+                                    <div class="mt-auto pt-2 border-top border-light d-flex justify-content-between">
+                                        <small class="text-roxo fw-bold cursor-pointer"><i data-lucide="heart"
+                                                width="14"></i> Curtir</small>
+                                        <i data-lucide="external-link" width="14" class="text-muted"></i>
+                                    </div>
                                 </div>
                             </article>
                         </div>
-
                     </div>
                 </section>
 
-         
+
                 <section class="mb-4">
-                    <h6 class="mb-3">Noticias para você</h6>
-                    <div class="card p-3" style="box-shadow: var(--card-shadow);">
-                        <h6 class="mb-2">Mochila Solar Inteligente</h6>
-                        <p class="small text-muted mb-0">
-                            Autonomia energética para estudantes e profissionais...
-                        </p>
-                        <div class="mt-2">
-                            <span class="badge bg-success">Ciência</span>
-                            <span class="badge bg-warning text-dark">Meio ambiente</span>
+                    <div class="card card-dashboard border-0 bg-soft-roxo overflow-hidden">
+                        <div class="card-body d-flex justify-content-between align-items-center p-3">
+                            <div>
+                                <small class="text-uppercase fw-bold text-roxo mb-1 d-block">Recomendado para
+                                    você</small>
+                                <h6 class="fw-bold text-dark mb-1">Mochila Solar Inteligente</h6>
+                                <p class="small text-muted mb-2">Um projeto alinhado com seus interesses em Energia e
+                                    IoT.</p>
+                                <div class="d-flex gap-2">
+                                    <span class="badge bg-white text-dark border">Ciência</span>
+                                    <span class="badge bg-white text-dark border">Meio Ambiente</span>
+                                </div>
+                            </div>
+                            <div class="d-none d-sm-block text-end">
+                                <button class="btn btn-roxo btn-sm rounded-pill px-3 shadow-sm">Ver Projeto</button>
+                            </div>
                         </div>
                     </div>
                 </section>
 
-                <!-- FEED -->
+                <!-- feed principal -->
                 <section>
-                    <h6 class="mb-3">Feed de interesses</h6>
+                    <h5 class="fw-bold text-dark mb-3">Seu Feed</h5>
 
-                    <!--posts-->
-                
-                    <article class="card mb-3 p-3" style="box-shadow: var(--card-shadow);">
-                        <div class="d-flex align-items-start gap-3">
-                            <img src="../imgs/empresas/Instituto TechLabs.jpg" class="avatar-sm" alt="">
-                            <div class="flex-grow-1">
-                                <div class="d-flex justify-content-between">
-                                    <div>
-                                        <strong>Instituto TechLabs</strong>
-                                        <div class="small text-muted">Centro de Pesquisa · 1 dia</div>
-                                    </div>
-                                    <a href="#" class="btn btn-sm btn-outline-secondary">Seguir</a>
+                    <!-- Post 1 -->
+                    <article class="card card-dashboard border-0 mb-3">
+                        <div class="card-body p-3">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="../imgs/empresas/Instituto TechLabs.jpg"
+                                    class="avatar-feed rounded-circle me-3" alt="Avatar"
+                                    onerror="this.src='https://placehold.co/50x50/333/white?text=TL'">
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-0 fw-bold text-dark">Instituto TechLabs</h6>
+                                    <small class="text-muted">Centro de Pesquisa &bull; 1 dia atrás</small>
                                 </div>
-
-                                <p class="mt-2 mb-2 small text-muted">
-                                    Novas bolsas para estudantes interessados em IA aplicada e soluções sociais.
-                                </p>
-
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <a href="#" class="small text-primary">
-                                        <i data-lucide="thumbs-up" class="me-1"></i> Curtir
-                                    </a>
-                                    <a href="#" class="btn btn-sm btn-outline-primary">
-                                        <i data-lucide="info" class="me-1"></i> Saiba mais
-                                    </a>
-                                </div>
+                                <button class="btn btn-outline-secondary btn-sm rounded-pill px-3"><i
+                                        class="fa-solid fa-plus me-1"></i> Seguir</button>
                             </div>
-                        </div>
-                    </article>
 
-    
-                    <article class="card mb-3 p-3" style="box-shadow: var(--card-shadow);">
-                        <div class="d-flex align-items-start gap-3">
-                            <img src="../imgs/trabalhadores/Mariana Duarte.jpg" class="avatar-sm" alt="">
-                            <div class="flex-grow-1">
-                                <div class="d-flex justify-content-between">
-                                    <div>
-                                        <strong>Mariana Duarte</strong>
-                                        <div class="small text-muted">Mentora de Inovação · 3 dias</div>
-                                    </div>
-                                    <a href="#" class="btn btn-sm btn-outline-secondary">Seguir</a>
-                                </div>
+                            <p class="text-secondary mb-3">
+                                Estamos com <span class="fw-bold text-roxo">novas bolsas abertas</span> para estudantes
+                                interessados em IA aplicada e soluções sociais. É a oportunidade perfeita para colocar a
+                                teoria em prática! 🚀
+                            </p>
+                            <!-- Adicionar o banner-->
+                            <div class="bg-light rounded-3 p-4 text-center mb-3">
+                                <i class="fa-solid fa-image text-muted fs-1 opacity-25"></i>
+                                <p class="text-muted small mt-2">Banner da Oportunidade</p>
+                            </div>
 
-                                <p class="mt-2 mb-2 small text-muted">
-                                    A inovação surge quando combinamos propósito com tecnologia. Participe da próxima
-                                    mentoria aberta!
-                                </p>
-
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <a href="#" class="small text-primary">
-                                        <i data-lucide="thumbs-up" class="me-1"></i> Curtir
-                                    </a>
-                                    <a href="#" class="btn btn-sm btn-outline-primary">Participar</a>
-                                </div>
+                            <div class="d-flex gap-3 border-top pt-3">
+                                <button class="btn btn-light btn-sm text-muted flex-fill"><i data-lucide="thumbs-up"
+                                        class="me-2" width="16"></i> Curtir</button>
+                                <button class="btn btn-light btn-sm text-muted flex-fill"><i
+                                        data-lucide="message-circle" class="me-2" width="16"></i> Comentar</button>
+                                <button class="btn btn-light btn-sm text-muted flex-fill"><i data-lucide="share-2"
+                                        class="me-2" width="16"></i> Compartilhar</button>
                             </div>
                         </div>
                     </article>
 
 
-                    <article class="card mb-3 p-3" style="box-shadow: var(--card-shadow);">
-                        <div class="d-flex align-items-start gap-3">
-                            <img src="../imgs/empresas/StartEdu.jpg" class="avatar-sm" alt="">
-                            <div class="flex-grow-1">
-                                <div class="d-flex justify-content-between">
-                                    <div>
-                                        <strong>StartEdu</strong>
-                                        <div class="small text-muted">EdTech · 5 dias</div>
-                                    </div>
-                                    <a href="#" class="btn btn-sm btn-outline-secondary">Seguir</a>
+                    <article class="card card-dashboard border-0 mb-3">
+                        <div class="card-body p-3">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="../imgs/trabalhadores/Mariana Duarte.jpg"
+                                    class="avatar-feed rounded-circle me-3" alt="Avatar"
+                                    onerror="this.src='https://placehold.co/50x50/5b2c83/white?text=MD'">
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-0 fw-bold text-dark">Mariana Duarte</h6>
+                                    <small class="text-muted">Mentora de Inovação &bull; 3 dias atrás</small>
                                 </div>
-
-                                <p class="mt-2 mb-2 small text-muted">
-                                    Lançamento da plataforma de microprojetos colaborativos para jovens desenvolvedores.
-                                </p>
-
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <a href="#" class="small text-primary">
-                                        <i data-lucide="thumbs-up" class="me-1"></i> Curtir
-                                    </a>
-                                    <a href="#" class="btn btn-sm btn-outline-primary">Conhecer</a>
-                                </div>
+                                <button class="btn btn-outline-secondary btn-sm rounded-pill px-3"><i
+                                        class="fa-solid fa-plus me-1"></i> Seguir</button>
                             </div>
-                        </div>
-                    </article>
 
-              
-                    <article class="card mb-3 p-3" style="box-shadow: var(--card-shadow);">
-                        <div class="d-flex align-items-start gap-3">
-                            <img src="../imgs/trabalhadores/Ricardo Fagundes.jpg" class="avatar-sm" alt="">
-                            <div class="flex-grow-1">
-                                <div class="d-flex justify-content-between">
-                                    <div>
-                                        <strong>Ricardo Fagundes</strong>
-                                        <div class="small text-muted">Mentor Tech · 1 semana</div>
-                                    </div>
-                                    <a href="#" class="btn btn-sm btn-outline-secondary">Seguir</a>
-                                </div>
+                            <p class="text-secondary mb-2">
+                                A inovação surge quando combinamos propósito com tecnologia. Participe da próxima
+                                mentoria aberta onde discutiremos Design Thinking para projetos sociais.
+                            </p>
 
-                                <p class="mt-2 mb-2 small text-muted">
-                                    Nova turma aberta para mentoria de carreira em tecnologia, com foco em projetos
-                                    sociais.
-                                </p>
-
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <a href="#" class="small text-primary">
-                                        <i data-lucide="thumbs-up" class="me-1"></i> Curtir
-                                    </a>
-                                    <a href="#" class="btn btn-sm btn-outline-primary">Inscrever</a>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                 
-                    <article class="card mb-3 p-3" style="box-shadow: var(--card-shadow);">
-                        <div class="d-flex align-items-start gap-3">
-                            <img src="../imgs/empresas/StartEdu.jpg" class="avatar-sm" alt="">
-                            <div class="flex-grow-1">
-                                <div class="d-flex justify-content-between">
-                                    <div>
-                                        <strong>Fundação PróFuturo</strong>
-                                        <div class="small text-muted">Instituição · 1 semana</div>
-                                    </div>
-                                    <a href="#" class="btn btn-sm btn-outline-secondary">Seguir</a>
-                                </div>
-
-                                <p class="mt-2 mb-2 small text-muted">
-                                    Programa de apoio para estudantes que desejam desenvolver projetos de impacto nas
-                                    comunidades.
-                                </p>
-
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <a href="#" class="small text-primary">
-                                        <i data-lucide="thumbs-up" class="me-1"></i> Curtir
-                                    </a>
-                                    <a href="#" class="btn btn-sm btn-outline-primary">
-                                        <i data-lucide="info" class="me-1"></i> Saiba mais
-                                    </a>
-                                </div>
+                            <div class="d-flex gap-3 border-top pt-3 mt-3">
+                                <button class="btn btn-light btn-sm text-muted flex-fill"><i data-lucide="thumbs-up"
+                                        class="me-2" width="16"></i> Curtir</button>
+                                <button class="btn btn-light btn-sm text-muted flex-fill"><i
+                                        data-lucide="message-circle" class="me-2" width="16"></i> Comentar</button>
+                                <button class="btn btn-roxo btn-sm text-white flex-fill shadow-sm">Participar</button>
                             </div>
                         </div>
                     </article>
@@ -527,66 +555,83 @@
 
             </main>
 
-            <!-- Lado direito -->
-            <aside class="col-lg-3 mb-4">
-                <h5 class="mb-0">Conexões</h5>
+
+            <!-- lado direito -->
+            <aside class="col-lg-3">
+
                 <!-- Conexões -->
-                <section class="conexoes">
+                <div class="card card-dashboard border-0 p-3 mb-3">
+                    <h6 class="fw-bold mb-3">Sua rede
 
-                    <div class="lista-conexoes">
+</h6>
 
-                 
-                        <div class="card-conexao">
-                            <img src="../imgs/trabalhadores/pessoa02.jpg" alt="Lucas Andrade">
-                            <h4>Lucas Andrade</h4>
-                            <p>Front-end</p>
-                            <button class="btn-ver">
-                                <i data-lucide="eye"></i> Ver perfil
-                            </button>
+                    <div class="d-flex flex-column gap-3">
+
+
+                        <div class="d-flex align-items-center gap-2">
+                            <img src="../imgs/trabalhadores/pessoa02.jpg" class="rounded-circle object-fit-cover"
+                                width="45" height="45" onerror="this.src='https://placehold.co/45x45/eee/999?text=LA'">
+                            <div class="flex-grow-1 lh-1">
+                                <h6 class="mb-0 fs-6 fw-semibold">Lucas Andrade</h6>
+                                <small class="text-muted smaller">Front-end Dev</small>
+                            </div>
+                
                         </div>
 
-          
-                        <div class="card-conexao">
-                            <img src="../imgs/trabalhadores/pessoa01.jpg" alt="Ana Ribeiro">
-                            <h4>Ana Ribeiro</h4>
-                            <p>UI/UX Designer</p>
-                            <button class="btn-ver">
-                                <i data-lucide="eye"></i> Ver perfil
-                            </button>
+
+                        <div class="d-flex align-items-center gap-2">
+                            <img src="../imgs/trabalhadores/pessoa01.jpg" class="rounded-circle object-fit-cover"
+                                width="45" height="45" onerror="this.src='https://placehold.co/45x45/eee/999?text=AR'">
+                            <div class="flex-grow-1 lh-1">
+                                <h6 class="mb-0 fs-6 fw-semibold">Ana Ribeiro</h6>
+                                <small class="text-muted smaller">UI/UX Designer</small>
+                            </div>
+                            
                         </div>
 
-                        <!-- Perfil 3 -->
-                        <div class="card-conexao">
-                            <img src="../imgs/trabalhadores/pessoa03.jpg" alt="Marcos Silva">
-                            <h4>Marcos Silva</h4>
-                            <p>Analista de Sistemas</p>
-                            <button class="btn-ver">
-                                <i data-lucide="eye"></i> Ver perfil
-                            </button>
-                        </div>
-
-                        <!-- NOVOS PERFIS -->
-
-                  
-                        <div class="card-conexao">
-                            <img src="../imgs/trabalhadores/pessoa04.jpg" alt="Fernanda Costa">
-                            <h4>Fernanda Costa</h4>
-                            <p>DevOps Engineer</p>
-                            <button class="btn-ver">
-                                <i data-lucide="eye"></i> Ver perfil
-                            </button>
+                        <div class="d-flex align-items-center gap-2">
+                            <img src="../imgs/trabalhadores/pessoa04.jpg" class="rounded-circle object-fit-cover"
+                                width="45" height="45" onerror="this.src='https://placehold.co/45x45/eee/999?text=FC'">
+                            <div class="flex-grow-1 lh-1">
+                                <h6 class="mb-0 fs-6 fw-semibold">Fernanda Costa</h6>
+                                <small class="text-muted smaller">DevOps</small>
+                            </div>
+                            
                         </div>
 
                     </div>
-                </section>
 
-                <!-- Puzzle -->
-                <div class="card p-3" style="box-shadow: var(--card-shadow);">
-                    <h6 class="mb-2">Puzzle de hoje</h6>
-                    <small class="text-muted">Desvende o puzzle do dia!</small>
-                    <div class="mt-3">
-                        <a href="#" class="btn btn-sm btn-success">Game #2</a>
+                    <button class="btn btn-link text-decoration-none small text-center w-100 mt-3 text-muted">Ver mais
+        </button>
+                </div>
+
+
+                <div class="card card-dashboard border-0 overflow-hidden bg-dark text-white shadow">
+                    <div class="card-body p-4 text-center position-relative">
+
+                        <div class="position-absolute top-0 start-0 w-100 h-100"
+                            style="background: linear-gradient(45deg, var(--roxo), var(--azul)); opacity: 0.2;"></div>
+
+                        <div class="position-relative z-1">
+                            <div class="icon-square mx-auto bg-white text-roxo mb-3 rounded-circle shadow-sm">
+                                <i class="fa-solid fa-puzzle-piece fs-4"></i>
+                            </div>
+                            <h5 class="fw-bold">Puzzle Diário</h5>
+                            <p class="small opacity-75 mb-3">Desafie sua lógica e ganhe pontos na plataforma!</p>
+                            <button class="btn btn-light text-roxo fw-bold w-100 rounded-pill shadow-sm">Jogar Agora
+                                #2</button>
+                        </div>
                     </div>
+                </div>
+
+
+                <div class="mt-3 text-center px-3">
+                    <p class="smaller text-muted">
+                        <a href="#" class="text-muted text-decoration-none me-2">Sobre</a>
+                        <a href="#" class="text-muted text-decoration-none me-2">Ajuda</a>
+                        <a href="#" class="text-muted text-decoration-none">Privacidade</a>
+                    </p>
+                    <p class="smaller text-muted opacity-50">Synergy360 © 2024</p>
                 </div>
 
             </aside>
@@ -594,14 +639,11 @@
         </div>
     </div>
 
-    </div>
-
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/estudante.js"></script>
     <script>
         lucide.createIcons();
     </script>
-
 </body>
 
 </html>

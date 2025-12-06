@@ -77,16 +77,23 @@
             const senha = document.getElementById("senha").value.trim();
 
 
-            if (email === "admin" && senha === "123") {
+            if (email === "mentor" && senha === "123") {
                 window.location.href = "mentor.html";
                 return;
             }
 
-            if (email === "aluno" && senha === "123") {
+            if (email === "estudante" && senha === "123") {
                 window.location.href = "estudante.html";
                 return;
             }
-
+             if (email === "empresa" && senha === "123") {
+                window.location.href = "estudante.html";
+                return;
+            }
+             if (email === "sertao" && senha === "123") {
+                window.location.href = "sertao.html";
+                return;
+            }
 
             alert("Credenciais incorretas. Tente novamente!");
         }

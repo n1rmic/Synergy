@@ -1,20 +1,66 @@
+Pagina estudante:
+
+
+
+Criar perfil publico da empresa
+
+Perfil do estudante:
+
+remover mensagem
+
+No convidar, adicionar convidar para projeto
+
+
+No aluno, adicionar parceria da universidade
+
+
+Mudar no dropdown, mudar para o caminho
+
+Mensagens:
+chat
+Todos os projetos 
+Projetos antigos
+projetos atuais
+
+
+Perfil mentor:
+
+Criar outro de uma Faculdade federal
+
+
+
+
+Criar um perfil de faculdade federal
+Cor rosa
+
+
+
+
+No perfil do Sertão, adicionar um gráfico dos dados
+
+
+
+
+
+
+
+Sertão colocar a Roxa
+
+
+
+
+
+
+
+
 - Pagina principal - falta vitrine de projetos  - Anne
 
 
 
 
 
-- remover o pré login
-  
 - login unificado
   
-
-
-
-
-- Perguntar a Anne prefere estudante ou teste
-
-
 
 
 
@@ -24,19 +70,8 @@
 
 adicionar empresa do mentor
 
-Remover banner, é uma propaganda de uma empresa
-O banner fica em alunos
-
-add propaganda Energy menor em algum canto
 
 
-No perfil do mentor, adicione um resumo + informações 
-
-
-Adicionar perfil do mentor
-
-
-Em copilot, trabalhar com lembrete. 
 
 
 Criar um convite de projeto
@@ -47,13 +82,7 @@ Criar um convite de projeto
 
 
 
-
-
-
-
 - Perfil empresa -
-
-Remover widgets linkdin
 
 
 Em Sugestões de talentos, colocar instituições.
@@ -62,23 +91,10 @@ Em Sugestões de talentos, colocar instituições.
 Alterar o feed, parecido com mentor, porem focado para empresa
 
 
-Criar  COPILOT pagina Apoio na gestão (ver no figma Projetos - Feedback - Submeter - Com arquivo)
-
-
-remover logo empresa na navbar
-
-Remover o SPA
 
 
 
 
-
-Ao invés de criar perfil de instituição:
-
-- Criar outro perfil empresa Sertão verde 
-
-
-Ela terá o relatório Dashboard
 
 
 

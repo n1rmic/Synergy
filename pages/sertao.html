@@ -3,13 +3,14 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../imgs/logo.png" type="image/png">
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link href="../css/sertao.css" rel="stylesheet">
     <title>Sertão Verde — Synergy360</title>
     <style>
-        /* Estilos inline para o funcionamento do SPA e Upload */
+        
         .app-view {
             transition: opacity 0.3s ease;
             opacity: 0;
@@ -29,7 +30,7 @@
             border-color: var(--roxo);
             background-color: #f3eef8;
         }
-        /* Estilo extra para o Dashboard */
+   
         .metric-value {
             font-family: 'Montserrat', sans-serif;
             font-size: 1.8rem;
@@ -99,11 +100,12 @@
                                     <li><a class="dropdown-item" href="#" onclick="switchView('mensagens')">Mensagens</a></li>
                                     <li class="dropdown-submenu position-relative">
                                         <a class="dropdown-item dropdown-toggle d-flex justify-content-between align-items-center" href="#">
-                                            Projetos
+                                            Todos Projetos
                                             <i class="fa-solid fa-chevron-right text-muted" style="font-size: 0.6em;"></i>
                                         </a>
                                         <ul class="dropdown-menu submenu-right border-0 shadow-sm rounded-3">
-                                            <li><a class="dropdown-item" href="#">Todos os projetos</a></li>
+                                             <li><a class="dropdown-item" href="#">Projetos antigos</a></li>
+                                              <li><a class="dropdown-item" href="#">Projeto atuais</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -140,7 +142,7 @@
 
                     <li class="nav-item dropdown ms-lg-2">
                         <a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href="#" id="perfilMenu" data-bs-toggle="dropdown">
-                            <img src="https://placehold.co/40x40/2e7d32/ffffff?text=SV" class="avatar-nav rounded-circle" alt="Sertão Verde">
+                            <img src="../imgs/sertao.png" class="avatar-nav rounded-circle" alt="Sertão Verde">
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end border-0 shadow-sm rounded-3">
                             <li><a class="dropdown-item" href="#">Configurações da Empresa</a></li>
@@ -162,7 +164,7 @@
                     <div class="card-header-brand" style="background: linear-gradient(90deg, #2e7d32, #66bb6a);"></div> 
                     <div class="card-body text-center pt-0 position-relative">
                         <div class="avatar-wrapper mb-2 mx-auto">
-                            <img src="https://placehold.co/100x100/2e7d32/ffffff?text=SV" alt="Logo" class="avatar-profile">
+                            <img src="../imgs/sertao.png" alt="Logo" class="avatar-profile">
                             <span class="status-dot" title="Online"></span>
                         </div>
                         <h5 class="fw-bold mb-0 text-success">Sertão Verde</h5>
@@ -549,13 +551,13 @@
 
                 <div class="card border-0 shadow-sm mt-3 p-3 rounded-4" style="background: var(--bg-soft-roxo); border-left: 4px solid var(--roxo);">
                     <div class="text-center px-2">
-                        <img src="" alt="Synergy360" width="90" class="mb-2">
+                        <img src="../imgs/synergy360 logo svg.svg" alt="Synergy360" width="90" class="mb-2">
                         <h6 class="fw-bold text-roxo mb-1">Transforme seu Negócio</h6>
                         <p class="smaller text-muted mb-3">
                             A Synergy360 conecta empresas a talentos e soluções inovadoras para acelerar resultados.
                         </p>
                         <button class="btn btn-roxo btn-sm rounded-pill fw-bold px-4 shadow-sm">
-                            Conheça a Plataforma
+                            Conheça os nossos planos
                         </button>
                     </div>
                 </div>
