@@ -256,3 +256,44 @@ body {
     background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
     color: white;
 }
+/* --- Adicione isto ao seu CSS para corrigir os Dropdowns --- */
+
+/* Garante que o dropdown principal abra no hover apenas em telas grandes */
+@media (min-width: 992px) {
+    .navbar-collapse .dropdown:hover > .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+
+    /* Configuração para Submenus (Dropdown dentro de Dropdown) */
+    .dropdown-submenu {
+        position: relative;
+    }
+
+    /* Posiciona o submenu à direita do pai */
+    .dropdown-menu .submenu-right {
+        top: 0;
+        left: 100%; 
+        margin-top: -5px; 
+        margin-left: 0;
+        display: none; /* Escondido por padrão */
+    }
+
+    /* Mostra o submenu quando passa o mouse no item pai */
+    .dropdown-submenu:hover > .submenu-right {
+        display: block;
+    }
+}
+
+/* Ajuste para mobile (empilhar os menus) */
+@media (max-width: 991px) {
+    .dropdown-menu .submenu-right {
+        position: static;
+        display: block; /* No mobile, já deixa expandido ou usa clique padrão do bootstrap */
+        margin-left: 20px;
+        border-left: 2px solid var(--bg-soft-roxo);
+    }
+}
+
+
+
