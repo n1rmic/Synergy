@@ -1,5 +1,4 @@
 :root {
-  
     --verde: #6CC24A;
     --roxo: #5b2c83;
     --azul: #00aeef;
@@ -8,11 +7,9 @@
     --bg-soft-verde: #eefceb;
     --bg-soft-azul: #e6f7ff;
 
-
     --fundo: #f6f7f8;
     --texto: #23323a;
     --texto-muted: #6c757d;
-
 
     --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
     --hover-shadow: 0 8px 25px rgba(91, 44, 131, 0.08);
@@ -26,7 +23,6 @@ body {
     font-family: "Source Sans 3", "Segoe UI", sans-serif;
     -webkit-font-smoothing: antialiased;
 }
-
 
 .navbar-white {
     background-color: #ffffff;
@@ -44,14 +40,6 @@ body {
     border: 2px solid var(--bg-soft-roxo);
 }
 
-@media (min-width: 992px) {
-    .navbar-collapse .dropdown:hover>.dropdown-menu {
-        display: block;
-        margin-top: 0;
-    }
-}
-
-
 .card-dashboard {
     background: #fff;
     border-radius: var(--border-radius);
@@ -62,7 +50,6 @@ body {
 .card-dashboard:hover {
     box-shadow: var(--hover-shadow);
 }
-
 
 .card-header-brand {
     height: 60px;
@@ -118,7 +105,7 @@ body {
     border-color: var(--roxo) !important;
 }
 
-/*Centro*/
+/* Centro */
 .destaque-card {
     background: #fff;
     border-radius: 12px;
@@ -147,13 +134,11 @@ body {
     font-size: 0.8rem;
 }
 
-
 .avatar-feed {
     width: 48px;
     height: 48px;
     object-fit: cover;
 }
-
 
 .icon-square {
     width: 36px;
@@ -164,52 +149,22 @@ body {
     justify-content: center;
 }
 
-
 .avatar-group-item {
-
     z-index: 5;
 }
 
-.avatar-group-item:nth-child(2) {
-    z-index: 4;
-}
+.avatar-group-item:nth-child(2) { z-index: 4; }
+.avatar-group-item:nth-child(3) { z-index: 3; }
+.avatar-group-item:nth-child(4) { z-index: 2; }
+.avatar-group-item:nth-child(5) { z-index: 1; }
 
-.avatar-group-item:nth-child(3) {
-    z-index: 3;
-}
+.text-roxo { color: var(--roxo) !important; }
+.text-verde { color: var(--verde) !important; }
+.text-azul { color: var(--azul) !important; }
 
-.avatar-group-item:nth-child(4) {
-    z-index: 2;
-}
-
-.avatar-group-item:nth-child(5) {
-    z-index: 1;
-}
-
-
-.text-roxo {
-    color: var(--roxo) !important;
-}
-
-.text-verde {
-    color: var(--verde) !important;
-}
-
-.text-azul {
-    color: var(--azul) !important;
-}
-
-.bg-soft-roxo {
-    background-color: var(--bg-soft-roxo);
-}
-
-.bg-soft-verde {
-    background-color: var(--bg-soft-verde);
-}
-
-.bg-soft-azul {
-    background-color: var(--bg-soft-azul);
-}
+.bg-soft-roxo { background-color: var(--bg-soft-roxo); }
+.bg-soft-verde { background-color: var(--bg-soft-verde); }
+.bg-soft-azul { background-color: var(--bg-soft-azul); }
 
 .btn-roxo {
     background-color: var(--verde);
@@ -234,7 +189,7 @@ body {
     color: white;
 }
 
-/*responsi*/
+/* Responsividade */
 @media (max-width: 991px) {
     .navbar-white {
         height: auto;
@@ -256,44 +211,46 @@ body {
     background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
     color: white;
 }
-/* --- Adicione isto ao seu CSS para corrigir os Dropdowns --- */
 
-/* Garante que o dropdown principal abra no hover apenas em telas grandes */
+/* --- CORREÇÃO DO DROPDOWN E POSICIONAMENTO --- */
+
 @media (min-width: 992px) {
-    .navbar-collapse .dropdown:hover > .dropdown-menu {
+    .navbar-collapse .dropdown:hover>.dropdown-menu {
         display: block;
         margin-top: 0;
     }
 
-    /* Configuração para Submenus (Dropdown dentro de Dropdown) */
     .dropdown-submenu {
         position: relative;
     }
 
-    /* Posiciona o submenu à direita do pai */
+    /* Submenu aparecendo corretamente */
     .dropdown-menu .submenu-right {
         top: 0;
-        left: 100%; 
-        margin-top: -5px; 
-        margin-left: 0;
-        display: none; /* Escondido por padrão */
+        left: 100%;
+        margin-top: -5px;
+        margin-left: 0.1rem;
+        display: none;
     }
 
-    /* Mostra o submenu quando passa o mouse no item pai */
-    .dropdown-submenu:hover > .submenu-right {
+    .dropdown-submenu:hover>.submenu-right {
         display: block;
     }
 }
 
-/* Ajuste para mobile (empilhar os menus) */
+/* CORREÇÃO DO PERFIL CORTADO */
+/* Força o menu do perfil a vir um pouco mais para a esquerda */
+#perfilMenu + .dropdown-menu {
+    right: 0 !important;
+    left: auto !important;
+    margin-right: 15px !important; /* Empurra para dentro da tela */
+}
+
 @media (max-width: 991px) {
     .dropdown-menu .submenu-right {
         position: static;
-        display: block; /* No mobile, já deixa expandido ou usa clique padrão do bootstrap */
+        display: block;
         margin-left: 20px;
         border-left: 2px solid var(--bg-soft-roxo);
     }
 }
-
-
-

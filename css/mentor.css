@@ -28,7 +28,7 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* ================= Navbar ================= */
+
 .navbar-white {
     background-color: #ffffff;
     height: 70px;
@@ -42,15 +42,15 @@ body {
     border: 2px solid var(--bg-soft-roxo);
 }
 
-/* Dropdown no Hover (Apenas Desktop - a partir de 992px) */
+
 @media (min-width: 992px) {
     .navbar-collapse .dropdown:hover > .dropdown-menu {
         display: block;
-        margin-top: 0; /* Garante que o dropdown abra logo abaixo do link */
+        margin-top: 0; 
     }
 }
 
-/* ================= Cards Gerais ================= */
+
 .card-dashboard {
     background: #fff;
     border-radius: var(--border-radius);
@@ -62,7 +62,7 @@ body {
     box-shadow: var(--hover-shadow);
 }
 
-/* ================= Sidebar Esquerda (Perfil) ================= */
+
 .card-header-brand {
     height: 60px;
     background: linear-gradient(90deg, var(--roxo), #7b4aa3);
@@ -118,7 +118,7 @@ body {
     border-color: var(--roxo) !important;
 }
 
-/* ================= Destaques (Centro) ================= */
+
 .destaque-card {
     background: #fff;
     border-radius: 12px;
@@ -142,14 +142,13 @@ body {
 .font-sm { font-size: 0.9rem; }
 .smaller { font-size: 0.8rem; }
 
-/* ================= Feed (Centro) ================= */
+
 .avatar-feed {
     width: 48px;
     height: 48px;
     object-fit: cover;
 }
 
-/* ================= Conexões (Direita) ================= */
 .icon-square {
     width: 36px;
     height: 36px;
@@ -159,9 +158,8 @@ body {
     justify-content: center;
 }
 
-/* Utilitário para sobreposição de avatares na seção de conexões */
 .avatar-group-item {
-    /* Define a ordem de empilhamento para garantir que o primeiro item fique por cima */
+    
     z-index: 5; 
 }
 .avatar-group-item:nth-child(2) { z-index: 4; }
@@ -169,7 +167,7 @@ body {
 .avatar-group-item:nth-child(4) { z-index: 2; }
 .avatar-group-item:nth-child(5) { z-index: 1; }
 
-/* ================= Utilitários de Cores ================= */
+
 .text-roxo { color: var(--roxo) !important; }
 .text-verde { color: var(--verde) !important; }
 .text-azul { color: var(--azul) !important; }
@@ -199,47 +197,43 @@ body {
     color: white;
 }
 
-/* Ajustes de Responsividade */
+
 @media (max-width: 991px) {
     .navbar-white { height: auto; padding-bottom: 15px; }
 }
 
 
-/* ================= CSS para Dropdown em Cascata (Hover) ================= */
-
-/* Ativa o hover apenas em telas grandes (Desktop) */
 @media (min-width: 992px) {
-    /* Abre o dropdown principal no hover */
+   
     .navbar-collapse .dropdown:hover > .dropdown-menu {
         display: block;
         margin-top: 0;
     }
     
-    /* Abre os submenus no hover */
+  
     .dropdown-submenu:hover > .dropdown-menu {
         display: block;
     }
 }
 
-/* Posicionamento do Submenu para a DIREITA (Igual à imagem) */
+
 .dropdown-submenu .submenu-right {
     top: 0;
-    left: 100%; /* Empurra para o lado direito do pai */
-    margin-top: -5px; /* Alinha levemente para cima */
-    margin-left: 0.1rem; /* Pequeno espaçamento */
+    left: 100%; 
+    margin-top: -5px; 
+    margin-left: 0.1rem; 
 }
 
-/* Garante que o item do menu mantenha o estilo */
+
 .dropdown-item {
     display: flex;
-    justify-content: space-between; /* Espaça o texto da setinha se houver */
+    justify-content: space-between; 
     align-items: center;
 }
 
-/* ================= Fix do Menu Perfil ================= */
-/* Garante que o dropdown do perfil não fique cortado na tela */
+
 #perfilMenu + .dropdown-menu {
-    right: 0; /* Alinha a direita do menu com o elemento pai */
-    margin-right: 15px !important; /* Empurra 15px para a esquerda (para dentro da tela) */
-    transform: none !important; /* Evita conflitos com o posicionamento automático do Bootstrap */
+    right: 0; 
+    margin-right: 15px !important; 
+    transform: none !important; 
 }

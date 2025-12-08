@@ -1,51 +1,13 @@
-Pagina estudante:
-
-
-
-Criar perfil publico da empresa
-
-Perfil do estudante:
-
-remover mensagem
-
-No convidar, adicionar convidar para projeto
-
-
-No aluno, adicionar parceria da universidade
-
-
-Mudar no dropdown, mudar para o caminho
-
-Mensagens:
-chat
-Todos os projetos 
-Projetos antigos
-projetos atuais
-
 
 Perfil mentor:
 
-Criar outro de uma Faculdade federal
+Criar mentor de uma Faculdade federal
 
 
 
 
 Criar um perfil de faculdade federal
 Cor rosa
-
-
-
-
-No perfil do Sertão, adicionar um gráfico dos dados
-
-
-
-
-
-
-
-Sertão colocar a Roxa
-
 
 
 
@@ -57,38 +19,6 @@ Sertão colocar a Roxa
 
 
 
-
-
-- login unificado
-  
-
-
-
-
-
-- pagina mentor -
-
-adicionar empresa do mentor
-
-
-
-
-
-Criar um convite de projeto
-
-
-
-
-
-
-
-- Perfil empresa -
-
-
-Em Sugestões de talentos, colocar instituições.
-
-
-Alterar o feed, parecido com mentor, porem focado para empresa
 
 
 

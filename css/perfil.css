@@ -1,0 +1,269 @@
+:root {
+    /* --- Cores Gerais & Estudante --- */
+    --verde: #6CC24A;
+    --roxo: #5b2c83;
+    --azul: #00aeef;
+    --cinza-claro: #e9ecef;
+
+    /* --- Cores Específicas UFC --- */
+    --ufc-azul: #d63384; 
+    --ufc-gold: #F0B400; 
+
+    /* --- Cores Específicas Sertão --- */
+    --sertao-verde-escuro: #1b5e20;
+    --sertao-verde-claro: #4caf50;
+    --sertao-header-start: #2e7d32;
+    --sertao-header-end: #66bb6a;
+
+    /* --- Backgrounds Suaves --- */
+    --bg-soft-roxo: #f3eef8;
+    --bg-soft-azul: #e6f7ff;
+    --bg-soft-verde: #eefceb; /* Usado no Sertão */
+    --bg-soft-ufc: #fce4ec;   /* Rosa claro suave */
+    
+    /* --- Base --- */
+    --fundo: #f6f7f8;
+    --texto: #23323a;
+    --texto-muted: #6c757d;
+
+    /* --- Sombras e Bordas --- */
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    --hover-shadow: 0 8px 25px rgba(91, 44, 131, 0.1); 
+    --hover-shadow-ufc: 0 8px 25px rgba(214, 51, 132, 0.15);
+    --border-radius: 16px;
+    --transition: all 0.25s ease;
+}
+
+/* --- Fontes --- */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat.ttf') format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Source Sans 3';
+    src: url('fonts/SourceSans3.ttf') format('truetype');
+    font-weight: 400;
+}
+
+
+body {
+    background-color: var(--fundo);
+    color: var(--texto);
+    font-family: "Source Sans 3", "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px; 
+}
+
+/* --- Navbar Geral --- */
+.navbar-white {
+    background-color: #ffffff;
+    height: 70px;
+}
+@media (max-width: 991px) {
+    .navbar-white { height: auto; padding-bottom: 15px; }
+}
+
+.logo-top { height: 32px; object-fit: contain; }
+.avatar-nav {
+    width: 40px; height: 40px; object-fit: cover;
+    border: 2px solid var(--bg-soft-azul); 
+}
+
+/* Navbar Links (Estilo Dashboard & Estudante) */
+.nav-main-link {
+    display: flex; flex-direction: column; align-items: center;
+    line-height: 1; padding: 0.5rem 0.5rem !important;
+}
+.nav-icon .nav-link { transition: var(--transition); opacity: 0.7; }
+.nav-icon .nav-link:hover, .nav-icon .nav-link.active-nav {
+    color: var(--roxo) !important; opacity: 1;
+}
+.active-nav { font-weight: 700; position: relative; }
+.active-nav::after {
+    content: ''; display: block; width: 20px; height: 3px;
+    background: var(--roxo); margin: 2px auto 0; border-radius: 2px;
+}
+
+/* --- Cards Gerais --- */
+.card-dashboard, .perfil-top-card, .projeto-card {
+    background: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+    border: none;
+}
+.card-dashboard:hover, .projeto-card:hover {
+    box-shadow: var(--hover-shadow);
+    transform: translateY(-5px);
+}
+
+/* --- Botões Customizados --- */
+/* Botões Roxo (Padrão) */
+.btn-roxo, .btn-primary-custom {
+    background-color: var(--roxo); color: white; border: none;
+    font-weight: 600; transition: var(--transition);
+}
+.btn-roxo:hover, .btn-primary-custom:hover {
+    background-color: #4a236b; color: white; transform: translateY(-2px);
+}
+
+/* Botões UFC */
+.btn-ufc {
+    background-color: var(--ufc-azul); color: white; border: none; transition: var(--transition);
+}
+.btn-ufc:hover { background-color: #a61e61; color: white; }
+.btn-outline-ufc { border: 1px solid var(--ufc-azul); color: var(--ufc-azul); background: transparent; }
+.btn-outline-ufc:hover { background: var(--ufc-azul); color: white; }
+
+/* Botões Verde/Sucesso */
+.btn-success-custom {
+    background-color: var(--verde); color: white; border: none; font-weight: 600;
+}
+.btn-success-custom:hover { background-color: #5bb03d; transform: translateY(-2px); }
+
+/* Botões Outline Gerais */
+.btn-outline-custom {
+    border: 2px solid #dee2e6; color: var(--texto); font-weight: 600; background: transparent;
+}
+.btn-outline-custom:hover {
+    border-color: var(--roxo); color: var(--roxo); background-color: #fcf9ff;
+}
+
+/* --- Utilitários de Cor e Background --- */
+.text-roxo { color: var(--roxo) !important; }
+.text-ufc { color: var(--ufc-azul) !important; }
+.text-gold { color: var(--ufc-gold) !important; }
+.text-verde { color: var(--verde) !important; }
+.text-azul { color: var(--azul) !important; }
+
+.bg-soft-roxo { background-color: var(--bg-soft-roxo); }
+.bg-soft-ufc { background-color: var(--bg-soft-ufc); }
+.bg-soft-verde { background-color: var(--bg-soft-verde); }
+.bg-soft-azul { background-color: var(--bg-soft-azul); }
+
+
+
+
+.profile-banner {
+    height: 180px;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    position: relative;
+}
+
+
+.profile-banner.banner-ufc {
+    background: linear-gradient(135deg, #d63384 0%, #a61e61 100%);
+}
+
+.profile-banner.banner-sertao {
+    background: linear-gradient(135deg, var(--sertao-verde-escuro) 0%, var(--sertao-verde-claro) 100%);
+}
+
+.profile-avatar-container {
+    position: relative;
+    margin-top: -75px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.profile-avatar-lg {
+    width: 150px; height: 150px;
+    border: 5px solid #fff;
+    background-color: #fff;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+
+.badge-verified {
+    position: absolute; bottom: 10px; right: 10px;
+    border: 3px solid #fff; border-radius: 50%;
+    width: 32px; height: 32px;
+    display: flex; align-items: center; justify-content: center;
+    color: white;
+}
+.badge-verified.ufc { background-color: var(--ufc-gold); }
+.badge-verified.sertao { background-color: var(--azul); }
+
+
+.tech-pill {
+    padding: 5px 12px; border-radius: 20px;
+    font-size: 0.8rem; font-weight: 600;
+    display: inline-block; margin-right: 5px; margin-bottom: 5px;
+}
+.tech-pill.ufc {
+    background-color: var(--bg-soft-ufc); color: var(--ufc-azul); border: 1px solid var(--ufc-azul);
+}
+.tech-pill.sertao {
+    background-color: var(--bg-soft-verde); color: var(--verde); border: 1px solid var(--verde);
+}
+
+.perfil-top-card {
+    border-top: 5px solid var(--roxo) !important;
+}
+
+.perfil-foto {
+    width: 140px; height: 140px;
+    border-radius: 50%; object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.status-indicator {
+    width: 20px; height: 20px;
+    background-color: var(--verde);
+    border: 3px solid #fff; border-radius: 50%;
+    position: absolute; bottom: 10px; right: 10px;
+}
+
+.perfil-nome { font-weight: 800; color: var(--roxo); letter-spacing: -0.5px; }
+.perfil-profissao { font-size: 1.1rem; font-weight: 600; color: var(--texto); }
+.perfil-bio { max-width: 600px; font-size: 0.95rem; line-height: 1.6; color: #4a5568; }
+
+/* Tags de Skill */
+.tags-wrapper { line-height: 2.2; }
+.tag-skill {
+    background: rgba(0, 174, 239, 0.1); color: var(--azul);
+    padding: 8px 16px; border-radius: 50px;
+    font-weight: 600; font-size: 0.85rem; margin-right: 6px;
+    transition: var(--transition); border: 1px solid transparent;
+}
+.tag-skill:hover {
+    background: var(--azul); color: white; transform: scale(1.05);
+}
+
+
+.projeto-capa { width: 100%; height: 180px; object-fit: cover; }
+.status-badge {
+    position: absolute; top: 12px; right: 12px;
+    padding: 6px 12px; border-radius: 6px;
+    font-size: 0.75rem; font-weight: 700;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); color: white;
+}
+
+.conquista-badge {
+    border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.05); min-width: 200px; flex: 1;
+    transition: var(--transition);
+}
+.conquista-badge:hover { border-color: var(--roxo); transform: translateY(-3px); }
+.icon-box {
+    width: 48px; height: 48px; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+}
+.bg-light-warning { background-color: #fff8e1; }
+.bg-light-primary { background-color: #e3f2fd; }
+.bg-light-success { background-color: #e8f5e9; }
+
+
+@media (min-width: 992px) {
+    .navbar-collapse .dropdown:hover>.dropdown-menu { display: block; margin-top: 0; }
+    .dropdown-submenu:hover>.submenu-right { display: block; }
+}
+.dropdown-menu {
+    border: none; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 12px; padding: 10px;
+}

@@ -1,0 +1,227 @@
+:root {
+   
+    --ufc-azul: #00539F; 
+    --ufc-gold: #F0B400; 
+    
+    --verde: #28a745;
+    --roxo: #5b2c83;
+    --azul: #00aeef;
+
+    --bg-soft-roxo: #f3eef8;
+    --bg-soft-azul: #e6f7ff;
+    --bg-soft-ufc: #e3f2fd; 
+
+    --fundo: #f6f7f8;
+    --texto: #23323a;
+    --texto-muted: #6c757d;
+
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    --hover-shadow: 0 8px 25px rgba(0, 83, 159, 0.15);
+    --border-radius: 16px;
+    --transition: all 0.25s ease;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat.ttf') format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Source Sans 3';
+    src: url('fonts/SourceSans3.ttf') format('truetype');
+    font-weight: 400;
+}
+
+body {
+    background-color: var(--fundo);
+    color: var(--texto);
+    font-family: "Source Sans 3", "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.navbar-white {
+    background-color: #ffffff;
+    height: 70px;
+}
+
+.logo-top {
+    height: 32px;
+}
+
+.avatar-nav {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border: 2px solid var(--bg-soft-ufc);
+}
+
+.card-dashboard {
+    background: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+}
+
+.card-dashboard:hover {
+    box-shadow: var(--hover-shadow);
+}
+
+.card-header-brand {
+    height: 60px;
+    background: linear-gradient(90deg, var(--ufc-azul), #003d73);
+}
+
+.avatar-wrapper {
+    margin-top: -40px;
+    position: relative;
+    display: inline-block;
+}
+
+.avatar-profile {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    background: #fff;
+}
+
+.status-dot {
+    width: 18px;
+    height: 18px;
+    background: var(--ufc-gold);
+    border: 3px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.sidebar-title {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #999;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.project-invite-card {
+    border-left: 4px solid var(--ufc-azul) !important;
+    background-color: var(--bg-soft-ufc);
+    color: var(--texto);
+}
+
+.text-roxo { color: var(--roxo) !important; }
+.text-ufc { color: var(--ufc-azul) !important; }
+.text-gold { color: var(--ufc-gold) !important; }
+
+.bg-soft-roxo { background-color: var(--bg-soft-roxo); }
+.bg-soft-ufc { background-color: var(--bg-soft-ufc); }
+
+.btn-ufc {
+    background-color: var(--ufc-azul);
+    color: white;
+    border: none;
+    transition: var(--transition);
+}
+
+.btn-ufc:hover {
+    background-color: #003d73;
+    color: white;
+}
+
+.btn-outline-ufc {
+    border: 1px solid var(--ufc-azul);
+    color: var(--ufc-azul);
+    background: transparent;
+}
+
+.btn-outline-ufc:hover {
+    background: var(--ufc-azul);
+    color: white;
+}
+
+.btn-roxo {
+    background-color: var(--roxo);
+    color: white;
+}
+.btn-roxo:hover {
+    background-color: #4a236b;
+    color: white;
+}
+
+.metric-value {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* SPA Views */
+.app-view {
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    display: none;
+}
+
+.app-view.active-view {
+    opacity: 1;
+    display: block !important;
+}
+
+.upload-area {
+    border: 2px dashed #dee2e6;
+    background-color: #f8f9fa;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.upload-area:hover {
+    border-color: var(--ufc-azul);
+    background-color: var(--bg-soft-ufc);
+}
+
+/* --- Ajustes de Navbar e Dropdown --- */
+
+@media (min-width: 992px) {
+    .navbar-collapse .dropdown:hover>.dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+    .dropdown-submenu:hover>.submenu-right {
+        display: block;
+    }
+}
+
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 10px;
+}
+
+/* Submenus laterais */
+.dropdown-submenu .submenu-right {
+    top: 0;
+    left: 100%;
+    margin-top: -5px;
+    margin-left: 0.1rem;
+    display: none;
+}
+
+
+#perfilMenu + .dropdown-menu {
+    right: 0 !important;
+    left: auto !important;
+    margin-right: 15px !important; 
+}
+
+/* Responsividade Navbar */
+@media (max-width: 991px) {
+    .navbar-white {
+        height: auto;
+        padding-bottom: 15px;
+    }
+}
