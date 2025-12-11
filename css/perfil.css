@@ -267,3 +267,102 @@ body {
     border: none; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     border-radius: 12px; padding: 10px;
 }
+
+/* --- TEMA UFC BLUE (Adicionado para o Mentor) --- */
+:root {
+    --ufc-blue-dark: #003366;
+    --ufc-blue-light: #0056b3;
+    --ufc-bg-soft-blue: #e6f0ff;
+}
+
+/* Banner Azul */
+.banner-ufc-blue {
+    background: linear-gradient(135deg, var(--ufc-blue-dark) 0%, var(--ufc-blue-light) 100%);
+}
+
+/* Textos e Fundos Utilitários */
+.text-ufc-blue { color: var(--ufc-blue-dark) !important; }
+.bg-soft-ufc-blue { background-color: var(--ufc-bg-soft-blue) !important; color: var(--ufc-blue-dark); }
+
+/* Botões Azuis */
+.btn-ufc-blue {
+    background-color: var(--ufc-blue-dark);
+    color: white;
+    border: none;
+    transition: var(--transition);
+}
+.btn-ufc-blue:hover {
+    background-color: #002244;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Badges e Tags Específicas */
+.badge-verified.blue { 
+    background-color: var(--ufc-blue-dark); 
+}
+
+.tag-skill.blue {
+    background: var(--ufc-bg-soft-blue);
+    color: var(--ufc-blue-dark);
+    border: 1px solid transparent;
+}
+.tag-skill.blue:hover {
+    background: var(--ufc-blue-dark);
+    color: white;
+}
+
+/* Ajuste de Aba Ativa para o tema azul */
+.nav-pills .nav-link.active-blue {
+    background-color: var(--ufc-blue-dark) !important;
+    color: white !important;
+}
+
+
+ /* --- TEMA AZUL UFC (Sobrescrita Local) --- */
+        :root {
+            --ufc-blue-dark: #003366;
+            --ufc-blue-light: #0056b3;
+            --ufc-bg-soft: #e6f0ff;
+        }
+
+        /* Banner Azul */
+        .banner-ufc-blue {
+            background: linear-gradient(135deg, var(--ufc-blue-dark) 0%, var(--ufc-blue-light) 100%);
+        }
+
+        /* Botões e Textos */
+        .text-ufc-blue { color: var(--ufc-blue-dark) !important; }
+        .bg-soft-ufc-blue { background-color: var(--ufc-bg-soft) !important; color: var(--ufc-blue-dark); }
+        
+        .btn-ufc-blue {
+            background-color: var(--ufc-blue-dark);
+            color: white;
+            border: none;
+            transition: all 0.25s ease;
+        }
+        .btn-ufc-blue:hover {
+            background-color: #002244;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Badge Verificado Azul */
+        .badge-verified.blue { background-color: var(--ufc-blue-dark); }
+
+        /* Ajuste nas Tags Skills para serem Azuis */
+        .tag-skill.blue {
+            background: var(--ufc-bg-soft);
+            color: var(--ufc-blue-dark);
+            border: 1px solid transparent; /* Adicionado para evitar pulo no hover */
+        }
+        .tag-skill.blue:hover {
+            background: var(--ufc-blue-dark);
+            color: white;
+            border-color: var(--ufc-blue-dark);
+        }
+
+        /* Ajuste na Navbar para este perfil */
+        .nav-pills .nav-link.active {
+            background-color: var(--ufc-blue-dark) !important;
+        }

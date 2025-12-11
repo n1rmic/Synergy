@@ -1,10 +1,10 @@
 :root {
-    /* Cores da Marca */
+    /* Cores da Marca - Mantidas */
     --verde: #6CC24A;
     --roxo: #5b2c83;
     --azul: #00aeef;
     
-    /* Variações Suaves (Soft Colors) para fundos */
+    /* Variações Suaves */
     --bg-soft-roxo: #f3eef8;
     --bg-soft-verde: #eefceb;
     --bg-soft-azul: #e6f7ff;
@@ -28,7 +28,7 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-
+/* --- Navbar --- */
 .navbar-white {
     background-color: #ffffff;
     height: 70px;
@@ -42,15 +42,41 @@ body {
     border: 2px solid var(--bg-soft-roxo);
 }
 
-
 @media (min-width: 992px) {
     .navbar-collapse .dropdown:hover > .dropdown-menu {
         display: block;
         margin-top: 0; 
     }
+    .dropdown-submenu:hover > .dropdown-menu {
+        display: block;
+    }
 }
 
+/* --- Dropdowns e Submenus --- */
+.dropdown-submenu .submenu-right {
+    top: 0;
+    left: 100%; 
+    margin-top: -5px; 
+    margin-left: 0.1rem; 
+}
 
+.dropdown-item {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+#perfilMenu + .dropdown-menu {
+    right: 0; 
+    margin-right: 15px !important; 
+    transform: none !important; 
+}
+
+@media (max-width: 991px) {
+    .navbar-white { height: auto; padding-bottom: 15px; }
+}
+
+/* --- Cards e Dashboard --- */
 .card-dashboard {
     background: #fff;
     border-radius: var(--border-radius);
@@ -62,12 +88,13 @@ body {
     box-shadow: var(--hover-shadow);
 }
 
-
+/* Header com gradiente (Adaptável para cores da universidade se quiser mudar inline no HTML) */
 .card-header-brand {
     height: 60px;
     background: linear-gradient(90deg, var(--roxo), #7b4aa3);
 }
 
+/* --- Perfil Sidebar --- */
 .avatar-wrapper {
     margin-top: -40px;
     position: relative;
@@ -113,61 +140,20 @@ body {
     font-weight: 600;
 }
 
-/* Utilirário para borda roxa */
-.border-roxo {
-    border-color: var(--roxo) !important;
-}
-
-
-.destaque-card {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: var(--card-shadow);
-    transition: var(--transition);
-    cursor: pointer;
-}
-
-.destaque-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--hover-shadow);
-}
-
-.line-clamp-2 {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-.font-sm { font-size: 0.9rem; }
-.smaller { font-size: 0.8rem; }
-
-
-.avatar-feed {
-    width: 48px;
-    height: 48px;
-    object-fit: cover;
-}
-
-.icon-square {
-    width: 36px;
-    height: 36px;
-    border-radius: 10px;
+/* Badge da Instituição/Empresa */
+.institution-badge {
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 8px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+.institution-badge:hover {
+    background-color: var(--bg-soft-roxo);
 }
 
-.avatar-group-item {
-    
-    z-index: 5; 
-}
-.avatar-group-item:nth-child(2) { z-index: 4; }
-.avatar-group-item:nth-child(3) { z-index: 3; }
-.avatar-group-item:nth-child(4) { z-index: 2; }
-.avatar-group-item:nth-child(5) { z-index: 1; }
-
-
+/* --- Utilitários de Texto e Cores --- */
 .text-roxo { color: var(--roxo) !important; }
 .text-verde { color: var(--verde) !important; }
 .text-azul { color: var(--azul) !important; }
@@ -176,6 +162,19 @@ body {
 .bg-soft-verde { background-color: var(--bg-soft-verde); }
 .bg-soft-azul { background-color: var(--bg-soft-azul); }
 
+.border-roxo { border-color: var(--roxo) !important; }
+
+.font-sm { font-size: 0.9rem; }
+.smaller { font-size: 0.8rem; }
+
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* --- Botões --- */
 .btn-roxo {
     background-color: var(--roxo);
     color: white;
@@ -197,43 +196,23 @@ body {
     color: white;
 }
 
-
-@media (max-width: 991px) {
-    .navbar-white { height: auto; padding-bottom: 15px; }
+/* --- Feed e Avatares --- */
+.avatar-feed {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
 }
 
-
-@media (min-width: 992px) {
-   
-    .navbar-collapse .dropdown:hover > .dropdown-menu {
-        display: block;
-        margin-top: 0;
-    }
-    
-  
-    .dropdown-submenu:hover > .dropdown-menu {
-        display: block;
-    }
-}
-
-
-.dropdown-submenu .submenu-right {
-    top: 0;
-    left: 100%; 
-    margin-top: -5px; 
-    margin-left: 0.1rem; 
-}
-
-
-.dropdown-item {
+.icon-square {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
     display: flex;
-    justify-content: space-between; 
     align-items: center;
+    justify-content: center;
 }
 
-
-#perfilMenu + .dropdown-menu {
-    right: 0; 
-    margin-right: 15px !important; 
-    transform: none !important; 
-}
+/* Para grupos de avatares (se usado) */
+.avatar-group-item { z-index: 5; }
+.avatar-group-item:nth-child(2) { z-index: 4; }
+.avatar-group-item:nth-child(3) { z-index: 3; }

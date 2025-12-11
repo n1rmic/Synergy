@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="../imgs/logo.png" type="image/png">
+    
+    <link href="../css/mentor.css" rel="stylesheet">
+    
+    <title>Docente — Synergy360</title>
+</head>
+
+<body>
+
+   <nav class="navbar navbar-expand-lg navbar-white bg-white border-bottom shadow-sm sticky-top">
+    <div class="container-fluid">
+
+        <a class="navbar-brand d-flex align-items-center gap-3" href="../index.html">
+            <img src="../imgs/synergy360 logo svg.svg" alt="Synergy360" class="logo-top">
+        </a>
+
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarMain">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMain">
+            <ul class="nav navbar-nav ms-auto align-items-center mt-3 mt-lg-0">
+
+                <li class="nav-item dropdown me-lg-3">
+                    <a class="nav-link text-dark dropdown-toggle nav-main-link" href="#" data-bs-toggle="dropdown">
+                        <i class="fa-solid fa-folder-open fs-5 me-1 text-muted"></i>
+                        <span class="small fw-semibold">Projetos</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end border-0 shadow-sm rounded-3">
+                        <li><a class="dropdown-item" href="#">Projetos concluídos</a></li>
+                        <li><a class="dropdown-item" href="#">Projetos em andamento</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown me-lg-3">
+                    <a class="nav-link text-dark dropdown-toggle nav-main-link" href="#" data-bs-toggle="dropdown">
+                        <i class="fa-solid fa-route fs-5 me-1 text-muted"></i>
+                        <span class="small fw-semibold">Trilhas</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end border-0 shadow-sm rounded-3">
+                        <li><a class="dropdown-item" href="#">Big Five</a></li>
+                        <li><a class="dropdown-item" href="#">Sprint de Desenvolvimento</a></li>
+                        <li><a class="dropdown-item" href="#">Ferramentas de RH</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown me-lg-3">
+                    <a class="nav-link text-dark dropdown-toggle nav-main-link" href="#" data-bs-toggle="dropdown">
+                        <i class="fa-regular fa-comment fs-5 me-1 text-muted"></i>
+                        <span class="small fw-semibold">Mensagens</span>
+                    </a>
+
+                    <ul class="dropdown-menu border-0 shadow-sm rounded-3">
+                        
+                        <li class="dropdown-submenu position-relative">
+                            <a class="dropdown-item dropdown-toggle d-flex justify-content-between align-items-center" href="#">
+                                Chat
+                                <i class="fa-solid fa-chevron-right text-muted" style="font-size: 0.6em;"></i>
+                            </a>
+                            
+                            <ul class="dropdown-menu submenu-right border-0 shadow-sm rounded-3">
+                                <li><a class="dropdown-item" href="#">Mensagens</a></li>
+                                
+                                <li class="dropdown-submenu position-relative">
+                                    <a class="dropdown-item dropdown-toggle d-flex justify-content-between align-items-center" href="#">
+                                        Projetos
+                                        <i class="fa-solid fa-chevron-right text-muted" style="font-size: 0.6em;"></i>
+                                    </a>
+                                    
+                                    <ul class="dropdown-menu submenu-right border-0 shadow-sm rounded-3">
+                                        <li><a class="dropdown-item" href="#">Todos os projetos</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li><a class="dropdown-item" href="#">Convites</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown me-lg-3">
+                    <a class="nav-link text-dark dropdown-toggle nav-main-link" href="#" data-bs-toggle="dropdown">
+                        <i class="fa-solid fa-robot fs-5 me-1 text-roxo"></i>
+                        <span class="small fw-semibold text-roxo">Copilot</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end border-0 shadow-sm rounded-3">
+                        <li><a class="dropdown-item" href="#">Sugestões e Roadmap</a></li>
+                        <li><a class="dropdown-item" href="#">Lembretes e Prazos</a></li>
+                        <li><a class="dropdown-item" href="#">Apoio na Gestão / Insights</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-icon me-lg-3">
+                    <a class="nav-link text-dark nav-main-link" href="#">
+                        <i class="fa-solid fa-database fs-5 me-1 text-muted"></i>
+                        <span class="small fw-semibold">Dados</span>
+                    </a>
+                </li>
+
+                <li class="nav-item nav-icon me-lg-3">
+                    <a class="nav-link text-dark nav-main-link" href="#">
+                        <i class="fa-solid fa-chart-pie fs-5 me-1 text-muted"></i>
+                        <span class="small fw-semibold">Insights360</span>
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown ms-lg-2">
+                    <a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href="#" id="perfilMenu"
+                        data-bs-toggle="dropdown">
+                        <img src="../imgs/trabalhadores/Sandra frança.jpg" class="avatar-nav rounded-circle"
+                            alt="Mentor">
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end border-0 shadow-sm rounded-3">
+                        <li><a class="dropdown-item" href="perfil/perfil-mentor.html">Meu Perfil</a></li>
+                        <li><a class="dropdown-item" href="#">Configurações</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item text-danger" href="#">Sair</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <div class="container mt-4 mb-5 main-container">
+        <div class="row g-4">
+
+            <aside class="col-lg-3 mb-4">
+
+                <div class="card card-dashboard border-0 mb-3 overflow-hidden">
+                    <div class="card-header-brand" style="background: linear-gradient(90deg, #1e3c72, #2a5298);"></div>
+
+                    <div class="card-body text-center pt-0 position-relative">
+                        <div class="avatar-wrapper mb-2 mx-auto">
+                            <img src="../imgs/trabalhadores/Sandra frança.jpg" alt="Professor" class="avatar-profile">
+                            <span class="status-dot" title="Disponível"></span>
+                        </div>
+
+                        <h5 class="fw-bold mb-0 text-dark">Prof. Sandra França </h5>
+                        <p class="text-muted small mb-2">Departamento de Computação</p>
+
+                        <div class="mb-3 d-flex justify-content-center">
+                            <div class="company-badge" title="Instituição">
+                                <i class="fa-solid fa-building-columns text-secondary"></i>
+                                <a style="text-decoration: none;" href="perfil/perfil-faculdade.html">  
+                                    <span class="fw-bold text-dark">Univ. Federal do Ceará</span>
+                                </a> 
+                            </div>
+                        </div>
+
+                        <button class="btn btn-outline-primary btn-sm w-100 rounded-pill mb-2" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#perfilDetalhes">
+                            Ver detalhes <i class="fa-solid fa-chevron-down ms-1"></i>
+                        </button>
+                    </div>
+
+                    <div class="collapse px-3 pb-3 text-start" id="perfilDetalhes">
+                        <hr class="text-muted opacity-25 mt-0 mb-3">
+                        <div class="mb-3">
+                            <h6 class="sidebar-title">Resumo Profissional</h6>
+                            <p class="smaller text-muted mb-0">
+                                Doutora em Ciência da Computação com foco em IA. Coordena grupos de pesquisa e orienta projetos de extensão tecnológica na UFC.
+                            </p>
+                        </div>
+                        <div class="mb-3">
+                            <h6 class="sidebar-title">Especialidades</h6>
+                            <div class="d-flex flex-wrap gap-1">
+                                <span class="tag-mini">Inteligência Artificial</span>
+                                <span class="tag-mini">Data Science</span>
+                                <span class="tag-mini">Docência</span>
+                            </div>
+                        </div>
+                        <div class="mb-2 bg-light p-2 rounded border">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span class="smaller text-muted">Avaliação</span>
+                                <span class="smaller fw-bold text-warning"><i
+                                        class="fa-solid fa-star me-1"></i>4.9</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="smaller text-muted">Orientações</span>
+                                <span class="smaller fw-bold text-dark">12</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card-dashboard border-0 p-3">
+                    <h6 class="fw-bold mb-3 small">Painel Acadêmico</h6>
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="smaller text-muted">Orientandos (Mestrado)</span>
+                        <span class="badge bg-primary rounded-pill">3</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="smaller text-muted">Iniciação Científica</span>
+                        <span class="badge bg-success rounded-pill">5</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="smaller text-muted">Bancas Pendentes</span>
+                        <span class="badge bg-danger rounded-pill">2</span>
+                    </div>
+                </div>
+
+            </aside>
+
+            <main class="col-lg-6 mb-4">
+
+                <div class="card card-dashboard invite-card border-0 mb-4 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <span class="badge bg-warning text-dark mb-2"><i class="fa-solid fa-graduation-cap me-1"></i>Convite para Banca</span>
+                                <h5 class="fw-bold mb-1">Defesa de TCC: Otimização de Redes</h5>
+                                <p class="text-muted small mb-0">Aluno: Carlos Mendes. Você foi indicado como avaliador externo.</p>
+                            </div>
+                            <div class="bg-white p-2 rounded-3 shadow-sm text-center border" style="min-width: 60px;">
+                                <span class="d-block fw-bold text-warning fs-5">20</span>
+                                <span class="d-block smaller text-uppercase fw-bold text-muted"
+                                    style="font-size: 0.7rem;">Dez</span>
+                            </div>
+                        </div>
+                        <hr class="border-warning opacity-25 my-3">
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-warning btn-sm px-4 fw-bold shadow-sm rounded-pill text-dark">Confirmar Presença</button>
+                            <button class="btn btn-outline-secondary btn-sm px-3 rounded-pill">Justificar Ausência</button>
+                            <a href="#" class="btn btn-link btn-sm text-muted ms-auto text-decoration-none smaller">Ler prévia do TCC</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card-dashboard border-0 mb-4 bg-soft-azul">
+                    <div class="card-body p-3">
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <i class="fa-solid fa-robot text-azul fs-5"></i>
+                            <h6 class="fw-bold text-azul mb-0">Copilot: Prazos do Semestre</h6>
+                        </div>
+
+                        <div class="bg-white rounded-3 p-2 shadow-sm">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item border-0 d-flex align-items-center gap-3 py-2">
+                                    <input class="form-check-input mt-0" type="checkbox" aria-label="Checkbox">
+                                    <div class="lh-1">
+                                        <span class="d-block small fw-bold text-dark">Lançamento de Notas - Turma A2</span>
+                                        <span class="text-danger smaller fst-italic">Sistema fecha em 3 dias</span>
+                                    </div>
+                                </li>
+                                <li class="list-group-item border-0 d-flex align-items-center gap-3 py-2">
+                                    <input class="form-check-input mt-0" type="checkbox" aria-label="Checkbox">
+                                    <div class="lh-1">
+                                        <span class="d-block small fw-bold text-dark">Parecer do Artigo - IEEE Conference</span>
+                                        <span class="text-muted smaller">Vence amanhã</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="text-center mt-2 border-top pt-2">
+                                <a href="#" class="smaller text-azul fw-bold text-decoration-none">Ver todos os
+                                    prazos</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h5 class="fw-bold text-dark mb-3">Interações dos Discentes</h5>
+
+                <div class="card card-dashboard border-0 mb-3">
+                    <div class="card-body p-3">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://placehold.co/50x50/003366/fff?text=LM"
+                                class="avatar-feed rounded-circle me-3" alt="Aluno">
+                            <div>
+                                <h6 class="mb-0 fw-bold text-dark">Larissa Martins</h6>
+                                <small class="text-muted">Orientanda (TCC II) &bull; 1h atrás</small>
+                            </div>
+                        </div>
+                        <p class="text-secondary mb-2">
+                            Professor João, conforme combinamos na última reunião, estou enviando a versão final do capítulo 3 para revisão. Já ajustei as normas da ABNT.
+                        </p>
+                        <div class="bg-light p-2 rounded border d-flex align-items-center gap-3">
+                            <i class="fa-solid fa-file-word text-primary fs-4 ms-2"></i>
+                            <div>
+                                <span class="d-block fw-bold small">Capitulo3_Revisado_Final.docx</span>
+                                <span class="d-block smaller text-muted">1.2 MB</span>
+                            </div>
+                            <button class="btn btn-sm btn-light border ms-auto">Baixar</button>
+                        </div>
+                        <div class="mt-3 d-flex gap-2">
+                            <button class="btn btn-light btn-sm text-primary flex-fill fw-bold"><i
+                                    class="fa-solid fa-pen-to-square me-1"></i> Dar Feedback</button>
+                            <button class="btn btn-light btn-sm text-muted flex-fill"><i
+                                    class="fa-regular fa-calendar-check me-1"></i> Marcar Reunião</button>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="card card-dashboard border-0 mb-3">
+                    <div class="card-body p-3">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://placehold.co/50x50/28a745/fff?text=JP"
+                                class="avatar-feed rounded-circle me-3" alt="Aluno">
+                            <div>
+                                <h6 class="mb-0 fw-bold text-dark">João Paulo</h6>
+                                <small class="text-muted">Monitor de Algoritmos &bull; 3h atrás</small>
+                            </div>
+                        </div>
+                        <p class="text-secondary mb-2">
+                            Prof, os alunos estão pedindo o adiamento da lista de exercícios 04 por causa da semana de provas de Cálculo. Podemos estender o prazo no SIGAA?
+                        </p>
+                        <div class="mt-3 d-flex gap-2">
+                            <button class="btn btn-light btn-sm text-success flex-fill fw-bold"><i
+                                    class="fa-solid fa-check me-1"></i> Autorizar</button>
+                            <button class="btn btn-light btn-sm text-muted flex-fill"><i
+                                    class="fa-regular fa-comment me-1"></i> Responder</button>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+
+            <aside class="col-lg-3 mb-4 d-none d-lg-block">
+
+                <div class="card card-dashboard border-0 p-3 mb-3">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h6 class="fw-bold mb-0 small">Solicitações de Orientação</h6>
+                        <span class="badge bg-danger rounded-pill">2</span>
+                    </div>
+                    <div class="d-flex flex-column gap-3">
+                        <div class="d-flex align-items-center gap-2">
+                            <img src="../imgs/trabalhadores/pessoa01.jpg" class="rounded-circle object-fit-cover"
+                                width="40" height="40" onerror="this.src='https://placehold.co/40x40'">
+                            <div class="flex-grow-1 lh-1">
+                                <h6 class="mb-0 fw-semibold" style="font-size: 0.9rem;">Ana Beatriz</h6>
+                                <small class="text-muted smaller">Tema: Machine Learning</small>
+                            </div>
+                            <div class="d-flex gap-1">
+                                <button class="btn btn-sm btn-light text-success border rounded-circle"
+                                    title="Aceitar"><i class="fa-solid fa-check"></i></button>
+                                <button class="btn btn-sm btn-light text-danger border rounded-circle"
+                                    title="Recusar"><i class="fa-solid fa-xmark"></i></button>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <img src="../imgs/trabalhadores/pessoa02.jpg" class="rounded-circle object-fit-cover"
+                                width="40" height="40" onerror="this.src='https://placehold.co/40x40'">
+                            <div class="flex-grow-1 lh-1">
+                                <h6 class="mb-0 fw-semibold" style="font-size: 0.9rem;">Pedro Santos</h6>
+                                <small class="text-muted smaller">IC (Bolsa PIBIC)</small>
+                            </div>
+                            <div class="d-flex gap-1">
+                                <button class="btn btn-sm btn-light text-success border rounded-circle"><i
+                                        class="fa-solid fa-check"></i></button>
+                                <button class="btn btn-sm btn-light text-muted border rounded-circle"><i
+                                        class="fa-solid fa-envelope"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-link text-decoration-none smaller text-center w-100 mt-3 text-muted">Ver
+                        todas</button>
+                </div>
+
+                <div class="card border-0 shadow-sm mt-3 p-3 rounded-4"
+                    style="background: #eef4ff; border-left: 4px solid #003366;">
+
+                    <div class="text-center px-2">
+                        <img src="../imgs/empresas/faculdade.png" alt="UFC" width="60" class="mb-2">
+
+                        <h6 class="fw-bold text-dark mb-1">Universidade Conectada</h6>
+
+                        <p class="smaller text-muted mb-3">
+                            Acesse os editais de fomento e bolsas de pesquisa disponíveis na pró-reitoria.
+                        </p>
+
+                        <button class="btn btn-primary btn-sm rounded-pill fw-bold px-4 shadow-sm" style="background-color: #003366; border:none;">
+                            Acessar Editais
+                        </button>
+                    </div>
+                </div>
+
+
+            </aside>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+        });
+    </script>
+</body>
+
+</html>
