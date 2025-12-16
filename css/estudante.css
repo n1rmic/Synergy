@@ -212,7 +212,7 @@ body {
     color: white;
 }
 
-/* --- CORREÇÃO DO DROPDOWN E POSICIONAMENTO --- */
+
 
 @media (min-width: 992px) {
     .navbar-collapse .dropdown:hover>.dropdown-menu {
@@ -238,12 +238,11 @@ body {
     }
 }
 
-/* CORREÇÃO DO PERFIL CORTADO */
-/* Força o menu do perfil a vir um pouco mais para a esquerda */
+
 #perfilMenu + .dropdown-menu {
     right: 0 !important;
     left: auto !important;
-    margin-right: 15px !important; /* Empurra para dentro da tela */
+    margin-right: 15px !important; 
 }
 
 @media (max-width: 991px) {

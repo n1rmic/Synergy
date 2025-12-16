@@ -88,7 +88,7 @@ body {
     box-shadow: var(--hover-shadow);
 }
 
-/* Header com gradiente (Adaptável para cores da universidade se quiser mudar inline no HTML) */
+
 .card-header-brand {
     height: 60px;
     background: linear-gradient(90deg, var(--roxo), #7b4aa3);
@@ -212,7 +212,7 @@ body {
     justify-content: center;
 }
 
-/* Para grupos de avatares (se usado) */
+
 .avatar-group-item { z-index: 5; }
 .avatar-group-item:nth-child(2) { z-index: 4; }
 .avatar-group-item:nth-child(3) { z-index: 3; }
